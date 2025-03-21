@@ -1,0 +1,155 @@
+/* Define estilos globais para o corpo da página */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão para o texto */
+    margin: 0; /* Remove margens externas */
+    padding: 0; /* Remove espaçamentos internos */
+    background-color: #f4f4f4; /* Define a cor de fundo da página */
+}
+
+/* Estiliza o logotipo */
+#logo {
+    height: 70px; /* Define a altura da imagem do logotipo */
+    display: flex; /* Usa flexbox para o alinhamento */
+    margin: 10px; /* Adiciona margem externa */
+    align-items: flex-start;  /* Alinha o logotipo ao topo */
+}
+
+/* Estiliza a barra de navegação */
+nav {
+    background-color: #004080; /* Define a cor de fundo da navegação */
+    padding: 15px; /* Adiciona preenchimento interno */
+}
+
+/* Remove os estilos padrões da lista e aplica layout flexível */
+nav ul {
+    list-style: none; /* Remove marcadores da lista */
+    display: flex; /* Usa flexbox para organizar os itens */
+    justify-content: flex-start; /* Alinha os itens à esquerda */
+    padding: 0; /* Remove espaçamento interno */
+    margin: 0; /* Remove margem externa */
+}
+
+/* Estiliza cada item da lista de navegação */
+nav ul li {
+    margin-right: 20px; /* Adiciona espaçamento entre os itens */
+}
+
+/* Estiliza os links dentro da navegação */
+nav ul li a {
+    color: white; /* Define a cor do texto */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 18px; /* Define o tamanho da fonte */
+}
+
+/* Empurra a opção "Área da Secretaria" para o canto direito */
+.secretaria {
+    margin-left: auto;
+}
+
+/* Estiliza o título da página */
+#titulo {
+    text-align: center; /* Centraliza o texto */
+    margin-top: 30px; /* Adiciona espaçamento superior */
+    margin-bottom: 60px; /* Adiciona espaçamento inferior */
+}
+
+/* Configuração para telas maiores (desktop) */
+@media (min-width: 769px) {
+    .cursos {
+        display: flex; /* Usa flexbox para exibição lado a lado */
+        flex-direction: row; /* Mantém os cursos na mesma linha */
+        align-items: center; /* Centraliza os itens verticalmente */
+        justify-content: space-between; /* Distribui os itens igualmente */
+        text-align: center; /* Centraliza o texto dentro dos elementos */
+    }
+    
+    .curso {
+        width: 30%; /* Define a largura de cada curso */
+    }
+}
+
+/* Configuração para telas menores (mobile) */
+@media (max-width: 768px) {
+    .cursos {
+        display: flex; /* Usa flexbox */
+        flex-direction: column; /* Empilha os cursos verticalmente */
+        align-items: center; /* Centraliza os itens */
+        justify-content: space-around; /* Distribui o espaço entre os itens */
+        flex-wrap: wrap; /* Permite quebra de linha */
+        gap: 20px; /* Adiciona espaçamento entre os cursos */
+        padding: 20px; /* Adiciona espaçamento interno */
+        text-align: center; /* Centraliza o texto */
+    }
+    
+    .curso {
+        width: 90%; /* Define uma largura maior para os cursos no mobile */
+    }
+}
+
+/* Estiliza os cursos */
+.curso {
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em coluna */
+    align-items: center; /* Centraliza os itens */
+    justify-content: center; /* Centraliza o conteúdo */
+    height: 100%; /* Define a altura total */
+}
+
+/* Estiliza os carrosséis de imagens */
+.carrosel {
+    height: 200px; /* Define a altura fixa do carrossel */
+    width: 80%; /* Define a largura relativa ao contêiner */
+    background-color: white; /* Define cor de fundo */
+    border-radius: 10px; /* Arredonda as bordas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra sutil */
+    display: flex; /* Usa flexbox para alinhamento interno */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    position: relative; /* Define posicionamento relativo para os botões */
+}
+
+/* Estiliza os botões do carrossel */
+.carrosel-btn {
+    background-color: rgba(0, 0, 0, 0.5); /* Define um fundo semitransparente */
+    color: white; /* Define cor do texto */
+    border: none; /* Remove bordas */
+    padding: 10px; /* Define espaçamento interno */
+    cursor: pointer; /* Altera o cursor para indicar interatividade */
+    font-size: 18px; /* Define tamanho do texto */
+    position: absolute; /* Posicionamento absoluto dentro do carrossel */
+    top: 50%; /* Posiciona verticalmente no centro */
+    transform: translateY(-50%); /* Ajusta alinhamento vertical */
+}
+
+/* Altera a cor do botão ao passar o mouse */
+.carrosel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Posiciona o botão "anterior" à esquerda */
+.voltar-btn {
+    left: 10px;
+}
+
+/* Posiciona o botão "próximo" à direita */
+.avancar-btn {
+    right: 10px;
+}
+
+/* Estiliza as imagens dentro do carrossel */
+.carrosel-img {
+    width: 100%; /* Faz a imagem ocupar toda a largura */
+    height: 200px; /* Mantém altura fixa */
+    object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
+    cursor: pointer; /* Torna a imagem clicável */
+}
+
+/* Estiliza o rodapé */
+footer {
+    background-color: black; /* Define cor de fundo */
+    color: white; /* Define cor do texto */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px; /* Adiciona espaçamento interno */
+    margin-top: 80px; /* Adiciona espaço entre o conteúdo e o rodapé */
+    height: 120px; /* Define altura fixa */
+}
