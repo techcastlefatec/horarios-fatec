@@ -67,3 +67,24 @@ Clique [aqui](https://trello.com/) para acessar o quadro do Trello do projeto.
 
 <br>
 
+### • Sprint Backlog
+<br>
+
+| ID REFERENCIA |Pioridade (Scrum Poker Planning) | REQUISITO DA SPRINT| Responsável |TAREFA INICIADA | TAREFA CONCLUIDA | 
+|---------------|--------------------|---------------|-----------------|-----------------|------------------|
+|  RNF - 2    | 2 |Definir elementos das páginas para criar os protótipos iniciais utilizando diagrama de casos de uso |Bruna e Pedro | ✔  |✔  |
+|  RNF - 1    | 4 |Elaboração dos protóripos das telas no Figma para ambiente desktop e mobile, verificando a navegabilidade do site   |Bruna, Suelen e Pedro | ✔  |✔  |
+|  RNF - 2 | 1 |Definir a harmonia visual do site, escolhendo contrastes e paleta de cores com a equipe|Bruna, Suelen e Pedro  | ✔  |✔  |
+|  RF - 1/ RF - 5    | 1 |Levantamento das informações referentes aos horários de aulas e disposição das salas da Fatec|Camila, Ryan e Nicolas|  ✔  |✔  |
+|  RF - 1/ RF - 3    | 5 |Coleta de informações em CSV e  |Ryan e Camila   | ✔  |✔  |
+|  RNF - 2    | 2 |Desenvolver a primeira versão da página de cadastro de matérias em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades do JavaScript, quando necessário. |Bruna |  ✔  |✔  |
+|  RNF - 2    | 2 |Desenvolver a primeira versão da página de cadastro de professores em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades do JavaScript, quando necessário. |Camila |  ✔  |✔  |
+|  RNF - 2    | 2 |Desenvolver a primeira versão da página de hirários por turma em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades do JavaScript, quando necessário. |Ryan |  ✔  |✔  |
+|  RNF - 2    | 2 |Desenvolver a primeira versão da página de lista de professores em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades do JavaScript, quando necessário. |Nicolas |  ✔  |✔  |
+|  RNF - 2    | 2 |Desenvolver a primeira versão da página de lista de salas em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades do JavaScript, quando necessário. |Suelen e Pedro |  ✔  |✔  |
+|  RNF - 2    | 2 |Desenvolver a primeira versão da página de login da secretaria em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades do JavaScript, quando necessário. |Fernanda |  ✔  |✔  |
+|  RNF - 2    | 2 |Desenvolver a primeira versão da página da tela inicial da secretaria em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades do JavaScript, quando necessário. |Bruno |  ✔  |✔  |
+<br>
+
+
+
