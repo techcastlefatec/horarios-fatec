@@ -93,7 +93,7 @@ Clique [aqui](https://trello.com/) para acessar o quadro do Trello do projeto.
 | ID REFERENCIA |Pioridade (Scrum Poker Planning) | REQUISITO DA SPRINT| Responsável |TAREFA INICIADA | TAREFA CONCLUIDA | 
 |---------------|--------------------|---------------|-----------------|-----------------|------------------|
 |  RNF - 2    | 2 |Definir elementos das páginas para criar os protótipos iniciais utilizando diagrama de casos de uso |Bruna e Pedro | ✔  |✔  |
-|  RNF - 1    | 4 |Elaboração dos protóripos das telas no Figma para ambiente desktop e mobile, verificando a navegabilidade do site   |Bruna, Suelen e Pedro | ✔  |✔  |
+|  RNF - 1    | 6 |Elaboração dos protóripos das telas no Figma para ambiente desktop e mobile, verificando a navegabilidade do site   |Bruna, Suelen e Pedro | ✔  |✔  |
 |  RNF - 2 | 1 |Definir a harmonia visual do site, escolhendo contrastes e paleta de cores com a equipe|Bruna, Suelen e Pedro  | ✔  |✔  |
 |  RF - 1/ RF - 5    | 1 |Levantamento das informações referentes aos horários de aulas e disposição das salas da Fatec|Camila, Ryan e Nicolas|  ✔  |✔  |
 |  RF - 1/ RF - 3    | 5 |Coleta de informações em CSV para organização para uso futuro  |Ryan e Camila   | ✔  |✔  |
