@@ -45,20 +45,27 @@ Clique [aqui](https://trello.com/) para acessar o quadro do Trello do projeto.
 
 <br>
 
-## \:page\_with\_curl: USER STORIES
+## :page_with_curl: USER STORIES
 
-| ID REFERÊNCIA | Remetente                  | Instrução                                                                                                              | Finalidade                                                                                              |
-| ------------- | -------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| RNF - 1            | Aluno                      | Os alunos devem poder visualizar seus horários de aula organizados por dia da semana                                   | Permitir que os alunos tenham acesso rápido e organizado aos seus horários, evitando confusão e atrasos |
-| RNF - 1            | Aluno                      | Deve haver uma interface para consulta dos professores por nome                                                        | Facilitar o contato entre alunos e professores, permitindo que tirem dúvidas e organizem atendimentos   |
-| RNF - 1            | Aluno                      | Os alunos devem poder visualizar um mapa interativo das salas de aula                                                  | Ajudar os alunos a localizar facilmente suas salas, reduzindo atrasos e confusão no campus              |
-| RF - 2, RF - 3, RF -5        | Secretaria Acadêmica       | A Secretaria Acadêmica deve poder cadastrar, editar e remover professores                                              | Manter os registros de professores sempre atualizados para refletir mudanças na equipe acadêmica        |
-|  RF - 2, RF - 3, RF -5            | Secretaria Acadêmica       | A Secretaria Acadêmica deve poder cadastrar, editar e remover disciplinas                                              | Garantir que o sistema esteja atualizado com a grade curricular vigente                                 |
-| RF - 3           | Secretaria Acadêmica       | O sistema deve permitir a associação de professores às disciplinas                                                     | Assegurar que os alunos possam visualizar quem ministra cada disciplina                                 |                                    
-| RNF - 1           | Aluno/Secretaria Acadêmica | O sistema deve ter uma interface amigável                                                                              | Agilizar a navegação e a localização de informações relevantes dentro da plataforma                     |
-| RF - 1           | Secretaria Acadêmica       | Deve haver um sistema de autenticação para que apenas usuários autorizados possam acessar determinadas funcionalidades | Garantir a segurança e integridade das informações acadêmicas                                           |
-| RNF - 2           | Aluno/Secretaria Acadêmica | O sistema deve ser responsivo para funcionar em dispositivos móveis                                                    | Assegurar que os alunos e a secretaria acadêmica possam acessar as informações de qualquer dispositivo  |
-| RF - 4           | Aluno/Secretaria Acadêmica | O sistema deve permitir o download dos horários das aulas e dos mapas de sala em formato PDF                           | Facilitar o acesso offline e a impressão das informações pelos alunos e funcionários                    |
+| ID REFERÊNCIA | User Case | Remetente                  | Instrução                                                                                                              | Finalidade                                                                                              |
+| ------------- | --------- | -------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| RNF - 1       | UC1       | Aluno                      | Os alunos devem poder visualizar seus horários de aula organizados por dia da semana                                   | Permitir que os alunos tenham acesso rápido e organizado aos seus horários, evitando confusão e atrasos |
+| RNF - 1       | UC2       | Aluno                      | Deve haver uma interface para consulta dos professores por nome                                                        | Facilitar o contato entre alunos e professores, permitindo que tirem dúvidas e organizem atendimentos   |
+| RNF - 1       | UC3       | Aluno                      | Os alunos devem poder visualizar um mapa interativo das salas de aula                                                  | Ajudar os alunos a localizar facilmente suas salas, reduzindo atrasos e confusão no campus              |
+| RF - 2, RF - 3, RF -5 | UC4       | Secretaria Acadêmica       | A Secretaria Acadêmica deve poder cadastrar, editar e remover professores                                              | Manter os registros de professores sempre atualizados para refletir mudanças na equipe acadêmica        |
+| RF - 2, RF - 3, RF -5 | UC5       | Secretaria Acadêmica       | A Secretaria Acadêmica deve poder cadastrar, editar e remover disciplinas                                              | Garantir que o sistema esteja atualizado com a grade curricular vigente                                 |
+| RF - 3       | UC6       | Secretaria Acadêmica       | O sistema deve permitir a associação de professores às disciplinas                                                     | Assegurar que os alunos possam visualizar quem ministra cada disciplina                                 |                                    
+| RNF - 1       | UC7       | Aluno/Secretaria Acadêmica | O sistema deve ter uma interface amigável                                                                              | Agilizar a navegação e a localização de informações relevantes dentro da plataforma                     |
+| RF - 1       | UC8       | Secretaria Acadêmica       | Deve haver um sistema de autenticação para que apenas usuários autorizados possam acessar determinadas funcionalidades | Garantir a segurança e integridade das informações acadêmicas                                           |
+| RNF - 2       | UC9       | Aluno/Secretaria Acadêmica | O sistema deve ser responsivo para funcionar em dispositivos móveis                                                    | Assegurar que os alunos e a secretaria acadêmica possam acessar as informações de qualquer dispositivo  |
+| RF - 4       | UC10      | Aluno/Secretaria Acadêmica | O sistema deve permitir o download dos horários das aulas e dos mapas de sala em formato PDF                           | Facilitar o acesso offline e a impressão das informações pelos alunos e funcionários                    |
+
+<br>
+
+![Diagrama](https://drive.google.com/uc?export=view&id=1rPymPTtGd56zmupaU2qmT7-xgRtSe7-9)
+
+<br>
+
 
 <br>
 
