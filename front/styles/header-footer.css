@@ -1,0 +1,76 @@
+/* HEADER */
+
+
+header {
+    height: 170px;
+    font-family: Arial, sans-serif; /* Define a fonte padrão para o texto */
+}
+
+#topo-header {
+    background-color: white;
+    display: flex; /* Usa flexbox para o alinhamento */
+    justify-content: space-between;
+}
+/* Estiliza o logotipo */
+.logo-header {
+    height: 100px; /* Define a altura da imagem do logotipo */
+    width: 200px;
+    margin: 10px; /* Adiciona margem externa */
+   
+}
+
+.linha {
+    height: 10px;
+    background-color: grey;
+}
+
+/* Estiliza a barra de navegação */
+nav {
+    background-color: red; /* Define a cor de fundo da navegação */
+    padding: 15px; /* Adiciona preenchimento interno */
+}
+
+/* Remove os estilos padrões da lista e aplica layout flexível */
+nav ul {
+    list-style: none; /* Remove marcadores da lista */
+    display: flex; /* Usa flexbox para organizar os itens */
+    justify-content: flex-start; /* Alinha os itens à esquerda */
+    padding: 0; /* Remove espaçamento interno */
+    margin: 0; /* Remove margem externa */
+}
+
+/* Estiliza cada item da lista de navegação */
+nav ul li {
+    margin-right: 20px; /* Adiciona espaçamento entre os itens */
+}
+
+/* Estiliza os links dentro da navegação */
+nav ul li a {
+    color: white; /* Define a cor do texto */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 18px; /* Define o tamanho da fonte */
+}
+
+/* Empurra a opção "Área da Secretaria" para o canto direito */
+.secretaria-nav {
+    margin-left: auto;
+}
+
+
+
+/* FOOTER */
+
+
+/* Estiliza o rodapé */
+footer {
+    background-color: #474a51; /* Define cor de fundo */
+    color: white; /* Define cor do texto */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px; /* Adiciona espaçamento interno */
+    margin-top: 80px; /* Adiciona espaço entre o conteúdo e o rodapé */
+    height: 120px; /* Define altura fixa */
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
