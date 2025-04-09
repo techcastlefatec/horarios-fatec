@@ -27,13 +27,20 @@
     <div class="linha"> </div>
     <!-- Navegação principal da página -->
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li> <!-- Link para a página inicial -->
-            <li><a href="pages/professores.html">Professores</a></li> <!-- Link para a página de professores -->
-            <li><a href="#">Salas</a></li> <!-- Link fictício (não leva a lugar nenhum por enquanto) -->
-            <li class="secretaria-nav"><a href="pages/login.html">Área da Secretaria</a></li> <!-- Link para a área da secretaria -->
-        </ul>
-    </nav>
+        <div class="nav-container">
+          <a href="index.html" class="nav-logo">Home</a>
+      
+          <!-- Botão de menu hambúrguer -->
+          <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+      
+          <!-- Menu dropdown -->
+          <ul class="nav-links" id="nav-links">
+            <li><a href="pages/professores.html">Professores</a></li>
+            <li><a href="#">Salas</a></li>
+            <li><a href="pages/login.html">Área da Secretaria</a></li>
+          </ul>
+        </div>
+      </nav>
     <div class="linha"> </div>
     </div>
     
