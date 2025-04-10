@@ -98,7 +98,7 @@ Clique [aqui](https://trello.com/) para acessar o quadro do Trello do projeto.
 <span id="sprint-1">
  
 ## :page_with_curl: SPRINT 1 
-<p align="justify">Na Primeira Sprint .... </p>
+<p align="justify">Na Primeira Sprint priorizamos para a criação dos modelos das telas do programa em Figma com protótipos das funcionalidades. Criamos as telas tanto para utilização em desktop quanto para mobile, visando a compatibilidade com ambos os dispositivos. Iniciamos o desenvolvimentos das primeiras telas em HTML/CSS para dar uma amostra de como será o resultado final, e também a criação do banco de dados SQL para o armazenamento das informações do sistema. </p>
 
 <br>
 
