@@ -59,7 +59,15 @@
 
 <br>
 
-![Diagrama](https://drive.google.com/uc?export=view&id=1rPymPTtGd56zmupaU2qmT7-xgRtSe7-9)
+## 📘 Diagrama de Casos de Uso
+
+![Diagrama de Casos de Uso](Diagramas/Uso.png) 
+
+---
+
+## 📗 Diagrama de Classes
+
+![Diagrama de Classes](Diagramas/Classe.png)
 
 <br>
 
@@ -121,7 +129,7 @@
 
  
 ## :page_with_curl: SPRINT 1 
-<p align="justify">Na Primeira Sprint .... </p>
+<p align="justify">Na Primeira Sprint priorizamos para a criação dos modelos das telas do programa em Figma com protótipos das funcionalidades. Criamos as telas tanto para utilização em desktop quanto para mobile, visando a compatibilidade com ambos os dispositivos. Iniciamos o desenvolvimentos das primeiras telas em HTML/CSS para dar uma amostra de como será o resultado final, e também a criação do banco de dados SQL para o armazenamento das informações do sistema. </p>
 
 <br>
 
