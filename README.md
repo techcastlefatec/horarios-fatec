@@ -62,7 +62,15 @@ Clique [aqui](https://trello.com/) para acessar o quadro do Trello do projeto.
 
 <br>
 
-![Diagrama](https://drive.google.com/uc?export=view&id=1rPymPTtGd56zmupaU2qmT7-xgRtSe7-9)
+## 📘 Diagrama de Casos de Uso
+
+![Diagrama de Casos de Uso](Diagramas/Class Diagram0.png)
+
+---
+
+## 📗 Diagrama de Classes
+
+![Diagrama de Classes](Diagramas/UseCase Diagram0.png)
 
 <br>
 
