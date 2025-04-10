@@ -64,13 +64,13 @@ Clique [aqui](https://trello.com/) para acessar o quadro do Trello do projeto.
 
 ## 📘 Diagrama de Casos de Uso
 
-![Diagrama de Casos de Uso](Diagramas/Class Diagram0.png)
+![Diagrama de Casos de Uso](Diagramas/Classe.png) 
 
 ---
 
 ## 📗 Diagrama de Classes
 
-![Diagrama de Classes](Diagramas/UseCase Diagram0.png)
+![Diagrama de Classes](Diagramas/Uso.png)
 
 <br>
 
