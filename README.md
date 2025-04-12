@@ -62,7 +62,15 @@ Clique [aqui](https://trello.com/) para acessar o quadro do Trello do projeto.
 
 <br>
 
-![Diagrama](https://drive.google.com/uc?export=view&id=1rPymPTtGd56zmupaU2qmT7-xgRtSe7-9)
+## 📘 Diagrama de Casos de Uso
+
+![Diagrama de Casos de Uso](Diagramas/Uso.png) 
+
+---
+
+## 📗 Diagrama de Classes
+
+![Diagrama de Classes](Diagramas/Classe.png)
 
 <br>
 
@@ -87,10 +95,41 @@ Clique [aqui](https://trello.com/) para acessar o quadro do Trello do projeto.
 
 <br>
 
+## LINGUAGENS E FERRAMENTAS
+<br>
+<p align="left"> 
+  <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> 
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> 
+  </a> 
+  <a href="https://www.figma.com/" target="_blank" rel="noreferrer"> 
+    <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/> 
+  </a> 
+  <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> 
+    <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> 
+  </a> 
+  <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> 
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> 
+  </a> 
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> 
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> 
+  </a> 
+  <a href="https://nodejs.org" target="_blank" rel="noreferrer"> 
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> 
+  </a> 
+  <a href="https://expressjs.com/" target="_blank" rel="noreferrer">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="express" width="40" height="40"/>
+  </a>
+  <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> 
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40" height="40"/> 
+  </a> 
+</p>
+<br>
+
+
 <span id="sprint-1">
  
 ## :page_with_curl: SPRINT 1 
-<p align="justify">Na Primeira Sprint .... </p>
+<p align="justify">Na Primeira Sprint priorizamos para a criação dos modelos das telas do programa em Figma com protótipos das funcionalidades. Criamos as telas tanto para utilização em desktop quanto para mobile, visando a compatibilidade com ambos os dispositivos. Iniciamos o desenvolvimentos das primeiras telas em HTML/CSS para dar uma amostra de como será o resultado final, e também a criação do banco de dados SQL para o armazenamento das informações do sistema. </p>
 
 <br>
 
@@ -101,17 +140,99 @@ Clique [aqui](https://trello.com/) para acessar o quadro do Trello do projeto.
 |---------------|--------------------|---------------|-----------------|-----------------|------------------|
 |  RNF - 2    | 2 |Definir elementos das páginas para criar os protótipos iniciais utilizando diagrama de casos de uso |Bruna e Pedro | ✔  |✔  |
 |  RNF - 1    | 6 |Elaboração dos protóripos das telas no Figma para ambiente desktop e mobile, verificando a navegabilidade do site   |Bruna, Suelen e Pedro | ✔  |✔  |
-|  RNF - 2 | 1 |Definir a harmonia visual do site, escolhendo contrastes e paleta de cores com a equipe|Bruna, Suelen e Pedro  | ✔  |✔  |
+|  RNF - 2 | 2 |Definir a harmonia visual do site, escolhendo contrastes e paleta de cores com a equipe|Bruna, Suelen e Pedro  | ✔  |✔  |
 |  RF - 1/ RF - 5    | 1 |Levantamento das informações referentes aos horários de aulas e disposição das salas da Fatec|Camila, Ryan e Nicolas|  ✔  |✔  |
-|  RF - 1/ RF - 3    | 5 |Coleta de informações em CSV para organização para uso futuro  |Ryan e Camila   | ✔  |✔  |
-|  RNF - 2    | 2 |Desenvolver a primeira versão da página de cadastro de matérias em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. |Bruna |  ✔  |✔  |
-|  RNF - 2    | 2 |Desenvolver a primeira versão da página de cadastro de professores em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. |Camila |  ✔  |✔  |
-|  RNF - 2    | 2 |Desenvolver a primeira versão da página de hirários por turma em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. |Ryan |  ✔  |✔  |
-|  RNF - 2    | 2 |Desenvolver a primeira versão da página de lista de professores em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. |Nicolas |  ✔  |✔  |
-|  RNF - 2    | 2 |Desenvolver a primeira versão da página de lista de salas em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. |Suelen e Pedro |  ✔  |✔  |
-|  RNF - 2    | 2 |Desenvolver a primeira versão da página de login da secretaria em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. |Fernanda |  ✔  |✔  |
-|  RNF - 2    | 2 |Desenvolver a primeira versão da página da tela inicial da secretaria em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. |Bruno |  ✔  |✔  |
+|  RNF - 2    | 2 |Realizar o prototipo da primeira tela em html |Bruno | ✔  |✔  |
+|  RNF - 2    | 4 |Organizar a documentação no github |Fernanda | ✔  |✔  |
+|  RF - 1/ RF - 3    | 6 |Coleta de informações em CSV para organização e criação das primeiras cláusulas em .sql  |Camila e Nicolas   | ✔  |✔  |
+|  RNF - 2    | 2 |Desenvolver a primeira versão da página de cadastro de matérias em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. |Bruna |  ✔  |  |
+|  RNF - 2    | 2 |Desenvolver a primeira versão da página de cadastro de professores em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. |Camila |  ✔  |  |
+|  RNF - 2    | 2 |Desenvolver a primeira versão da página de hirários por turma em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. |Ryan |  ✔  |  |
+|  RNF - 2    | 2 |Desenvolver a primeira versão da página de lista de professores em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. |Nicolas |  ✔  |  |
+|  RNF - 2    | 2 |Desenvolver a primeira versão da página de lista de salas em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. |Suelen e Pedro |  ✔  |  |
+|  RNF - 2    | 2 |Desenvolver a primeira versão da página de login da secretaria em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. |Fernanda |  ✔  |  |
+|  RNF - 2    | 2 |Desenvolver a primeira versão da página da tela inicial da secretaria em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. |Bruno |  ✔  |  |
+<br>
+
+<br>
+
+### • Burndown Sprint 1
+<br>
+
+<br>
+
+![Burndown](Documentos/Burndown/burndownSprint1.png)
+
+<br>
+
+<br>
+
+### • Sprint Retrospective 
+<br>
+
+**1. O que funcionou bem durante o sprint?**
+<br>
+...
+
+**2. O que não funcionou tão bem durante o sprint?**
+<br>
+...
+
+**3. Quais ações podemos tomar para melhorar no próximo sprint?**
+<br>
+...
 <br>
 
 
+<span id="sprint-2">
+ 
+## :page_with_curl: SPRINT 2 
+<p align="justify">Na Segunda Sprint ... </p>
 
+<br>
+
+### • Sprint Backlog
+<br>
+
+### • Sprint Backlog
+<br>
+
+| ID REFERENCIA | Prioridade (Scrum Poker Planning) | REQUISITO DA SPRINT                                                                                                     | Responsável | TAREFA INICIADA | TAREFA CONCLUIDA |
+|---------------|-----------------------------------|--------------------------------------------------------------------------------------------------------------------------|-------------|------------------|-------------------|
+| ---           | ---                               | Finalizar a primeira versão da tela que foi designada em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. | Bruna       |                  |                   |
+| ---           | ---                               | Finalizar a primeira versão da tela que foi designada em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. | Suelen      |                  |                   |
+| ---           | ---                               | Finalizar a primeira versão da tela que foi designada em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. | Camila      |                  |                   |
+| ---           | ---                               | Finalizar a primeira versão da tela que foi designada em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. | Fernanda    |                  |                   |
+| ---           | ---                               | Finalizar a primeira versão da tela que foi designada em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. | Pedro       |                  |                   |
+| ---           | ---                               | Finalizar a primeira versão da tela que foi designada em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. | Ryan        |                  |                   |
+| ---           | ---                               | Finalizar a primeira versão da tela que foi designada em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. | Nicolas     |                  |                   |
+| ---           | ---                               | Finalizar a primeira versão da tela que foi designada em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. | Bruno       |                  |                   |
+| ---           | ---                               | Estudo em grupo de JavaScript para nivelamento dos membros do grupo.                                                     | Todos       |                  |                   |
+| ---           | ---                               | Estudo em grupo sobre node.js, express.js, e API para que todos do grupo possam atender aos requisitos da próxima Sprint | Todos       |                  |                   |
+
+<br>
+
+<br>
+
+### • Burndown Sprint 2
+<br>
+
+...
+
+<br>
+
+### • Sprint Retrospective 
+<br>
+
+**1. O que funcionou bem durante o sprint?**
+<br>
+...
+
+**2. O que não funcionou tão bem durante o sprint?**
+<br>
+...
+
+**3. Quais ações podemos tomar para melhorar no próximo sprint?**
+<br>
+...
+<br>
