@@ -70,6 +70,14 @@
 
 <br>
 
+<br>
+
+## 🛢️ Modelo conceitual do banco de de dados - MER 
+
+
+![Modelo conceitual](Diagramas/modelo_conceitual-MER.png)
+
+<br>
 
 <br>
 
@@ -121,6 +129,7 @@
 </p>
 <br>
 
+<br>
 
 <span id="sprint-1">
  
