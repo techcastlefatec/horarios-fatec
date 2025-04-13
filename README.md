@@ -74,6 +74,14 @@ Clique [aqui](https://trello.com/) para acessar o quadro do Trello do projeto.
 
 <br>
 
+<br>
+
+## 🛢️ Modelo conceitual do banco de de dados - MER 
+
+
+![Modelo conceitual](Diagramas/modelo_conceitual-MER.png)
+
+<br>
 
 <br>
 
@@ -125,6 +133,7 @@ Clique [aqui](https://trello.com/) para acessar o quadro do Trello do projeto.
 </p>
 <br>
 
+<br>
 
 <span id="sprint-1">
  
