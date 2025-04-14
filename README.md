@@ -6,10 +6,6 @@
 # SOBRE O PROJETO 
 ## <p align="justify"> Aplicação Web para visualização de horários de aula e ambientes.</p>
 
-## Link para o Trello
-
-Clique [aqui](https://trello.com/) para acessar o quadro do Trello do projeto.
-
 ## SPRINTS
 
 | Sprint | Link        | Início      | Entrega     | Status |
@@ -74,6 +70,14 @@ Clique [aqui](https://trello.com/) para acessar o quadro do Trello do projeto.
 
 <br>
 
+<br>
+
+## 🛢️ Modelo conceitual do banco de de dados - MER 
+
+
+![Modelo conceitual](Diagramas/modelo_conceitual-MER.png)
+
+<br>
 
 <br>
 
@@ -125,6 +129,7 @@ Clique [aqui](https://trello.com/) para acessar o quadro do Trello do projeto.
 </p>
 <br>
 
+<br>
 
 <span id="sprint-1">
  
@@ -172,15 +177,15 @@ Clique [aqui](https://trello.com/) para acessar o quadro do Trello do projeto.
 
 **1. O que funcionou bem durante o sprint?**
 <br>
-...
+Funcionou bem a divisão de tarefas que fizemos, atribuindo partes do projeto para cada um dos membros da equipe com prazos para o cumprimento das demandas e interação com todos para aprovação das idéias propostas.
 
 **2. O que não funcionou tão bem durante o sprint?**
 <br>
-...
+Ocorreu uma falha de comunicação em um determinado momento onde não ficou claro uma tarefa mas foi rapidamente corrigida.
 
 **3. Quais ações podemos tomar para melhorar no próximo sprint?**
 <br>
-...
+Praticar mais as reuniões e atualizações diárias das tarefas, evitando desencontros.
 <br>
 
 
@@ -189,9 +194,6 @@ Clique [aqui](https://trello.com/) para acessar o quadro do Trello do projeto.
 ## :page_with_curl: SPRINT 2 
 <p align="justify">Na Segunda Sprint ... </p>
 
-<br>
-
-### • Sprint Backlog
 <br>
 
 ### • Sprint Backlog
