@@ -69,8 +69,7 @@ footer {
     padding: 20px; /* Adiciona espaçamento interno */
     margin-top: 80px; /* Adiciona espaço entre o conteúdo e o rodapé */
     height: 120px; /* Define altura fixa */
-    width: 100%;
-    position: fixed;
+    font-family: Arial, sans-serif; /* Define a fonte padrão para o texto */
     bottom: 0;
     left: 0;
 }

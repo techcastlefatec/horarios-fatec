@@ -1,8 +1,8 @@
 // Criamos uma lista de carrosséis, cada um com um ID e um conjunto de imagens
 const carrosels = [
-    { id: "carrosel-dsm", images: ["images/dsm1.png", "images/dsm2.png", "images/dsm3.png"] },
-    { id: "carrosel-marh", images: ["images/marh1.png", "images/marh2.png", "images/marh3.png"] },
-    { id: "carrosel-geo", images: ["images/geo1.png", "images/geo2.png", "images/geo3.png"] }
+    { id: "carrosel-dsm", images: ["../images/dsm1.png", "images/dsm2.png", "images/dsm3.png"] },
+    { id: "carrosel-marh", images: ["../images/marh1.png", "images/marh2.png", "images/marh3.png"] },
+    { id: "carrosel-geo", images: ["../images/geo1.png", "images/geo2.png", "images/geo3.png"] }
 ];
 
 // Para cada carrossel na lista, criamos a estrutura e funcionalidade
