@@ -129,6 +129,11 @@
 </p>
 <br>
 
+### Link do FIgma 
+
+https://www.figma.com/design/ncbsKxdbHCYvRl5TL874dG/Untitled?node-id=0-1&p=f&t=X5kZBRgXNIKPMt2d-0
+ 
+
 <br>
 
 <span id="sprint-1">
@@ -188,7 +193,10 @@ Ocorreu uma falha de comunicação em um determinado momento onde não ficou cla
 Praticar mais as reuniões e atualizações diárias das tarefas, evitando desencontros.
 <br>
 
+### Link do Vídeo https://youtu.be/UPejV6HgdTA?si=67n6WXczgsloSbuc
 
+<br>
+<br>
 <span id="sprint-2">
  
 ## :page_with_curl: SPRINT 2 
