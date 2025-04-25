@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tela Responsiva</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    header, footer {
+      background-color: #333;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    main {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .sidebar {
+      flex: 1;
+      background-color: #f4f4f4;
+      padding: 1rem;
+    }
+
+    .content {
+      flex: 2;
+      background-color: #e2e2e2;
+      padding: 1rem;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      main {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Minha Página Responsiva</h1>
+  </header>
+
+  <main>
+    <div class="sidebar">Barra Lateral</div>
+    <div class="content">Conteúdo Principal</div>
+  </main>
+
+  <footer>
+    <p>Rodapé © 2025</p>
+  </footer>
+</body>
+</html>

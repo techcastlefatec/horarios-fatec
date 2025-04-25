@@ -1,0 +1,89 @@
+  /* padrão para toda a tela, todos os elementos */
+  body{
+    margin: 0px;
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+}
+
+/*modifica a div que guarda os dois elementos principais da tela */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  #line {
+    margin-top: 200px;
+    width: 2px;
+    height: 536px;
+    background-color: #000; /* Cor da linha */
+    position: absolute;
+    left: 600px;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 1; /* Ajuste se necessário pra não ficar atrás de outros elementos */
+  }
+  
+  
+
+/* Edita a imagem (nofoto2) */
+.img{
+    display: flex;
+    margin-top: 40px;
+    margin-left: 90px;
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+}
+
+/* modidica apenas o main */
+main{
+    flex: 1;
+    margin-top: 50px;
+    margin-left: 90px;
+    margin-bottom: 85px;
+    margin-right: 120px;
+    width: 200px;
+    height: 350px;
+    
+}
+
+#aula{
+    margin-top: 100px;
+}
+
+/* modifica apenas o aside */
+aside{
+    flex: 1;
+    background-color: yellowgreen;
+    flex-direction: column;
+    margin-right: 120px;
+    margin-bottom: 85px;
+    border: 1px solid black;
+    border-radius: 25px;
+    height: 190px;
+    width: 1000px;
+    
+    
+}
+
+
+aside p{
+    margin-left: 10px;
+}
+
+#break{
+    margin-top: 50px;
+}
+
+@media (min-width: 769px){
+    body{background-color: lightseagreen;
+    flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    body{background-color: lightpink;
+        flex-direction: column;
+    }
+}
