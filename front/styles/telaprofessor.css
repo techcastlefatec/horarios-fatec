@@ -12,17 +12,16 @@
     align-items: flex-start;
   }
   
-  #line {
+#line {
     margin-top: 200px;
     width: 2px;
-    height: 536px;
+    height: 555px;
     background-color: #000; /* Cor da linha */
     position: absolute;
     left: 600px;
     top: 0;
-    transform: translateX(-50%);
     z-index: 1; /* Ajuste se necessário pra não ficar atrás de outros elementos */
-  }
+}
   
   
 
@@ -34,6 +33,11 @@
     width: 150px;
     height: 150px;
     border-radius: 100px;
+}
+
+
+main, aside {
+    padding-bottom: 20px;
 }
 
 /* modidica apenas o main */
@@ -50,6 +54,7 @@ main{
 
 #aula{
     margin-top: 100px;
+    margin-left: 15px;
 }
 
 /* modifica apenas o aside */
@@ -63,10 +68,7 @@ aside{
     border-radius: 25px;
     height: 190px;
     width: 1000px;
-    
-    
 }
-
 
 aside p{
     margin-left: 10px;
@@ -76,6 +78,7 @@ aside p{
     margin-top: 50px;
 }
 
+
 @media (min-width: 769px){
     body{background-color: lightseagreen;
     flex-direction: column;
@@ -83,7 +86,28 @@ aside p{
 }
 
 @media (max-width: 768px) {
-    body{background-color: lightpink;
+    .container {
         flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        margin: 20px;
+        width: auto;
+        height: auto;
+    }
+
+    #line {
+        display: none; /* Esconde a linha em telas pequenas */
+    }
+
+    aside {
+        width: 90%;
+        margin: 20px auto;
+        height: auto;
+    }
+
+    .img {
+        margin-left: 0;
     }
 }
