@@ -11,9 +11,10 @@
     justify-content: space-between;
     align-items: flex-start;
   }
-  
+
+/* linha que divide a tela, fica mais a esquerda, logo á direita dos dos dados professor */
 #line {
-    margin-top: 200px;
+    margin-top: 202px;
     width: 2px;
     height: 555px;
     background-color: #000; /* Cor da linha */
@@ -35,7 +36,7 @@
     border-radius: 100px;
 }
 
-
+/* modifica ambos os elementos */
 main, aside {
     padding-bottom: 20px;
 }
@@ -52,6 +53,7 @@ main{
     
 }
 
+/* modifica o titulo aulas sobre a tabela */
 #aula{
     margin-top: 100px;
     margin-left: 15px;
@@ -59,32 +61,67 @@ main{
 
 /* modifica apenas o aside */
 aside{
-    flex: 1;
+    flex: 2;
     background-color: yellowgreen;
     flex-direction: column;
     margin-right: 120px;
     margin-bottom: 85px;
     border: 1px solid black;
     border-radius: 25px;
-    height: 190px;
-    width: 1000px;
+
 }
 
+/* pequena modificação para o elemento <p> dentro do <aside> */
 aside p{
     margin-left: 10px;
 }
 
+/* ID para colocar espaço sobre as linhas das tabelas */
 #break{
     margin-top: 50px;
 }
 
-
-@media (min-width: 769px){
-    body{background-color: lightseagreen;
-    flex-direction: column;
+/* definição de tamanho para tela desktop cheia */
+@media (max-width: 1200px) {
+    .container {
+      padding: 0 40px;
+      gap: 20px;
     }
-}
+  
+    main {
+      width: 45%;
+      margin-right: 0;
+    }
+  
+    aside {
+      width: 50%;
+    }
+  
+    #line {
+        display: none;
+      left: 50%;
+    }
+  }
+  
+/* definição de taamnho para desktop reduzido */
+  @media (max-width: 992px) {
+    .container {
+      padding: 0 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    main, aside {
+      width: 90%;
+      margin: 10px 0;
+    }
+  
+    #line {
+      display: none;
+    }
+  }
 
+  /* definção de tamanho para mobile */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -102,7 +139,7 @@ aside p{
     }
 
     aside {
-        width: 90%;
+
         margin: 20px auto;
         height: auto;
     }
