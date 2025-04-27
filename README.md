@@ -139,7 +139,7 @@ https://www.figma.com/design/ncbsKxdbHCYvRl5TL874dG/Untitled?node-id=0-1&p=f&t=X
 <span id="sprint-1">
  
 ## :page_with_curl: SPRINT 1 
-<p align="justify">Na Primeira Sprint priorizamos para a criação dos modelos das telas do programa em Figma com protótipos das funcionalidades. Criamos as telas tanto para utilização em desktop quanto para mobile, visando a compatibilidade com ambos os dispositivos. Iniciamos o desenvolvimentos das primeiras telas em HTML/CSS para dar uma amostra de como será o resultado final, e também a criação do banco de dados SQL para o armazenamento das informações do sistema. </p>
+<p align="justify">Na Primeira Sprint priorizamos para a criação dos modelos das telas do programa em Figma com protótipos das funcionalidades. Criamos as telas tanto para utilização em desktop quanto para mobile, visando a compatibilidade com ambos os dispositivos. Iniciamos o desenvolvimento das primeiras telas em HTML/CSS para dar uma amostra de como será o resultado final, e também a criação do banco de dados SQL para o armazenamento das informações do sistema. </p>
 
 <br>
 
@@ -200,7 +200,7 @@ Praticar mais as reuniões e atualizações diárias das tarefas, evitando desen
 <span id="sprint-2">
  
 ## :page_with_curl: SPRINT 2 
-<p align="justify">Na Segunda Sprint ... </p>
+<p align="justify">Na Segunda Sprint priorizamos a criação das páginas em HTML/CSS dividias entre os membros da equipe, onde todos puderam compartilhar com seus conhecimentos agregando mais ao projeto e alinhando os ensinamentos. Realizamos um nivelamento de aprendizado com relação ao Javascript com toda a equipe, visando a melhor dinâmica para a próxima Sprint. </p>
 
 <br>
 
@@ -209,16 +209,16 @@ Praticar mais as reuniões e atualizações diárias das tarefas, evitando desen
 
 | ID REFERENCIA | Prioridade (Scrum Poker Planning) | REQUISITO DA SPRINT                                                                                                     | Responsável | TAREFA INICIADA | TAREFA CONCLUIDA |
 |---------------|-----------------------------------|--------------------------------------------------------------------------------------------------------------------------|-------------|------------------|-------------------|
-| ---           | ---                               | Finalizar a primeira versão da tela que foi designada em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. | Bruna       |                  |                   |
-| ---           | ---                               | Finalizar a primeira versão da tela que foi designada em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. | Suelen      |                  |                   |
-| ---           | ---                               | Finalizar a primeira versão da tela que foi designada em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. | Camila      |                  |                   |
-| ---           | ---                               | Finalizar a primeira versão da tela que foi designada em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. | Fernanda    |                  |                   |
-| ---           | ---                               | Finalizar a primeira versão da tela que foi designada em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. | Pedro       |                  |                   |
-| ---           | ---                               | Finalizar a primeira versão da tela que foi designada em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. | Ryan        |                  |                   |
-| ---           | ---                               | Finalizar a primeira versão da tela que foi designada em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. | Nicolas     |                  |                   |
-| ---           | ---                               | Finalizar a primeira versão da tela que foi designada em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. | Bruno       |                  |                   |
-| ---           | ---                               | Estudo em grupo de JavaScript para nivelamento dos membros do grupo.                                                     | Todos       |                  |                   |
-| ---           | ---                               | Estudo em grupo sobre node.js, express.js, e API para que todos do grupo possam atender aos requisitos da próxima Sprint | Todos       |                  |                   |
+|   RNF - 2     | 2 | Finalizar a primeira versão da tela que foi designada em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. | Bruna       |  ✔  |  |
+|   RNF - 2     | 2 | Finalizar a primeira versão da tela que foi designada em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. | Suelen      |  ✔  |  |
+|   RNF - 2     | 2 | Finalizar a primeira versão da tela que foi designada em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. | Camila      |  ✔  |  |
+|   RNF - 2     | 2 | Finalizar a primeira versão da tela que foi designada em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. | Fernanda    |  ✔  |  |
+|   RNF - 2     | 2 | Finalizar a primeira versão da tela que foi designada em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. | Pedro       |  ✔  |  |
+|   RNF - 2     | 2 | Finalizar a primeira versão da tela que foi designada em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. | Ryan        |  ✔  |  |
+|   RNF - 2     | 2 | Finalizar a primeira versão da tela que foi designada em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. | Nicolas     |  ✔  |  |
+|   RNF - 2     | 2 | Finalizar a primeira versão da tela que foi designada em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. | Bruno       |  ✔  |  |
+|   RNF - 1/ RNF - 2    | 6 | Estudo em grupo de JavaScript para nivelamento dos membros do grupo.       | Todos       |  ✔  |  |
+|   RNF - 1/ RNF - 2    | 6 | Estudo em grupo sobre node.js, express.js, e API para que todos do grupo possam atender aos requisitos da próxima Sprint | Todos       |   ✔  |  |
 
 <br>
 
