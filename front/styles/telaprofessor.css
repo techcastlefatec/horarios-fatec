@@ -1,150 +1,158 @@
-  /* padrão para toda a tela, todos os elementos */
-  body{
-    margin: 0px;
-    font-family: Arial, sans-serif;
-    font-size: 22px;
+/* ======= PADRÃO PARA TODA A TELA ======= */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 22px;
 }
 
-/*modifica a div que guarda os dois elementos principais da tela */
+/* ======= CONTAINER PRINCIPAL ======= */
 .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-
-/* linha que divide a tela, fica mais a esquerda, logo á direita dos dos dados professor */
-#line {
-    margin-top: 202px;
-    width: 2px;
-    height: 555px;
-    background-color: #000; /* Cor da linha */
-    position: absolute;
-    left: 600px;
-    top: 0;
-    z-index: 1; /* Ajuste se necessário pra não ficar atrás de outros elementos */
-}
-  
-  
-
-/* Edita a imagem (nofoto2) */
-.img{
-    display: flex;
-    margin-top: 40px;
-    margin-left: 90px;
-    width: 150px;
-    height: 150px;
-    border-radius: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative; /* Necessário para posicionar a linha */
+  padding: 20px;
 }
 
-/* modifica ambos os elementos */
+/* ======= LINHA VERTICAL (DINÂMICA) ======= */
+#divider-line {
+  position: absolute;
+  top: 100px; /* altura do header (ajuste conforme o seu header) */
+  bottom: 100px; /* altura do footer (ajuste conforme seu footer) */
+  left: 600px;
+  width: 2px;
+  background-color: #000;
+  z-index: 1;
+  transition: all 0.5s ease; /* animação suave para esconder/mostrar */
+}
+
+/* ======= IMAGEM DE PERFIL ======= */
+.profile-img {
+  display: flex;
+  margin-top: 40px;
+  margin-left: 90px;
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+  object-fit: cover;
+}
+
+/* ======= ÁREAS PRINCIPAIS ======= */
 main, aside {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
-/* modidica apenas o main */
-main{
-    flex: 1;
-    margin-top: 50px;
-    margin-left: 90px;
-    margin-bottom: 85px;
-    margin-right: 120px;
-    width: 200px;
-    height: 350px;
-    
+/* ======= SEÇÃO MAIN ======= */
+main {
+  flex: 1;
+  margin-top: 50px;
+  margin-left: 90px;
+  margin-right: 120px;
+  margin-bottom: 85px;
+  width: 200px;
+  height: 350px;
 }
 
-/* modifica o titulo aulas sobre a tabela */
-#aula{
-    margin-top: 100px;
-    margin-left: 15px;
+/* ======= SEÇÃO ASIDE ======= */
+aside {
+  flex: 2;
+  background-color: yellowgreen;
+  display: flex;
+  flex-direction: column;
+  margin-right: 120px;
+  margin-bottom: 85px;
+  border: 1px solid black;
+  border-radius: 25px;
+  padding: 10px;
 }
 
-/* modifica apenas o aside */
-aside{
-    flex: 2;
-    background-color: yellowgreen;
-    flex-direction: column;
-    margin-right: 120px;
-    margin-bottom: 85px;
-    border: 1px solid black;
-    border-radius: 25px;
-
+/* ======= TÍTULO AULAS ======= */
+#aula {
+  margin-top: 100px;
+  margin-left: 15px;
 }
 
-/* pequena modificação para o elemento <p> dentro do <aside> */
-aside p{
-    margin-left: 10px;
+/* ======= PARÁGRAFOS DENTRO DO ASIDE ======= */
+aside p {
+  margin-left: 10px;
 }
 
-/* ID para colocar espaço sobre as linhas das tabelas */
-#break{
-    margin-top: 50px;
+/* ======= ESPAÇO ENTRE ELEMENTOS ======= */
+#break {
+  margin-top: 50px;
 }
 
-/* definição de tamanho para tela desktop cheia */
+/* ======= RESPONSIVIDADE ======= */
+
+/* === DESKTOP GRANDE (até 1200px) === */
 @media (max-width: 1200px) {
-    .container {
-      padding: 0 40px;
-      gap: 20px;
-    }
-  
-    main {
-      width: 45%;
-      margin-right: 0;
-    }
-  
-    aside {
-      width: 50%;
-    }
-  
-    #line {
-        display: none;
-      left: 50%;
-    }
-  }
-  
-/* definição de taamnho para desktop reduzido */
-  @media (max-width: 992px) {
-    .container {
-      padding: 0 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-  
-    main, aside {
-      width: 90%;
-      margin: 10px 0;
-    }
-  
-    #line {
-      display: none;
-    }
+  .container {
+    padding: 0 40px;
+    gap: 20px;
   }
 
-  /* definção de tamanho para mobile */
+  main {
+    width: 45%;
+    margin-right: 0;
+  }
+
+  aside {
+    width: 50%;
+  }
+
+  #divider-line {
+    opacity: 0;
+    pointer-events: none;
+    transform: scaleY(0);
+  }
+}
+
+/* === DESKTOP MÉDIO (até 992px) === */
+@media (max-width: 992px) {
+  .container {
+    padding: 0 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  main, aside {
+    width: 90%;
+    margin: 10px 0;
+  }
+
+  #divider-line {
+    opacity: 0;
+    pointer-events: none;
+    transform: scaleY(0);
+  }
+}
+
+/* === TABLET / MOBILE (até 768px) === */
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    main {
-        margin: 20px;
-        width: auto;
-        height: auto;
-    }
+  main {
+    margin: 20px;
+    width: auto;
+    height: auto;
+  }
 
-    #line {
-        display: none; /* Esconde a linha em telas pequenas */
-    }
+  aside {
+    margin: 20px auto;
+    width: 90%;
+    height: auto;
+  }
 
-    aside {
+  .profile-img {
+    margin-left: 0;
+  }
 
-        margin: 20px auto;
-        height: auto;
-    }
-
-    .img {
-        margin-left: 0;
-    }
+  #divider-line {
+    opacity: 0;
+    pointer-events: none;
+    transform: scaleY(0);
+  }
 }
