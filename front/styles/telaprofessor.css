@@ -56,7 +56,6 @@ main {
 /* ======= SEÇÃO ASIDE ======= */
 aside {
   flex: 2;
-  background-color: yellowgreen;
   display: flex;
   flex-direction: column;
   margin-right: 120px;
