@@ -1,4 +1,4 @@
-insert into materia(nome)
+insert into tbdisciplina(nome)
 values 
 
 -- semestre 1
