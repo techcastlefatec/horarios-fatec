@@ -1,4 +1,4 @@
-insert into tbprofessor (nome)
+insert into tbprofessor (nome_professor)
 values
 ('Adilson Rodolfo Neves'),
 ('Adriana Antividad López Valverde'),

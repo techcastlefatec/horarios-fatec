@@ -1,4 +1,4 @@
-insert into tbcurso (nome)
+insert into tbcurso (nome_curso)
 values 
 ('Geoprocessamento'),
 ('Desenvolvimento de Software Multiplataforma'), 
