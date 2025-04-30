@@ -1,5 +1,8 @@
 insert into materia(nome)
 values 
+
+-- semestre 1
+
 ('Engenharia de Software I'),
 ('Sistemas Operacionais e Redes de Computadores'),
 ('Modelagem de Banco de Dados'),
@@ -7,12 +10,16 @@ values
 ('Desenvolvimento Web I'),
 ('Algoritmos e Lógicas de Programação'),
 
+--semestre 3
+
 ('Técnicas de Programação I'),
 ('Engenharia de Software II'),
 ('Desenvolvimento Web II'),
 ('Banco de Dados Realcional'),
 ('Matemática para Computação'),
 ('Estrutura de Dados'),
+
+-- semestre 3
 
 ('Banco de Dados não Relacional'),
 ('Técnicas de Programação II'),
@@ -22,6 +29,8 @@ values
 ('inglês I'),
 ('Desenvolvimento Web III'),
 
+-- semestre 4
+
 ('Programação para Dispositivos Móveis I'),
 ('Integração e Entrega Contínua'),
 ('Laboratório de Desenvolvimento Web'),
@@ -29,6 +38,8 @@ values
 ('Estatística Aplicada'),
 ('Experiência de Usuário'),
 ('Inglês II'),
+
+-- semestre 5
 
 ('Segurança no Desenvolvimento de Aplicações'),
 ('Programação para Dispositivos Móveis II'),
