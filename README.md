@@ -60,13 +60,13 @@
 
 ## 📘 Diagrama de Casos de Uso
 
-![Diagrama de Casos de Uso](Diagramas/Uso.png) 
+![Diagrama de Casos de Uso](Documentos/Diagramas/Uso.png) 
 
 ---
 
 ## 📗 Diagrama de Classes
 
-![Diagrama de Classes](Diagramas/Classe.png)
+![Diagrama de Classes](Documentos/Diagramas/Classe.png)
 
 <br>
 
@@ -75,7 +75,7 @@
 ## 🛢️ Modelo conceitual do banco de de dados - MER 
 
 
-![Modelo conceitual](Diagramas/modelo_conceitual-MER.png)
+![Modelo conceitual](Documentos/Diagramas/modelo_conceitual-MER.png)
 
 <br>
 

@@ -1,0 +1,106 @@
+<!-- Declaração do tipo de documento HTML -->
+<!DOCTYPE html>
+<html lang="pt-BR"> <!-- Define a linguagem padrão do documento como português do Brasil -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres para UTF-8, permitindo caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ajusta a escala para dispositivos móveis -->
+    <title>Horários de Aulas</title> <!-- Define o título da página que aparece na aba do navegador -->
+    <link rel="stylesheet" href="../styles/header-footer.css">
+    <!-- Importa o arquivo CSS externo para estilização da página -->
+    <link rel="stylesheet" href="../styles/consProf.css">
+</head>
+
+<body>
+    <!-- Cabeçalho da página -->
+    <header>
+        <div id="topo-header">
+            <div>
+                <img src="../images/cps.png" alt="Logo do Centro Paula Souza" class="logo-header">
+                <!-- Imagem do logotipo da CPS -->
+            </div>
+            <div>
+                <img src="../images/fatec-jac.png" alt="Logo da Fatec de Jacareí" class="logo-header">
+                <!-- Imagem do logotipo da Fatec -->
+            </div>
+            <div>
+                <img src="../images/sp.png" alt="Logo do Governo de São Paulo" class="logo-header">
+                <!-- Imagem do logotipo do GOV SP-->
+            </div>
+        </div>
+        <div class="linha"> </div>
+        <!-- Navegação principal da página -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li> <!-- Link para a página inicial -->
+                <li><a href="pages/professores.html">Professores</a></li> <!-- Link para a página de professores -->
+                <li><a href="#">Salas</a></li> <!-- Link fictício (não leva a lugar nenhum por enquanto) -->
+                <li class="secretaria-nav"><a href="pages/login.html">Área da Secretaria</a></li>
+                <!-- Link para a área da secretaria -->
+            </ul>
+        </nav>
+        <div class="linha"> </div>
+    </header>
+    <main class="main-content">
+        <div class="conteudo">
+            <h1 class="titulo-principal">Consulta de Professores</h1>
+            <h2 class="subtitulo">Professores disponíveis:</h2>
+
+        <div class="professores-grid">
+            <a href="#" class="prof-card" data-id="1"><div class="icon">&#128100;</div><p>Prof. Adilson Rodolfo Neves</p></a>
+            <a href="#" class="prof-card" data-id="2"><div class="icon">&#128100;</div><p>Prof. Adriana Antividad López Valverde</p></a>
+            <a href="#" class="prof-card" data-id="3"><div class="icon">&#128100;</div><p>Prof. André Olímpio</p></a>
+            <a href="#" class="prof-card" data-id="4"><div class="icon">&#128100;</div><p>Prof. Antonio Egídio São Thiago Graça</p></a>
+            <a href="#" class="prof-card" data-id="5"><div class="icon">&#128100;</div><p>Prof. Arley Ferreira de Souza</p></a>
+            <a href="#" class="prof-card" data-id="6"><div class="icon">&#128100;</div><p>Prof. Celso de Oliveira</p></a>
+            <a href="#" class="prof-card" data-id="7"><div class="icon">&#128100;</div><p>Prof. Daniel</p></a>
+            <a href="#" class="prof-card" data-id="8"><div class="icon">&#128100;</div><p>Prof. Daniel José de Andrade</p></a>
+            <a href="#" class="prof-card" data-id="9"><div class="icon">&#128100;</div><p>Prof. Érico Luciano Pagotto</p></a>
+            <a href="#" class="prof-card" data-id="10"><div class="icon">&#128100;</div><p>Prof. Fabrício Galende Marques de Carvalho</p></a>
+            <a href="#" class="prof-card" data-id="11"><div class="icon">&#128100;</div><p>Prof. Fernanda da Silveira Bueno</p></a>
+            <a href="#" class="prof-card" data-id="12"><div class="icon">&#128100;</div><p>Prof. Gerson Freitas Júnior</p></a>
+            <a href="#" class="prof-card" data-id="13"><div class="icon">&#128100;</div><p>Prof. Henrique Duarte Borges Louro</p></a>
+            <a href="#" class="prof-card" data-id="14"><div class="icon">&#128100;</div><p>Prof. Jane Delane Verona</p></a>
+            <a href="#" class="prof-card" data-id="15"><div class="icon">&#128100;</div><p>Prof. Joana Aparecida dos Santos Mohallen Paiva</p></a>
+            <a href="#" class="prof-card" data-id="16"><div class="icon">&#128100;</div><p>Prof. Jorge Tadeo Matsushima</p></a>
+            <a href="#" class="prof-card" data-id="17"><div class="icon">&#128100;</div><p>Prof. Karen Espinosa</p></a>
+            <a href="#" class="prof-card" data-id="18"><div class="icon">&#128100;</div><p>Prof. Kenji Taniguchi</p></a>
+            <a href="#" class="prof-card" data-id="19"><div class="icon">&#128100;</div><p>Prof. Lucilene Nunes Pimenta</p></a>
+            <a href="#" class="prof-card" data-id="20"><div class="icon">&#128100;</div><p>Prof. Luiz Gustavo Gallardo Mendes</p></a>
+            <a href="#" class="prof-card" data-id="21"><div class="icon">&#128100;</div><p>Prof. Luiz Sérgio Gonçalves Aguilar</p></a>
+            <a href="#" class="prof-card" data-id="22"><div class="icon">&#128100;</div><p>Prof. Marcelo Augusto Sudo</p></a>
+            <a href="#" class="prof-card" data-id="23"><div class="icon">&#128100;</div><p>Prof. Maria Lúcia de Oliveira</p></a>
+            <a href="#" class="prof-card" data-id="24"><div class="icon">&#128100;</div><p>Prof. Mariana Timponi Rodrigues</p></a>
+            <a href="#" class="prof-card" data-id="25"><div class="icon">&#128100;</div><p>Prof. Mário Sérgio Solfo Scalabrinno</p></a>
+            <a href="#" class="prof-card" data-id="26"><div class="icon">&#128100;</div><p>Prof. Matheus de Oliveira Lorena</p></a>
+            <a href="#" class="prof-card" data-id="27"><div class="icon">&#128100;</div><p>Prof. Nanci de Oliveira</p></a>
+            <a href="#" class="prof-card" data-id="28"><div class="icon">&#128100;</div><p>Prof. Neymar Siqueira Dellareti</p></a>
+            <a href="#" class="prof-card" data-id="29"><div class="icon">&#128100;</div><p>Prof. Nilton de Jesus</p></a>
+            <a href="#" class="prof-card" data-id="30"><div class="icon">&#128100;</div><p>Prof. Paulo José Maria Filho</p></a>
+            <a href="#" class="prof-card" data-id="31"><div class="icon">&#128100;</div><p>Prof. Renato Mortin</p></a>
+            <a href="#" class="prof-card" data-id="32"><div class="icon">&#128100;</div><p>Prof. Risélede Lucia dos Santos</p></a>
+            <a href="#" class="prof-card" data-id="33"><div class="icon">&#128100;</div><p>Prof. Rita de Cássia von Randow</p></a>
+            <a href="#" class="prof-card" data-id="34"><div class="icon">&#128100;</div><p>Prof. Rodrigo Monteiro de Barros Santana</p></a>
+            <a href="#" class="prof-card" data-id="35"><div class="icon">&#128100;</div><p>Prof. Ronaldo Emerick Moreira</p></a>
+            <a href="#" class="prof-card" data-id="36"><div class="icon">&#128100;</div><p>Prof. Samara Nihlala J.C. Hassmann</p></a>
+            <a href="#" class="prof-card" data-id="37"><div class="icon">&#128100;</div><p>Prof. Selma Candelária Genari</p></a>
+            <a href="#" class="prof-card" data-id="38"><div class="icon">&#128100;</div><p>Prof. Vivian C.C. Hyodo</p></a>
+            <a href="#" class="prof-card" data-id="39"><div class="icon">&#128100;</div><p>Prof. Wellington Rios</p></a>
+            <a href="#" class="prof-card" data-id="40"><div class="icon">&#128100;</div><p>Prof. Yara da Cruz Ferreira</p></a>
+          </div>
+        </div>
+    </main>
+    <!-- <script src="scripts/SEU-ARQUIVO.js"></script>  Importa o suas funcionalidades.js -->
+    <script src="../scripts/script.js"></script>
+    <!-- Importa o arquivo JavaScript para funcionalidades da barra de navegação -->
+    <!-- Rodapé da página -->
+    <footer>
+        
+        
+    </footer>
+
+
+</body>
+
+</html>
