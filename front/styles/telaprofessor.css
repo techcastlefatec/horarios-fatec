@@ -1,0 +1,157 @@
+/* ======= PADRÃO PARA TODA A TELA ======= */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 22px;
+}
+
+/* ======= CONTAINER PRINCIPAL ======= */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative; /* Necessário para posicionar a linha */
+  padding: 20px;
+}
+
+/* ======= LINHA VERTICAL (DINÂMICA) ======= */
+#divider-line {
+  position: absolute;
+  top: 100px; /* altura do header (ajuste conforme o seu header) */
+  bottom: 100px; /* altura do footer (ajuste conforme seu footer) */
+  left: 600px;
+  width: 2px;
+  background-color: #000;
+  z-index: 1;
+  transition: all 0.5s ease; /* animação suave para esconder/mostrar */
+}
+
+/* ======= IMAGEM DE PERFIL ======= */
+.profile-img {
+  display: flex;
+  margin-top: 40px;
+  margin-left: 90px;
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+  object-fit: cover;
+}
+
+/* ======= ÁREAS PRINCIPAIS ======= */
+main, aside {
+  padding-bottom: 20px;
+}
+
+/* ======= SEÇÃO MAIN ======= */
+main {
+  flex: 1;
+  margin-top: 50px;
+  margin-left: 90px;
+  margin-right: 120px;
+  margin-bottom: 85px;
+  width: 200px;
+  height: 350px;
+}
+
+/* ======= SEÇÃO ASIDE ======= */
+aside {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  margin-right: 120px;
+  margin-bottom: 85px;
+  border: 1px solid black;
+  border-radius: 25px;
+  padding: 10px;
+}
+
+/* ======= TÍTULO AULAS ======= */
+#aula {
+  margin-top: 100px;
+  margin-left: 15px;
+}
+
+/* ======= PARÁGRAFOS DENTRO DO ASIDE ======= */
+aside p {
+  margin-left: 10px;
+}
+
+/* ======= ESPAÇO ENTRE ELEMENTOS ======= */
+#break {
+  margin-top: 50px;
+}
+
+/* ======= RESPONSIVIDADE ======= */
+
+/* === DESKTOP GRANDE (até 1200px) === */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 40px;
+    gap: 20px;
+  }
+
+  main {
+    width: 45%;
+    margin-right: 0;
+  }
+
+  aside {
+    width: 50%;
+  }
+
+  #divider-line {
+    opacity: 0;
+    pointer-events: none;
+    transform: scaleY(0);
+  }
+}
+
+/* === DESKTOP MÉDIO (até 992px) === */
+@media (max-width: 992px) {
+  .container {
+    padding: 0 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  main, aside {
+    width: 90%;
+    margin: 10px 0;
+  }
+
+  #divider-line {
+    opacity: 0;
+    pointer-events: none;
+    transform: scaleY(0);
+  }
+}
+
+/* === TABLET / MOBILE (até 768px) === */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main {
+    margin: 20px;
+    width: auto;
+    height: auto;
+  }
+
+  aside {
+    margin: 20px auto;
+    width: 90%;
+    height: auto;
+  }
+
+  .profile-img {
+    margin-left: 0;
+  }
+
+  #divider-line {
+    opacity: 0;
+    pointer-events: none;
+    transform: scaleY(0);
+  }
+}

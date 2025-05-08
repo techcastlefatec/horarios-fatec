@@ -1,0 +1,78 @@
+<!-- Declaração do tipo de documento HTML -->
+<!DOCTYPE html>
+<html lang="pt-BR"> <!-- Define a linguagem padrão do documento como português do Brasil -->
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres para UTF-8, permitindo caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta a escala para dispositivos móveis -->
+    <title>Tela do Professor</title> <!-- Define o título da página que aparece na aba do navegador -->
+    <link rel="stylesheet" href="../styles/header-footer.css"> <!-- Importa o arquivo CSS externo para estilização da página -->
+    <!--  <link rel="stylesheet" href="styles/SEU-ARQUIVO.css"> Importa o arquivo CSS que voce criar -->
+   
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="../styles/telaprofessor.css">
+
+</head>
+<body>
+
+    <!-- Cabeçalho da página -->
+   <header>
+    <div id="topo-header"> 
+        <div>
+            <img src="../images/cps.png" alt="Logo do Centro Paula Souza" class="logo-header"> <!-- Imagem do logotipo da CPS -->
+        </div>
+    <div>
+        <img src="../images/fatec-jac.png" alt="Logo da Fatec de Jacareí" class="logo-header"> <!-- Imagem do logotipo da Fatec -->
+    </div>
+    <div>
+        <img src="../images/sp.png" alt="Logo do Governo de São Paulo" class="logo-header"> <!-- Imagem do logotipo do GOV SP-->
+    </div>
+    </div>
+    <div class="linha"> </div>
+    <!-- Navegação principal da página -->
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li> <!-- Link para a página inicial -->
+            <li><a href="../pages/professores.html">Professores</a></li> <!-- Link para a página de professores -->
+            <li><a href="#">Salas</a></li> <!-- Link fictício (não leva a lugar nenhum por enquanto) -->
+            <li class="secretaria-nav"><a href="../pages/login.html">Área da Secretaria</a></li> <!-- Link para a área da secretaria -->
+        </ul>
+    </nav>
+    <div class="linha"> </div>
+    </header>
+    
+    <div class="container">
+        <main> <!-- dados pessoais -->
+            <div>
+            <img src="../images/nofoto2.png" alt="foto-perfil" class="profile-img">
+            </div>
+            <div>
+                <div id="break">
+                <p><strong>Nome:</strong><br>Prof. Esp. Marcelo Augusto Sudo</p>
+                </div>
+            </div>
+            <div id="break">
+                <p><strong>Email Institucional:</strong></p>
+            </div>
+        </main>
+
+        <div id="divider-line"></div>
+
+        <div>
+            <div id="aula"><strong>Aulas:</strong></div>
+        <aside> <!-- tabela com as informações pedagógicas -->
+            <p><strong>Curso:</strong> Desenvolvimento de Software Multiplataforma</p>
+            <p id="break"><strong>Matéria:</strong> Design Digital, Modelagem de Banco de Dados</p>
+            <p id="break"><strong>Turma:</strong> 1DSM</p>
+        </aside>
+        </div>
+    </div>
+
+    <!-- <script src="scripts/SEU-ARQUIVO.js"></script>  Importa o suas funcionalidades.js -->
+    <script src="../scripts/navbar.js"></script> <!-- Importa o arquivo JavaScript para funcionalidades da barra de navegação -->
+    <!-- Rodapé da página -->
+    <footer>
+      
+    </footer>    
+    
+</body>
+</html>
