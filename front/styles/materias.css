@@ -1,0 +1,228 @@
+/* HEADER */
+
+/* Estiliza o cabeçalho da página */
+header {
+    
+    font-family: Arial, sans-serif; /* Fonte usada no cabeçalho */
+}
+
+/* Container das logos */
+#topo-header {
+    background-color: #80ADB6; /* Cor de fundo da parte superior do header */
+    display: flex; /* Layout em linha */
+    justify-content: space-between; /* Espaçamento igual entre os itens */
+    flex-wrap: wrap; /* Permite quebra de linha em telas pequenas */
+}
+
+/* Estiliza cada logotipo do cabeçalho */
+.logo-header {
+    height: 100px; /* Altura da imagem */
+    width: 200px; /* Largura da imagem */
+    margin: 10px; /* Espaço externo ao redor da imagem */
+    object-fit: contain; /* Garante que a imagem não distorça */
+}
+
+/* Linha branca que separa o header da navegação */
+.linha {
+    height: 10px; /* Altura da linha */
+    background-color: white; /* Cor da linha */
+}
+
+/* NAV */
+
+/* Container da barra de navegação */
+nav {
+    background-color: red; /* Cor de fundo da barra de navegação */
+    padding: 15px; /* Espaçamento interno */
+}
+
+/* Lista de navegação sem estilos padrões */
+nav ul {
+    list-style: none; /* Remove marcadores da lista */
+    display: flex; /* Itens em linha */
+    justify-content: flex-start; /* Alinha os itens à esquerda */
+    padding: 0; /* Remove padding interno */
+    margin: 0; /* Remove margem externa */
+}
+
+/* Cada item da lista de navegação */
+nav ul li {
+    margin-right: 20px; /* Espaçamento entre os itens */
+}
+
+/* Links da navegação */
+nav ul li a {
+    color: white; /* Cor do texto */
+    text-decoration: none; /* Remove sublinhado */
+    font-size: 18px; /* Tamanho da fonte */
+}
+
+/* Empurra o item da secretaria para a extrema direita */
+.secretaria-nav {
+    margin-left: auto;
+}
+
+/* Define cor de fundo da página */
+body {
+    background-color: #80ADB6;
+}
+
+/* CADASTRO DE MATÉRIAS */
+
+/* Container do título e seletor de curso */
+#cadastro-matérias {
+    display: flex; /* Coloca elementos em linha */
+    justify-content: space-between; /* Espaça entre título e seletor */
+    align-items: center; /* Alinha verticalmente */
+    margin: 50px 200px 0 200px; /* Margem externa */
+    font-family: Arial, sans-serif;
+    flex-wrap: wrap; /* quebra linha em telas menores */
+}
+
+/* Título "Cadastro de Matérias" */
+h2 {
+    font-size: 24px; /* Ajuste o tamanho do texto */
+    margin: 0;
+    color: black; /* Cor do texto */
+    transition: color 0.3s ease; /* Transição suave de cor */
+}
+
+h2:hover {
+    color: #333; /* Cor do título ao passar o mouse */
+}
+
+/* Seletor de curso */
+#selecao-curso {
+    height: 30px;
+    align-self: flex-start; /* Alinha ao topo */
+    font-size: 16px;
+    background-color: #D9D9D9;
+    border: 1px solid #333;
+    border-radius: 4px;
+    cursor: pointer; /* Mostra ponteiro ao passar o mouse */
+}
+
+#selecao-curso:hover {
+    background-color: #e4e0e0;
+}
+
+/* FORMULÁRIO DE DISCIPLINA */
+
+/* Container do formulário de cadastro */
+#Disciplina {
+    margin: 50px auto 0 auto; /* Centraliza horizontalmente */
+    margin-top: 30px; /* Espaçamento superior */
+    max-width: 90%;
+    width: 1000px;  /* mantém largura ideal em telas grandes */
+    background-color: #d9d9d9;
+    padding: 20px;
+    border-radius: 15px 15px 0 0; /* Cantos arredondados em cima */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+/* Cada linha do formulário (label + input) */
+#Disciplina div {
+    margin-bottom: 15px; /* Espaço entre os campos */
+    display: flex; /* Coloca label e input em linha */
+    align-items: center; /* Alinha verticalmente */
+}
+
+/* Estilo dos rótulos dos inputs */
+label {
+    font-size: 20px;
+    width: 90px; /* Largura fixa */
+}
+
+/* Estilo dos campos de entrada */
+input {
+    width: 400px; /* Largura dos inputs */
+    font-size: 20px; /* Tamanho da fonte igual ao label */
+    padding: 6px 10px; /* Espaço interno */
+    border: 1px solid black;
+    border-radius: 3px;
+    line-height: 1.2; /* Altura da linha do texto */
+    box-sizing: border-box; /* Inclui padding na largura */
+}
+
+/* Rodapé do formulário */
+.form-footer {
+    background-color: #666; /* Fundo escuro */
+    padding: 15px; /* Espaço interno */
+    border-radius: 0 0 15px 15px; /* Cantos arredondados embaixo */
+    text-align: right; /* Alinha botão à direita */
+}
+
+/* Estilo do botão de envio */
+.form-footer button {
+    padding: 10px 20px;
+    background-color: #D9D9D9;
+    color: black;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #333;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+    cursor: pointer;
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+.form-footer button:hover {
+    background-color: #e4e0e0;
+}
+
+/* Estilos para dispositivos móveis */
+
+@media (max-width: 768px) {
+
+    #cadastro-matérias {
+        flex-direction: column; /* Coloca título e seletor em coluna */
+        margin: 50px 20px 0 20px; /* Reduz a margem */
+    }
+
+    h2 {
+        font-size: 18px; /* Diminui o tamanho do título em telas pequenas */
+        text-align: center; /* Centraliza o título em telas menores */
+    }
+
+    #selecao-curso {
+        width: 100%; /* Seletor ocupa toda a largura */
+    }
+
+   
+    #Disciplina div {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    label, input {
+      width: 100%;
+    }
+
+    #topo-header {
+        justify-content: center; /* Centraliza os logos em telas pequenas */
+    }
+
+    .logo-header {
+        max-height: 80px; /* Adicionado para limitar a altura das imagens */
+        width: 150px; /* Largura ajustada para 150px */
+        margin: 10px; /* Mantido o espaçamento entre as logos */
+        object-fit: contain; /* Garante que as imagens não sejam distorcidas */
+        transition: transform 0.3s ease; /* Adicionado para uma animação suave ao passar o mouse */
+    }
+    
+}  
+
+/* FOOTER */
+
+/* Rodapé da página */
+footer {
+    background-color: #474a51; /* Fundo escuro */
+    color: white; /* Cor do texto */
+    text-align: center; /* Centraliza conteúdo */
+    padding: 20px; /* Espaço interno */
+    margin-top: 80px; /* Espaço acima do rodapé */
+    height: 120px; /* Altura fixa */
+    font-family: Arial, sans-serif;
+    bottom: 0;
+    left: 0;
+}
