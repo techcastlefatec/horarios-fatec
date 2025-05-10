@@ -10,7 +10,7 @@ as que fize<h1 align="center">Fatec Jacareí- DSM 1º SEMESTRE</h1>
 
 | Sprint | Link        | Início      | Entrega     | Status |
 |--------|-------------|-------------|-------------|--------|
-| 01     | [Sprint 01](#sprint-1) | 24/03/2025  | 15/04/2025  |       |
+| 01     | [Sprint 01](#sprint-1) | 24/03/2025  | 15/04/2025  |   ✔   |
 | 02     | [Sprint 02](#sprint-2) | 16/04/2025  | 13/05/2025  |       |
 | 03     | [Sprint 03](#sprint-3) | 14/05/2025  | 11/06/2025  |       |
 
