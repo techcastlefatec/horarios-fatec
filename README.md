@@ -219,6 +219,8 @@ Praticar mais as reuniões e atualizações diárias das tarefas, evitando desen
 |   RNF - 2     | 2 | Finalizar a primeira versão da tela que foi designada em HTML, estilizando em CSS de acordo com o design do Figma e colocar as funcionalidades em JavaScript, quando necessário. | Bruno       |  ✔  | ✔ |
 |   RNF - 1/ RNF - 2    | 6 | Estudo em grupo de JavaScript para nivelamento dos membros do grupo.       | Todos       |  ✔  | ✔ |
 |   RNF - 1/ RNF - 2    | 6 | Estudo em grupo sobre node.js, express.js, e API para que todos do grupo possam atender aos requisitos da próxima Sprint | Todos       |   ✔  | ✔ |
+|   RNF - 2     | 2 | Fazer a hospedagem do banco de dados na plataforma Render | Bruno       |  ✔  | ✔ |
+|   RNF - 2     | 2 | Criar uma API que forneça endpoints para manipulação de dados e integração com o frontend do trabalho  | Bruno      |  ✔  | ✔ |
 
 <br>
 
