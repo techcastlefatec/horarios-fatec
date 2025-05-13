@@ -229,7 +229,7 @@ Praticar mais as reuniões e atualizações diárias das tarefas, evitando desen
 ### • Burndown Sprint 2
 <br>
 
-...
+![Burndown](Documentos/Burndown/burndownSprint2.png)
 
 <br>
 
