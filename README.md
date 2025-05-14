@@ -236,15 +236,16 @@ Praticar mais as reuniões e atualizações diárias das tarefas, evitando desen
 ### • Sprint Retrospective 
 <br>
 
-**1. O que funcionou bem durante o sprint?**
+**1. O que funcionou bem durante a Sprint?**
 <br>
-A forma de divisão de tarefas que fizemos com todos os membros da equipe, respeitando os prazos e agregando conhecimentos para cada um, além de permitir a interação de uns com os outros, ajudando e redividindo as tarefas, quando necessário.
+A forma de divisão de tarefas feita com todos os membros da equipe, respeitando as necessidades individuais e agregando conhecimentos para cada um, além de permitir a interação de uns com os outros, incentivando a cooperação e redividindo as tarefas quando necessário.
 
-**2. O que não funcionou tão bem durante o sprint?**
+**2. O que não funcionou tão bem durante a Sprint?**
 <br>
-Tudo funcionou bem!
+Os trabalhos realizados poderiam ter tido um pouco mais de celeridade para que pudéssemos agregar mais tarefas à Sprint.
 
-**3. Quais ações podemos tomar para melhorar no próximo sprint?**
+
+**3. Quais ações podemos tomar para melhorar na próximo Sprint?**
 <br>
-Não conseguimos identificar no momento pontos de melhoria, mas manter o pensamento de efetivar as tarefas o quanto antes para não sobrecarregar a equipe na reta final.
+Melhorar as revisões de código e testes para garantir que não haja imprevistos na entrega final.
 <br>
