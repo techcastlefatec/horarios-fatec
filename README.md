@@ -60,7 +60,7 @@
 
 ## 📘 Diagrama de Casos de Uso
 
-![Diagrama de Casos de Uso](Documentos/Diagramas/Uso.png) 
+![Diagrama de Casos de Uso](Documentos/Diagramas/Uso.png)
 
 ---
 
@@ -75,7 +75,7 @@
 ## 🛢️ Modelo conceitual do banco de de dados - MER 
 
 
-![Modelo conceitual](Documentos/Diagramas/modelo_conceitual-MER.png)
+![Modelo conceitual](Documentos/Diagramas/MER.png)
 
 <br>
 
@@ -225,15 +225,21 @@ Praticar mais as reuniões e atualizações diárias das tarefas, evitando desen
 <br>
 <br>
 
-## 📘 Diagrama de Atividade Aluno
+## 📕 Diagrama de Atividade Aluno
 
 ![Diagrama de Atividade](Documentos/Diagramas/AtividadeAluno.png) 
 
 ---
 
-## 📘 Diagrama de Atividade Secretaria
+## 📒 Diagrama de Atividade Secretaria
 
 ![Diagrama de Atividade](Documentos/Diagramas/AtividadeSecretaria.png)
+
+---
+
+## 📙 Diagrama de Sequência
+
+![Diagrama de Sequencia](Documentos/Diagramas/Sequencia.png)
 
 <br>
 <br>
