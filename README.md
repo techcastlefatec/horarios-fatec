@@ -239,7 +239,7 @@ Praticar mais as reuniões e atualizações diárias das tarefas, evitando desen
 
 ## 📙 Diagrama de Sequência
 
-![Diagrama de Atividade](Documentos/Diagramas/Sequencia.png)
+![Diagrama de Sequencia](Documentos/Diagramas/Sequencia.png)
 
 <br>
 <br>
