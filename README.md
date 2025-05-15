@@ -60,7 +60,7 @@
 
 ## 📘 Diagrama de Casos de Uso
 
-![Diagrama de Casos de Uso](Documentos/Diagramas/Uso.png) 
+![Diagrama de Casos de Uso](Documentos/Diagramas/Uso.png)
 
 ---
 
@@ -75,7 +75,7 @@
 ## 🛢️ Modelo conceitual do banco de de dados - MER 
 
 
-![Modelo conceitual](Documentos/Diagramas/modelo_conceitual-MER.png)
+![Modelo conceitual](Documentos/Diagramas/MER.png)
 
 <br>
 
