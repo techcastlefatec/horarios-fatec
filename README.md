@@ -31,6 +31,7 @@
 | RF - 3                 | Garantir que o cadastro ou a ingestão de dados satisfaça as regras básicas de alocação da faculdade (ex.: duas turmas diferentes não podem ser alocadas na mesma sala, e um professor não pode ter duas turmas no mesmo horário)                                                                                                         | #02     |
 | RF - 4                 | Permitir que o sistema exporte relatórios/mapas de ambientes e horários em formato PDF                     | #03 |
 | RF - 5                 | Permitir consultas no sistema (ex.: por turma, turno, professor, data) para apoiar a gestão da faculdade   | #02     |
+| RF - 6                 |Fazer o deploy do projeto em alguma plataforma escolhida pelos grupo. (Plataforma escolhida: https://render.com)   | #03     |
 
 ### REQUISITOS NÃO FUNCIONAIS
 
