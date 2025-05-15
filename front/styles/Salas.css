@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+svg text {
+  fill: black;
+  cursor: pointer;
+  user-select: none;
+}
+
+svg rect {
+  stroke: black;
+  stroke-width: 2;
+  fill: none;
+  cursor: pointer;
+}
+
+svg rect:hover {
+  stroke: gray;
+}
+
+.active-text {
+  fill: red;
+}
+
+.active-rect {
+  stroke: red;
+}
+
+#info {
+  margin-top: 20px;
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
