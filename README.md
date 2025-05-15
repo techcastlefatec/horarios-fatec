@@ -180,20 +180,20 @@ https://www.figma.com/design/ncbsKxdbHCYvRl5TL874dG/Untitled?node-id=0-1&p=f&t=X
 ### • Sprint Retrospective 
 <br>
 
-**1. O que funcionou bem durante o sprint?**
+**1. O que funcionou bem durante a Sprint?**
 <br>
 Funcionou bem a divisão de tarefas que fizemos, atribuindo partes do projeto para cada um dos membros da equipe com prazos para o cumprimento das demandas e interação com todos para aprovação das idéias propostas.
 
-**2. O que não funcionou tão bem durante o sprint?**
+**2. O que não funcionou tão bem durante a Sprint?**
 <br>
 Ocorreu uma falha de comunicação em um determinado momento onde não ficou claro uma tarefa mas foi rapidamente corrigida.
 
-**3. Quais ações podemos tomar para melhorar no próximo sprint?**
+**3. Quais ações podemos tomar para melhorar na próxima Sprint?**
 <br>
 Praticar mais as reuniões e atualizações diárias das tarefas, evitando desencontros.
 <br>
 
-### Link do Vídeo https://youtu.be/UPejV6HgdTA?si=67n6WXczgsloSbuc
+### Link do Vídeo de apresentação da Sprint https://youtu.be/UPejV6HgdTA?si=67n6WXczgsloSbuc
 
 <br>
 <br>
@@ -266,4 +266,9 @@ Os trabalhos realizados poderiam ter tido um pouco mais de celeridade para que p
 **3. Quais ações podemos tomar para melhorar na próximo Sprint?**
 <br>
 Melhorar as revisões de código e testes para garantir que não haja imprevistos na entrega final.
+<br>
+<br>
+
+### Link do Vídeo de apresentação da Sprint https://www.youtube.com/watch?v=0FuPHoNnCh8
+
 <br>
