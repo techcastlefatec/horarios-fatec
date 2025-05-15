@@ -227,13 +227,13 @@ Praticar mais as reuniões e atualizações diárias das tarefas, evitando desen
 
 ## 📘 Diagrama de Atividade Aluno
 
-![Diagrama de Atividade](Documentos/Diagramas/Activity Diagram Aluno.png) 
+![Diagrama de Atividade](Documentos/Diagramas/Activity_Diagram_Aluno.png) 
 
 ---
 
 ## 📘 Diagrama de Atividade Secretaria
 
-![Diagrama de Atividade](Documentos/Diagramas/Activity Diagram Secretaria.png)
+![Diagrama de Atividade](Documentos/Diagramas/Activity_Diagram_Secretaria.png)
 
 <br>
 <br>
