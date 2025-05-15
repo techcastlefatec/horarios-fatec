@@ -1,4 +1,4 @@
-as que fize<h1 align="center">Fatec Jacareí- DSM 1º SEMESTRE</h1>
+<h1 align="center">Fatec Jacareí- DSM 1º SEMESTRE</h1>
 
 # <p>Equipe 💻: TechCastle </p>
 <br>
@@ -223,7 +223,19 @@ Praticar mais as reuniões e atualizações diárias das tarefas, evitando desen
 |   RNF - 2     | 2 | Criar uma API que forneça endpoints para manipulação de dados e integração com o frontend do trabalho  | Bruno      |  ✔  | ✔ |
 
 <br>
+<br>
 
+## 📘 Diagrama de Atividade Aluno
+
+![Diagrama de Atividade](Documentos/Diagramas/Activity_Diagram_Aluno.png) 
+
+---
+
+## 📘 Diagrama de Atividade Secretaria
+
+![Diagrama de Atividade](Documentos/Diagramas/Activity_Diagram_Secretaria.png)
+
+<br>
 <br>
 
 ### • Burndown Sprint 2
