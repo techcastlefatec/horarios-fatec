@@ -223,7 +223,19 @@ Praticar mais as reuniões e atualizações diárias das tarefas, evitando desen
 |   RNF - 2     | 2 | Criar uma API que forneça endpoints para manipulação de dados e integração com o frontend do trabalho  | Bruno      |  ✔  | ✔ |
 
 <br>
+<br>
 
+## 📘 Diagrama de Atividade Aluno
+
+![Diagrama de Atividade](Documentos/Diagramas/Activity Diagram Aluno.png) 
+
+---
+
+## 📘 Diagrama de Atividade Secretaria
+
+![Diagrama de Atividade](Documentos/Diagramas/Activity Diagram Secretaria.png)
+
+<br>
 <br>
 
 ### • Burndown Sprint 2
