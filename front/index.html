@@ -5,37 +5,13 @@
     <meta charset="UTF-8"> <!-- Define a codificação de caracteres para UTF-8, permitindo caracteres especiais -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta a escala para dispositivos móveis -->
     <title>Horários de Aulas</title> <!-- Define o título da página que aparece na aba do navegador -->
-    <link rel="stylesheet" href="../styles/style.css"> <!-- Importa o arquivo CSS externo para estilização da página -->
+    <link rel="stylesheet" href="../styles/index.css"> <!-- Importa o arquivo CSS externo para estilização da página -->
     <link rel="stylesheet" href="../styles/header-footer.css">
+    <script defer src="../scripts/header-footer.js"></script>
 </head>
 <body>
-    <!-- Cabeçalho da página -->
-   <header>
-    <div id="topo-header"> 
-        <div>
-            <img src="../images/cps.png" alt="Logo do Centro Paula Souza" class="logo-header"> <!-- Imagem do logotipo da CPS -->
-        </div>
-    <div>
-        <img src="../images/fatec-jac.png" alt="Logo da Fatec de Jacareí" class="logo-header"> <!-- Imagem do logotipo da Fatec -->
-    </div>
-    <div>
-        <img src="../images/sp.png" alt="Logo do Governo de São Paulo" class="logo-header"> <!-- Imagem do logotipo do GOV SP-->
-    </div>
-    </div>
-    <div class="linha"> </div>
-    <!-- Navegação principal da página -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li> <!-- Link para a página inicial -->
-            <li><a href="pages/professores.html">Professores</a></li> <!-- Link para a página de professores -->
-            <li><a href="#">Salas</a></li> <!-- Link fictício (não leva a lugar nenhum por enquanto) -->
-            <li class="secretaria-nav"><a href="pages/login.html">Área da Secretaria</a></li> <!-- Link para a área da secretaria -->
-        </ul>
-    </nav>
-    <div class="linha"> </div>
-    </header>
     
-    <!-- Seção do título principal -->
+     <!-- Seção do título principal -->
     <div id="titulo">
         <h1>Horários de Aulas</h1> <!-- Título principal da página -->
         <p>Horários dos cursos da Fatec Jacareí para o ano letivo de 2025</p> <!-- Pequena descrição da página -->
@@ -46,28 +22,70 @@
         <!-- Curso 1: Desenvolvimento de Software Multiplataforma -->
         <div class="curso">
             <h2>Desenvolvimento de Software Multiplataforma</h2> <!-- Nome do curso -->
-            <div class="carrosel" id="carrosel-dsm"></div> <!-- Espaço para um carrossel de imagens ou informações sobre o curso -->
+            <div class="logo-curso" id="curso-dsm">
+                <img src="images/dsm1.png" alt="Imagem do curso Desenvolvimento de Software Multiplataforma" class="imagem-curso"> <!-- Imagem representativa do curso -->
+            </div> 
+            <!-- Menu toggle de semestres -->
+            <div class="menu-toggle">
+                <button class="toggle-button">
+                    Ver Turmas <span class="seta">&#9660;</span> <!-- ▼ -->
+                </button>
+                <ul class="semestre-menu">
+                    <li><a href="pages/QuadroDeHorarios.html/1">1º SEMESTRE</a></li>
+                    <li><a href="pages/QuadroDeHorarios.html">2º SEMESTRE</a></li>
+                    <li><a href="pages/QuadroDeHorarios.html">3º SEMESTRE</a></li>
+                    <li><a href="pages/QuadroDeHorarios.html">4º SEMESTRE</a></li>
+                    <li><a href="pages/QuadroDeHorarios.html">5º SEMESTRE</a></li>
+                    <li><a href="pages/QuadroDeHorarios.html">6º SEMESTRE</a></li>
+                </ul>
+            </div>
         </div>
         
         <!-- Curso 2: Meio Ambiente e Recursos Hídricos -->
         <div class="curso">
             <h2>Meio Ambiente e Recursos Hídricos</h2>
-            <div class="carrosel" id="carrosel-marh"></div>
+            <div class="logo-curso" id="curso-marh">
+                <img src="../images/marh1.png" alt="Imagem do curso Meio Ambiente e Recursos Hídricos" class="imagem-curso"> <!-- Imagem representativa do curso -->
+            </div>
+            <div class="menu-toggle">
+                 <button class="toggle-button">
+                    Ver Turmas <span class="seta">&#9660;</span> <!-- ▼ -->
+                </button>
+                <ul class="semestre-menu">
+                    <li><a href="pages/QuadroDeHorarios.html">1º SEMESTRE</a></li>
+                    <li><a href="pages/QuadroDeHorarios.html">2º SEMESTRE</a></li>
+                    <li><a href="pages/QuadroDeHorarios.html">3º SEMESTRE</a></li>
+                    <li><a href="pages/QuadroDeHorarios.html">4º SEMESTRE</a></li>
+                    <li><a href="pages/QuadroDeHorarios.html">5º SEMESTRE</a></li>
+                    <li><a href="pages/QuadroDeHorarios.html">6º SEMESTRE</a></li>
+                </ul>
+            </div>
         </div>
         
         <!-- Curso 3: Geoprocessamento -->
         <div class="curso">
             <h2>Geoprocessamento</h2>
-            <div class="carrosel" id="carrosel-geo"></div>
+            <div class="logo-curso" id="curso-geo">
+                <img src="../images/geo1.png" alt="Imagem do curso Geoprocessamento" class="imagem-curso"> <!-- Imagem representativa do curso -->
+            </div>
+            <div class="menu-toggle">
+                 <button class="toggle-button">
+                    Ver Turmas <span class="seta">&#9660;</span> <!-- ▼ -->
+                </button>
+                <ul class="semestre-menu">
+                    <li><a href="pages/QuadroDeHorarios.html">1º SEMESTRE</a></li>
+                    <li><a href="pages/QuadroDeHorarios.html">2º SEMESTRE</a></li>
+                    <li><a href="pages/QuadroDeHorarios.html">3º SEMESTRE</a></li>
+                    <li><a href="pages/QuadroDeHorarios.html">4º SEMESTRE</a></li>
+                    <li><a href="pages/QuadroDeHorarios.html">5º SEMESTRE</a></li>
+                    <li><a href="pages/QuadroDeHorarios.html">6º SEMESTRE</a></li>
+                </ul>
+            </div>
         </div>
     </div>
-    
-    <!-- Rodapé da página -->
-    <footer>
-        
-    </footer>    
+      
     
     <!-- Importação do arquivo JavaScript para funcionalidades interativas -->
-    <script src="../scripts/script.js"></script>
+    <script defer src="scripts/index.js"></script>
 </body>
 </html>

@@ -7,34 +7,32 @@ h1 {
   margin-top: 50px;
 }
 
-svg text {
-  fill: black;
+#svg-container {
+  background-color: #c3c3c3;
+  display: flex;
+  justify-content: center;
+}
+
+.retangulo-interativo {
+  fill: transparent ;
+  stroke: black; 
+  stroke-width: 1 ;
   cursor: pointer;
-  user-select: none;
 }
 
-svg rect {
-  stroke: black;
-  stroke-width: 2;
-  fill: none;
-  cursor: pointer;
+.retangulo-interativo:hover:not(.ignorar-interacao) {
+  fill: #d3d3d3 !important;
+  stroke: #555 !important;
 }
 
-svg rect:hover {
-  stroke: gray;
+.retangulo-selecionado {
+  fill: #ffcccc !important;
+  stroke: #ff0000 !important;
+  stroke-width: 2.5 !important;
 }
 
-.active-text {
-  fill: red;
-}
 
-.active-rect {
-  stroke: red;
-}
-
-#info {
-  margin-top: 20px;
-  font-size: 20px;
-  font-family: Arial, sans-serif;
-  color: #333;
+/* Ignorados (sem interações visuais) */
+.ignorar-interacao {
+  pointer-events: none;
 }

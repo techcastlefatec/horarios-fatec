@@ -1,75 +1,141 @@
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* Evita scroll horizontal por erro de largura */
+}
+
 /* HEADER */
-
-
 header {
-    height: 170px;
-    font-family: Arial, sans-serif; /* Define a fonte padrão para o texto */
+  width: 100%;
 }
 
 #topo-header {
-    background-color: white;
-    display: flex; /* Usa flexbox para o alinhamento */
-    justify-content: space-between;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
-/* Estiliza o logotipo */
+
 .logo-header {
-    height: 100px; /* Define a altura da imagem do logotipo */
-    width: 200px;
-    margin: 10px; /* Adiciona margem externa */
-   
+  height: 100px;
+  width: 200px;
+  margin: 10px;
 }
 
+/* Linha cinza */
 .linha {
-    height: 10px;
-    background-color: grey;
+  height: 10px;
+  background-color: grey;
+  width: 100vw; /* força ocupar toda a largura da viewport */
 }
 
-/* Estiliza a barra de navegação */
+/* Navegação */
 nav {
-    background-color: red; /* Define a cor de fundo da navegação */
-    padding: 15px; /* Adiciona preenchimento interno */
+  background-color: red;
+  padding: 15px;
+  width: 100vw; /* força ocupar toda a largura da viewport */
 }
 
-/* Remove os estilos padrões da lista e aplica layout flexível */
-nav ul {
-    list-style: none; /* Remove marcadores da lista */
-    display: flex; /* Usa flexbox para organizar os itens */
-    justify-content: flex-start; /* Alinha os itens à esquerda */
-    padding: 0; /* Remove espaçamento interno */
-    margin: 0; /* Remove margem externa */
+/* Container principal da navegação */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Estiliza cada item da lista de navegação */
+/* Lista de navegação */
+nav ul.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+/* Itens da navegação */
 nav ul li {
-    margin-right: 20px; /* Adiciona espaçamento entre os itens */
+  margin-right: 20px;
 }
 
-/* Estiliza os links dentro da navegação */
+/* Links */
 nav ul li a {
-    color: white; /* Define a cor do texto */
-    text-decoration: none; /* Remove o sublinhado */
-    font-size: 18px; /* Define o tamanho da fonte */
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
 }
 
-/* Empurra a opção "Área da Secretaria" para o canto direito */
-.secretaria-nav {
-    margin-left: auto;
+#sec {
+  width: 200px;
+  list-style: none;
+  text-decoration: none;
+  align-self: right;
+  font-size: 18px;
 }
 
+/* Botão hamburger escondido por padrão */
+.menu-toggle-nav {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
 
+/* Menu mobile escondido por padrão */
+#menu-mobile-nav {
+  display: none;
+  flex-direction: column;
+  background-color: red;
+  padding: 10px;
+}
+
+#menu-mobile-nav a {
+  color: white;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+/* Responsivo para telas pequenas */
+@media (max-width: 768px) {
+    #logo-cps,
+    #logo-sp {
+    display: none;
+  }
+
+  #topo-header {
+    justify-content: center;
+  }
+  .nav-desktop {
+    display: none; /* esconde Professores, Salas e Secretaria no menu principal */
+  }
+
+  .menu-toggle-nav {
+    display: block; /* mostra botão ☰ */
+  }
+
+  #menu-mobile-nav.show {
+    display: flex; /* exibe o menu mobile quando ativado */
+  }
+}
 
 /* FOOTER */
-
-
-/* Estiliza o rodapé */
 footer {
-    background-color: #474a51; /* Define cor de fundo */
-    color: white; /* Define cor do texto */
-    text-align: center; /* Centraliza o texto */
-    padding: 40px; /* Adiciona espaçamento interno */
-    margin-top: 80px; /* Adiciona espaço entre o conteúdo e o rodapé */
-    height: 120px; /* Define altura fixa */
-    font-family: Arial, sans-serif; /* Define a fonte padrão para o texto */
-    bottom: 0;
-    left: 0;
+  background-color: #474a51;
+  color: white;
+  text-align: center;
+  padding: 40px;
+  margin-top: 80px;
+  height: 120px;
+  width: 100vw; /* força ocupar toda a largura da viewport */
+  font-family: Arial, sans-serif;
 }
