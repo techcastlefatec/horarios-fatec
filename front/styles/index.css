@@ -5,7 +5,7 @@ body {
 /* Estiliza o título da página */
 #titulo {
     text-align: center; /* Centraliza o texto */
-    margin-top: 30px; /* Adiciona espaçamento superior */
+    margin-top: 50px; /* Adiciona espaçamento superior */
     margin-bottom: 60px; /* Adiciona espaçamento inferior */
 }
 
@@ -18,7 +18,7 @@ body {
         justify-content: space-between; /* Distribui os itens igualmente */
         text-align: center; /* Centraliza o texto dentro dos elementos */
     }
-    
+
     .curso {
         width: 30%; /* Define a largura de cada curso */
     }
@@ -36,7 +36,7 @@ body {
         padding: 20px; /* Adiciona espaçamento interno */
         text-align: center; /* Centraliza o texto */
     }
-    
+
     .curso {
         width: 90%; /* Define uma largura maior para os cursos no mobile */
     }
@@ -52,7 +52,7 @@ body {
 }
 
 /* Estiliza os carrosséis de imagens */
-.carrosel {
+.logo-curso {
     height: 200px; /* Define a altura fixa do carrossel */
     width: 80%; /* Define a largura relativa ao contêiner */
     background-color: white; /* Define cor de fundo */
@@ -64,38 +64,69 @@ body {
     position: relative; /* Define posicionamento relativo para os botões */
 }
 
-/* Estiliza os botões do carrossel */
-.carrosel-btn {
-    background-color: rgba(0, 0, 0, 0.5); /* Define um fundo semitransparente */
-    color: white; /* Define cor do texto */
-    border: none; /* Remove bordas */
-    padding: 10px; /* Define espaçamento interno */
-    cursor: pointer; /* Altera o cursor para indicar interatividade */
-    font-size: 18px; /* Define tamanho do texto */
-    position: absolute; /* Posicionamento absoluto dentro do carrossel */
-    top: 50%; /* Posiciona verticalmente no centro */
-    transform: translateY(-50%); /* Ajusta alinhamento vertical */
-}
-
-/* Altera a cor do botão ao passar o mouse */
-.carrosel-btn:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Posiciona o botão "anterior" à esquerda */
-.voltar-btn {
-    left: 10px;
-}
-
-/* Posiciona o botão "próximo" à direita */
-.avancar-btn {
-    right: 10px;
-}
-
 /* Estiliza as imagens dentro do carrossel */
-.carrosel-img {
+.imagem-curso {
     width: 100%; /* Faz a imagem ocupar toda a largura */
     height: 200px; /* Mantém altura fixa */
     object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
     cursor: pointer; /* Torna a imagem clicável */
+}
+
+/* ====== ESTILOS DO MENU TOGGLE DE SEMESTRES ====== */
+
+.menu-toggle {
+    margin-top: 20px;
+    width: 80%;
+    text-align: center;
+}
+
+.toggle-button {
+    background-color: #ccc; /* Cinza */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.toggle-button:hover {
+    background-color: #bbb;
+}
+
+.toggle-button .seta {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.toggle-button.aberto .seta {
+    transform: rotate(180deg); /* Vira a seta para cima */
+}
+
+.semestre-menu {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+    display: none; /* Oculta por padrão */
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+.semestre-menu li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.semestre-menu li:last-child {
+    border-bottom: none;
+}
+
+.semestre-menu a {
+    text-decoration: none;
+    color: #333;
+    display: block;
 }

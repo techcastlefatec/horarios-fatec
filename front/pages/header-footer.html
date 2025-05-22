@@ -5,34 +5,46 @@
     <meta charset="UTF-8"> <!-- Define a codificação de caracteres para UTF-8, permitindo caracteres especiais -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta a escala para dispositivos móveis -->
     <title>Horários de Aulas</title> <!-- Define o título da página que aparece na aba do navegador -->
-    <link rel="stylesheet" href="styles/header-footer.css"> <!-- Importa o arquivo CSS externo para estilização da página -->
-    <!--  <link rel="stylesheet" href="styles/SEU-ARQUIVO.css"> Importa o arquivo CSS que voce criar -->
+    <link rel="stylesheet" href="../styles/header-footer.css"> <!-- Importa o arquivo CSS externo para estilização da página -->
+    
 </head>
 <body>
-
+   
     <!-- Cabeçalho da página -->
    <header>
     <div id="topo-header"> 
         <div>
-            <img src="images/cps.png" alt="Logo do Centro Paula Souza" class="logo-header"> <!-- Imagem do logotipo da CPS -->
+            <img src="../images/cps.png" alt="Logo do Centro Paula Souza" class="logo-header" id="logo-cps"> <!-- Imagem do logotipo da CPS -->
         </div>
     <div>
-        <img src="images/fatec-jac.png" alt="Logo da Fatec de Jacareí" class="logo-header"> <!-- Imagem do logotipo da Fatec -->
+        <img src="../images/fatec-jac.png" alt="Logo da Fatec de Jacareí" class="logo-header" id="logo-fatec"> <!-- Imagem do logotipo da Fatec -->
     </div>
     <div>
-        <img src="images/sp.png" alt="Logo do Governo de São Paulo" class="logo-header"> <!-- Imagem do logotipo do GOV SP-->
+        <img src="../images/sp.png" alt="Logo do Governo de São Paulo" class="logo-header" id="logo-sp"> <!-- Imagem do logotipo do GOV SP-->
     </div>
     </div>
     <div class="linha"> </div>
     <!-- Navegação principal da página -->
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li> <!-- Link para a página inicial -->
-            <li><a href="pages/professores.html">Professores</a></li> <!-- Link para a página de professores -->
-            <li><a href="#">Salas</a></li> <!-- Link fictício (não leva a lugar nenhum por enquanto) -->
-            <li class="secretaria-nav"><a href="pages/login.html">Área da Secretaria</a></li> <!-- Link para a área da secretaria -->
+    <div class="nav-container">
+        <ul class="nav-list">
+        <li><a href="http://localhost:3000">Home</a></li>
+        <li class="nav-desktop"><a href="http://localhost:3000/pages/consultaprofessor.html">Professores</a></li>
+        <li class="nav-desktop"><a href="http://localhost:3000/pages/Salas.html">Salas</a></li>
         </ul>
+        <ul id="sec">
+        <li class="nav-desktop secretaria-nav" ><a href="http://localhost:3000/pages/loginsecretaria.html">Área da Secretaria</a></li>
+        </ul>
+        <button class="menu-toggle-nav" onclick="toggleMenu()">☰</button>
+    </div>
+
+    <div id="menu-mobile-nav" class="menu-mobile-nav">
+        <a href="http://localhost:3000/pages/consultaprofessor.html">Professores</a>
+        <a href="http://localhost:3000/pages/Salas.html">Salas</a>
+        <a href="http://localhost:3000/pages/loginsecretaria.html">Área da Secretaria</a>
+    </div>
     </nav>
+
     <div class="linha"> </div>
     </header>
     
@@ -40,13 +52,39 @@
 
 
 
-    <!-- <script src="scripts/SEU-ARQUIVO.js"></script>  Importa o suas funcionalidades.js -->
-    <script src="scripts/navbar.js"></script> <!-- Importa o arquivo JavaScript para funcionalidades da barra de navegação -->
+    
     <!-- Rodapé da página -->
     <footer>
+       
+         <a class="govsp-social" href="https://www.flickr.com/governosp/" target="_blank">
+                            <img class="govsp-icon-social" src="https://fatecjacarei.cps.sp.gov.br/wp-content/themes/tema-cps/images/sao-paulo/i-flickr.png" alt="Flickr Governo de São Paulo" />
+                        </a>
+                        <a class="govsp-social" href="https://www.linkedin.com/company/governosp/" target="_blank">
+                            <img class="govsp-icon-social" src="https://fatecjacarei.cps.sp.gov.br/wp-content/themes/tema-cps/images/sao-paulo/i-linkedin.png" alt="Linkedin Governo de São Paulo" />
+                        </a>
+                        <a class="govsp-social" href="https://www.tiktok.com/@governosp" target="_blank">
+                            <img class="govsp-icon-social" src="https://fatecjacarei.cps.sp.gov.br/wp-content/themes/tema-cps/images/sao-paulo/i-tiktok.png" alt="TikTok Governo de São Paulo" />
+                        </a>
+                        <a class="govsp-social" href="https://www.youtube.com/governosp/" target="_blank">
+                            <img class="govsp-icon-social" src="https://fatecjacarei.cps.sp.gov.br/wp-content/themes/tema-cps/images/sao-paulo/i-youtube.png" alt="Youtube Governo de São Paulo" />
+                        </a>
+                        <a class="govsp-social" href="https://www.twitter.com/governosp/" target="_blank">
+                            <img class="govsp-icon-social" src="https://fatecjacarei.cps.sp.gov.br/wp-content/themes/tema-cps/images/sao-paulo/i-twitter.png" alt="Facebook Governo de São Paulo" />
+                        </a>
+                        <a class="govsp-social" href="https://www.instagram.com/governosp/" target="_blank">
+                            <img class="govsp-icon-social" src="https://fatecjacarei.cps.sp.gov.br/wp-content/themes/tema-cps/images/sao-paulo/i-insta.png" alt="Instagram Governo de São Paulo" />
+                        </a>
+                        <a class="govsp-social" href="https://www.facebook.com/governosp/" target="_blank">
+                            <img class="govsp-icon-social" src="https://fatecjacarei.cps.sp.gov.br/wp-content/themes/tema-cps/images/sao-paulo/i-facebook.png" alt="Facebook Governo de São Paulo" />
+                        </a>
       
     </footer>    
-    
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu-mobile-nav");
+            menu.classList.toggle("show");
+        }
+    </script>
    
 </body>
 </html>
