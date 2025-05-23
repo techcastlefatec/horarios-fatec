@@ -24,6 +24,7 @@ CREATE TABLE professores (
 
 CREATE TABLE materias (
     id SERIAL PRIMARY KEY,
+    carga VARCHAR(10),
     nome VARCHAR(100) NOT NULL
 );
 
