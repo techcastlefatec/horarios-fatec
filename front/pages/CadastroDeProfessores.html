@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Professor</title>
+    <link rel="stylesheet" href="../styles/CadastroDeProfessores.css" />
+  </head>
+
+  <body>
+    
+    <main>
+      <h2>Cadastro de professor</h2>
+      <button class="botao-alterar">Alterar professor</button>
+      <div class="form-container">
+        <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" />
+        </div>
+        <div class="form-group">
+          <label for="curso">Curso:</label>
+          <input type="text" id="curso" />
+        </div>
+        <div class="form-group">
+          <label for="materia">Matéria:</label>
+          <input type="text" id="materia" />
+        </div>
+        <!-- Imagem fictícia de upload -->
+        <div class="form-right">
+          <input type="file" id="uploadFoto" accept="image/*" hidden />
+          <label for="uploadFoto" class="upload-placeholder">📷 +</label>
+        </div>
+        <div class="form-bottom">
+          <button>Salvar</button>
+        </div>
+      </div>
+    </main>
+
+   
+  </body>
+</html>
