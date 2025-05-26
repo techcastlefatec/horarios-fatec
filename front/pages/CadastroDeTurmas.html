@@ -1,14 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-     <link rel="stylesheet" href="../styles/header-footer-secretaria.css">
-    <script defer src="../scripts/header-footer-secretaria.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Turmas</title>
+  <link rel="stylesheet" href="../styles/header-footer-secretaria.css" />
+  <link rel="stylesheet" href="../styles/CadastroDeTurmas.css" />
+  <script defer src="../scripts/header-footer-secretaria.js"></script>
 </head>
-<body style="background-color: #80ADB6;">
-    Voltar para a página inicial: 
-    <a href="http://localhost:3000"> Home</a>
+<body>
+
+  <h1>Cadastro de Turmas</h1>
+
+  <!-- Formulário de Cadastro -->
+  <fieldset>
+    <legend><strong>Nova Turma</strong></legend>
+    <form id="formCadastro">
+      <input type="text" id="nome" placeholder="Nome da Turma" required />
+      <input type="text" id="periodo" placeholder="Período" />
+      <input type="number" id="curso_id" placeholder="ID do Curso" required />
+      <button type="submit">Cadastrar</button>
+    </form>
+  </fieldset>
+
+  <!-- Formulário de Atualização (oculto até necessário) -->
+  <fieldset style="display:none;" id="updateSection">
+    <legend><strong>Editar Turma</strong></legend>
+    <form id="formAtualizar">
+      <input type="hidden" id="edit_id" />
+      <input type="text" id="edit_nome" placeholder="Nome da Turma" required />
+      <input type="text" id="edit_periodo" placeholder="Período" />
+      <input type="number" id="edit_curso_id" placeholder="ID do Curso" required />
+      <button type="submit">Salvar Alterações</button>
+      <button type="button" onclick="cancelarEdicao()">Cancelar</button>
+    </form>
+  </fieldset>
+
+  <!-- Lista de Turmas -->
+  <h2>Lista de Turmas</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Período</th>
+        <th>Curso ID</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody id="listaTurmas"></tbody>
+  </table>
+
+  <script src="../scripts/CadastroDeTurmas.js"></script>
 </body>
 </html>
