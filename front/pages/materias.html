@@ -39,14 +39,7 @@
     <!-- Título e seleção de curso -->
     <div id="cadastro-matérias"> <!-- Container para o título e o seletor de curso -->
         <h2>Cadastro de Matérias </h2> <!-- Título da seção -->
-        <form id="cursos"> <!-- Formulário apenas com o seletor -->
-            <select id="selecao-curso"> <!-- Menu suspenso para selecionar curso -->
-                <option value="" disabled selected>Alterar Curso</option> <!-- Placeholder bloqueado -->
-                <option value="ads">Desenvolvimento de Software Multiplataforma</option>
-                <option value="gpi">Geoprocessamento</option>
-                <option value="log">Meio Ambiente e Recursos Hídricos</option>
-            </select>
-        </form>
+        
     </div>
 
     <!-- Formulário para cadastrar disciplinas -->
@@ -57,13 +50,10 @@
                 <input type="text" id="Professor" name="Professor" required> <!-- Campo de entrada para a matéria -->
             </div>
             <div> 
-                <label for="Período">Período:</label>
-                <input type="text" id="Período" name="Período" required> <!-- Campo para o período -->
+                <label for="carga">Carga horária:</label>
+                <input type="text" id="carga" name="carga" required> <!-- Campo para inserir a carga horária -->
             </div>
-            <div> 
-                <label for="Professor">Professor:</label>
-                <input type="text" id="Professor" name="Professor" required> <!-- Campo para o nome do professor -->
-            </div>
+            
             <div class="form-footer"> <!-- Rodapé do formulário -->
                 <button type="submit">Salvar</button> <!-- Botão de envio do formulário, alinhado à direita -->
             </div>
