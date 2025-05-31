@@ -133,3 +133,9 @@ main {
     justify-content: center;
     margin-top: 15px;
 }
+}
+
+.lista-prof {
+    justify-content: center;
+    text-align: center;
+}
