@@ -139,3 +139,18 @@ main {
     justify-content: center;
     text-align: center;
 }
+th, td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #aaa;
+}
+
+
+th {
+  background-color: #b0b0b0;
+  color: #333;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
