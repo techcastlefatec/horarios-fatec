@@ -12,7 +12,7 @@
 |--------|-------------|-------------|-------------|--------|
 | 01     | [Sprint 01](#sprint-1) | 24/03/2025  | 15/04/2025  |   ✔   |
 | 02     | [Sprint 02](#sprint-2) | 16/04/2025  | 13/05/2025  |   ✔   |
-| 03     | [Sprint 03](#sprint-3) | 14/05/2025  | 11/06/2025  |       |
+| 03     | [Sprint 03](#sprint-3) | 14/05/2025  | 10/06/2025  |       |
 
 <br>
 
@@ -272,4 +272,64 @@ Melhorar as revisões de código e testes para garantir que não haja imprevisto
 
 ### Link do Vídeo de apresentação da Sprint https://www.youtube.com/watch?v=0FuPHoNnCh8
 
+<br>
+
+<span id="sprint-3">
+ 
+## :page_with_curl: SPRINT 3 
+<p align="justify">Na Terceira Sprint finalizamos o projeto com  . </p>
+
+<br>
+
+### • Sprint Backlog
+<br>
+
+| ID REFERENCIA | Prioridade (Scrum Poker Planning) | REQUISITO DA SPRINT                                                                                                     | Responsável | TAREFA INICIADA | TAREFA CONCLUIDA |
+|---------------|-----------------------------------|--------------------------------------------------------------------------------------------------------------------------|-------------|------------------|-------------------|
+|        |  | . |       |  ✔  |  |
+|        |  | . |       |  ✔  |  |
+|        |  | . |       |  ✔  |  |
+|        |  | . |       |  ✔  |  |
+|        |  | . |       |  ✔  |  |
+|        |  | . |       |  ✔  |  |
+|        |  | . |       |  ✔  |  |
+|        |  | . |       |  ✔  |  |
+|        |  | . |       |  ✔  |  |
+|        |  | . |       |  ✔  |  |
+|        |  | . |       |  ✔  |  |
+|        |  | . |       |  ✔  |  |
+
+<br>
+<br>
+
+
+
+<br>
+<br>
+
+### • Burndown Sprint 3
+<br>
+
+
+
+<br>
+
+### • Sprint Retrospective 
+<br>
+
+**1. O que funcionou bem durante a Sprint?**
+<br>
+
+
+**2. O que não funcionou tão bem durante a Sprint?**
+<br>
+
+
+**3. Quais ações podemos tomar para melhorar na próximo Sprint?**
+<br>
+
+<br>
+<br>
+
+### Link do Vídeo de apresentação da Sprint 
 <br>
