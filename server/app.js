@@ -1,21 +1,24 @@
 const express = require('express');
+const cors = require('cors');
 const path = require('path');
 const app = express();
-const pool = require('./config/db');
+const pool = require('./src/config/db');
 
-const usersRoutes = require('./routes/usersRoutes');
-const cursosRoutes = require('./routes/cursosRoutes');
-const turmasRoutes = require('./routes/turmasRoutes');
-const materiasRoutes = require('./routes/materiasRoutes');
-const professoresRoutes = require('./routes/professoresRoutes');
-const horariosRoutes = require('./routes/horariosRoutes');
-const aulasRoutes = require('./routes/aulasRoutes');
-const quadroRoutepublic = require('./routes/quadroRoute-public');
-const professoresRoutepublic = require('./routes/professoresRoute-public');
-const salasRoutepublic = require('./routes/salasRoute-public');
-const salasRoute = require('./routes/salasRoutes');
+const usersRoutes = require('./src/routes/usersRoutes');
+const cursosRoutes = require('./src/routes/cursosRoutes');
+const turmasRoutes = require('./src/routes/turmasRoutes');
+const materiasRoutes = require('./src/routes/materiasRoutes');
+const professoresRoutes = require('./src/routes/professoresRoutes');
+const horariosRoutes = require('./src/routes/horariosRoutes');
+const aulasRoutes = require('./src/routes/aulasRoutes');
+const quadroRoutepublic = require('./src/routes/quadroRoute-public');
+const professoresRoutepublic = require('./src/routes/professoresRoute-public');
+const salasRoutepublic = require('./src/routes/salasRoute-public');
+const salasRoute = require('./src/routes/salasRoutes');
 
-require('dotenv').config();
+require('dotenv').config({path: './.env'});
+
+app.use(cors());
 
 app.use(express.json());
 app.use('/api/users', usersRoutes);
@@ -43,7 +46,7 @@ app.get('/db', async (req, res) => {
 });
 
 
-app.use(express.static(path.join(__dirname, '../../front')));
+app.use(express.static(path.join(__dirname, '../front')));
 
 
 const PORT = process.env.PORT || 3000;
