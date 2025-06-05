@@ -108,10 +108,12 @@ function renderizarPaginacao() {
   paginacao.appendChild(btnAnterior);
 
   for (let i = 1; i <= totalPaginas; i++) {
-    const btn = criarBotao(i, () => mudarPagina(i));
-    if (i === paginaAtual) btn.disabled = true;
-    paginacao.appendChild(btn);
+  const btn = criarBotao(i, () => mudarPagina(i));
+  if (i === paginaAtual) {
+    btn.classList.add("ativo"); // Aplica estilo ativo
   }
+  paginacao.appendChild(btn);
+}
 
   const btnProximo = criarBotao("»", () => mudarPagina(paginaAtual + 1));
   btnProximo.disabled = paginaAtual === totalPaginas;
