@@ -12,7 +12,7 @@
 |--------|-------------|-------------|-------------|--------|
 | 01     | [Sprint 01](#sprint-1) | 24/03/2025  | 15/04/2025  |   ✔   |
 | 02     | [Sprint 02](#sprint-2) | 16/04/2025  | 13/05/2025  |   ✔   |
-| 03     | [Sprint 03](#sprint-3) | 14/05/2025  | 11/06/2025  |       |
+| 03     | [Sprint 03](#sprint-3) | 14/05/2025  | 15/06/2025  |       |
 
 <br>
 
@@ -271,5 +271,56 @@ Melhorar as revisões de código e testes para garantir que não haja imprevisto
 <br>
 
 ### Link do Vídeo de apresentação da Sprint https://www.youtube.com/watch?v=0FuPHoNnCh8
+
+<br>
+
+<span id="sprint-3">
+ 
+## :page_with_curl: SPRINT 3 
+<p align="justify">Na sprint 3 utilizamos as rotas da API nas páginas do frontend para exibir os dados e criar as funcionalidades CRUD conforme o projeto; realizamos um refinamento no design das páginas padronizando as cores e os menus. implementamos a funcionalidade de login para a área da secretaria e fizemos o deploy da aplicação na plataforma Render. </p>
+
+<br>
+
+### • Sprint Backlog
+<br>
+
+| ID REFERENCIA | Prioridade (Scrum Poker Planning) | REQUISITO DA SPRINT                                                                                                     | Responsável | TAREFA INICIADA | TAREFA CONCLUIDA |
+|---------------|-----------------------------------|--------------------------------------------------------------------------------------------------------------------------|-------------|------------------|-------------------|
+|       | 2 | Implementar a funcionalidade de CRUD de Aulas usando as rotas já expostas pela API. A tarefa envolve criar a interface de cadastro, exibição e exclusão de aulas, além de organizar os botões existentes no HTML. | Bruna       |  ✔  | ✔ |
+|       | 2 | Implementar a validação de login de usuários no sistema. O foco da tarefa é permitir que um usuário possa acessar a área da secretaria após informar corretamente seu nome de usuário e senha por meio de um formulário de login.  | Suelen      |  ✔  | ✔ |
+|       | 2 | Trabalhar com o CRUD de Matérias, utilizando as rotas já disponíveis na API. A tarefa envolve integrar o cadastro com um formulário HTML já existente, exibir todas as matérias cadastradas e implementar uma paginação para facilitar a navegação quando houver muitas matérias. | Fernanda    |  ✔  | ✔ |
+|       | 2 | Pedro será responsável pelo CRUD de Professores, integrando o formulário já existente no HTML, listando os professores cadastrados e implementando paginação para evitar sobrecarga na interface. Além disso, deve lidar com upload de imagem dos professores e enviar o nome do arquivo para ser salvo no banco de dados. | Pedro       |  ✔  | ✔ |
+|       | 2 | Exibir os dados de horários de aula (quadro de horários) em uma tabela adaptável, consumindo dados da rota pública do backend. Você vai trabalhar com a rota pública do quadro de horários. | Ryan        |  ✔  | ✔ |
+|       | 2 | Fazer listagem de professores e exibição de detalhada de um professor selecionado, consumindo dados da rota pública do backend. Você vai trabalhar com a rota pública de consulta a professores.  | Nicolas     |  ✔  | ✔ |
+|       | 2 | Fazer as requisições na parte de Cadastro de Turmas, na parte de relatórios criar as exportações em .pdf e .xlsx (excel), na parte de relatórios criar a funcionalidade de subir dados via .csv, fazer as informações das salas aparecerem na parte de Salas e proteger as rotas privadas com um middleware. | Bruno       |  ✔  | ✔ |
+
+### • Burndown Sprint 3
+<br>
+
+![Burndown]
+
+<br>
+
+### • Sprint Retrospective 
+<br>
+
+**1. O que funcionou bem durante a Sprint?**
+<br>
+
+
+**2. O que não funcionou tão bem durante a Sprint?**
+<br>
+
+
+
+**3. Quais ações podemos tomar para melhorar na próximo Sprint?**
+<br>
+
+
+<br>
+<br>
+
+### Link do Vídeo de apresentação da Sprint 
+
 
 <br>
