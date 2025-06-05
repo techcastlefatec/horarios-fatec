@@ -11,42 +11,42 @@
 
   <body>
     
-    <main>
-      <h2>Cadastro de Professores</h2>
-      <div class="form-container">
-        <div class="form-group">
-          <label for="nome">Nome:</label>
-          <input type="text" id="nome" />
-        </div>
-        <div class="form-group">
-          <label for="curso">Email:</label>
-          <input type="text" id="curso" />
-        </div>
-        <!-- Imagem fictícia de upload -->
-        <div class="form-right">
-          <input type="file" id="uploadFoto" accept="image/*" hidden />
-          <label for="uploadFoto" class="upload-placeholder">📷 +</label>
-        </div>
-        <div class="form-bottom">
-          <button>Salvar</button>
-        </div>
-      </div>
-    </main>
-  
- <h2>Lista de Turmas</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Nome</th>
-        <th>Email</th>
-        <th>Foto</th>
-      </tr>
-    </thead>
-    <tbody id="listaTurmas"></tbody>
-  </table>
+<main>
+  <h2>Cadastro de Professores</h2>
+  <form id="formProfessor" enctype="multipart/form-data" class="form-container">
+    <div class="form-group">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required />
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+    </div>
+    <div class="form-right">
+      <input type="file" id="uploadFoto" name="foto" accept="image/*" hidden required />
+      <label for="uploadFoto" class="upload-placeholder">📷 +</label>
+    </div>
+    <div class="form-bottom">
+      <button type="submit">Salvar</button>
+    </div>
+  </form>
+</main>
 
-  <script src="../scripts/CadastroDeTurmas.js"></script>
+<h2>Lista de Professores</h2> <!-- Corrigido -->
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Foto</th>
+    </tr>
+  </thead>
+  <tbody id="listaProfessores"></tbody>
+</table>
+<div id="paginacao"></div>
+
+<script src="../scripts/CadastroDeProfessores.js"></script> <!-- Novo JS -->
 </body>
 </html>
 
