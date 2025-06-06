@@ -22,7 +22,7 @@ form.addEventListener('submit', async (e) => {
   formData.append('fotoNome', nomeArquivo); // importante: backend usa isso
 
   try {
-    const res = await fetch('/api/professores', {
+    const res = await fetch('http://localhost:3000/api/professores', {
       method: 'POST',
       body: formData
     });
@@ -42,7 +42,7 @@ form.addEventListener('submit', async (e) => {
 
 async function carregarProfessores() {
   try {
-    const res = await fetch('/api/professores');
+    const res = await fetch('http://localhost:3000/api/professores');
     professores = await res.json();
     exibirProfessores();
   } catch (err) {
@@ -106,7 +106,7 @@ async function excluirProfessor(id) {
   if (!confirm('Tem certeza que deseja excluir este professor?')) return;
 
   try {
-    const res = await fetch(`/api/professores/${id}`, {
+    const res = await fetch(`http://localhost:3000/api/professores/${id}`, {
       method: 'DELETE'
     });
 
