@@ -4,6 +4,9 @@ let professores = [];
 let paginaAtual = 1;
 const porPagina = 10;
 
+let modoEdicao = false;
+let idEdicao = null;
+
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
@@ -11,29 +14,50 @@ form.addEventListener('submit', async (e) => {
   const email = form.email.value.trim();
   const file = form.foto.files[0];
 
-  const extensao = file.name.split('.').pop();
-  const nomeFormatado = nome.toLowerCase().replace(/\s+/g, '_');
-  const nomeArquivo = `${nomeFormatado}_${Date.now()}.${extensao}`;
-
   const formData = new FormData();
   formData.append('nome', nome);
   formData.append('email', email);
-  formData.append('foto', file, nomeArquivo);
-  formData.append('fotoNome', nomeArquivo); // importante: backend usa isso
+
+  if (file) {
+    const extensao = file.name.split('.').pop();
+    const nomeFormatado = nome.toLowerCase().replace(/\s+/g, '_');
+    const nomeArquivo = `${nomeFormatado}_${Date.now()}.${extensao}`;
+    formData.append('foto', file, nomeArquivo);
+    formData.append('fotoNome', nomeArquivo);
+  }
 
   try {
-    const res = await fetch('http://localhost:3000/api/professores', {
-      method: 'POST',
-      body: formData
-    });
+    let res;
+    if (modoEdicao && idEdicao !== null) {
+      res = await fetch(`http://localhost:3000/api/professores/${idEdicao}`, {
+        method: 'PUT',
+        body: formData
+      });
 
-    if (res.ok) {
-      alert('Professor cadastrado com sucesso!');
-      form.reset();
-      carregarProfessores();
+      if (res.ok) {
+        alert('Professor atualizado com sucesso!');
+      } else {
+        alert('Erro ao atualizar professor.');
+      }
     } else {
-      alert('Erro ao cadastrar professor.');
+      res = await fetch('http://localhost:3000/api/professores', {
+        method: 'POST',
+        body: formData
+      });
+
+      if (res.ok) {
+        alert('Professor cadastrado com sucesso!');
+      } else {
+        alert('Erro ao cadastrar professor.');
+      }
     }
+
+    form.reset();
+    form.querySelector('button[type="submit"]').textContent = 'Salvar';
+    modoEdicao = false;
+    idEdicao = null;
+
+    carregarProfessores();
   } catch (err) {
     console.error('Erro:', err);
     alert('Erro na requisição.');
@@ -63,7 +87,10 @@ function exibirProfessores() {
       <td>${p.nome}</td>
       <td>${p.email}</td>
       <td><img src="images/professores/${p.foto}" width="50" /></td>
-      <td><button onclick="excluirProfessor(${p.id})">Excluir</button></td>
+      <td>
+        <button onclick="editarProfessor(${p.id})">Editar</button>
+        <button onclick="excluirProfessor(${p.id})">Excluir</button>
+      </td>
     `;
     lista.appendChild(tr);
   }
@@ -120,6 +147,19 @@ async function excluirProfessor(id) {
     console.error(err);
     alert('Erro na exclusão.');
   }
+}
+
+function editarProfessor(id) {
+  const prof = professores.find(p => p.id === id);
+  if (!prof) return;
+
+  document.getElementById('nome').value = prof.nome;
+  document.getElementById('email').value = prof.email;
+
+  modoEdicao = true;
+  idEdicao = id;
+
+  form.querySelector('button[type="submit"]').textContent = 'Atualizar';
 }
 
 carregarProfessores();
