@@ -1,11 +1,11 @@
 const gridContainer = document.querySelector('.professores-grid'); 
 
-// Parâmetros de paginação
-const itensPorPagina = 12;
+// parâmetros de paginação
+const itensPorPagina = 16;
 let paginaAtual = 1;
 let professores = [];
 
-// Função para buscar todos os professores
+// buscar todos os professores
 async function buscarProfessores() {
     try {
         const resposta = await fetch('http://localhost:3000/api/public/professores-public'); 
@@ -18,11 +18,11 @@ async function buscarProfessores() {
     }
 }
 
-// Função para renderizar os professores na página
+// renderizar os professores na página
 function renderizarProfessores() {
     gridContainer.innerHTML = '';
 
-    // Filtra os professores válidos ANTES da paginação
+    // filtra os professores válidos ANTES da paginação
     const professoresValidos = professores.filter(prof => prof.nome !== 'a definir');
 
     const inicio = (paginaAtual - 1) * itensPorPagina;
@@ -38,7 +38,7 @@ function renderizarProfessores() {
     });
 }
 
-// Função para criar a navegação de páginas
+// criar a navegação de páginas
 function criarPaginacao() {
     const paginacao = document.createElement("div");
     paginacao.className = 'paginacao'; 
@@ -57,11 +57,11 @@ function criarPaginacao() {
         paginacao.appendChild(btn);
     }
 
-    // Remove paginação anterior se houver e adiciona a nova
+    // remove paginação anterior se houver e adiciona a nova
     const existente = document.querySelector(".paginacao");
     if (existente) existente.remove();
     gridContainer.parentElement.appendChild(paginacao);
 }
 
-// Chamada inicial
+// chamada inicial
 buscarProfessores();
