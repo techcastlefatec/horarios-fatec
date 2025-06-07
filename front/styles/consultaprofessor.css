@@ -60,34 +60,3 @@ body {
     line-height: 1.4;
     margin-top: 8px;
 }
-
-.paginacao{
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.paginacao button{
-    width: 40px;
-    height: 50px;
-    margin: 0;
-    border-radius: 7px;
-    justify-content: center;
-    align-items: center;
-    background-color: #797979;
-    color: white;
-    
-}
-
-.paginacao button:hover {
-    background-color: #b9b9b9;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    cursor: pointer;
-}
-
-.paginacao button.ativo {
-    background-color: #007bff;
-    color: white;
-    border-color: #007bff;
-}
