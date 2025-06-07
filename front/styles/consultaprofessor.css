@@ -44,7 +44,7 @@ body {
 /* Efeito hover nos cartões */
 .prof-card:hover {
     transform: scale(1.02);
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 4px 10px rgb(0, 0, 0);
     cursor: pointer;
 }
 
@@ -59,10 +59,4 @@ body {
     font-size: 15px;
     line-height: 1.4;
     margin-top: 8px;
-}
-
-th, td {
-  padding: 12px 15px;
-  text-align: center;
-  border-bottom: 1px solid #aaa;
 }
