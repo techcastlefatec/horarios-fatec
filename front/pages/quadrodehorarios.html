@@ -4,230 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Horários de Aulas</title>
-    <link rel="stylesheet" href="styles/header-footer.css" />
-    <!--Importar o arquivo CSS externo para estilizar pág.-->
-    <link rel="stylesheet" href="styles/style.css" />
-    <!--Importar arquivo CSS que criar-->
+    <link rel="stylesheet" href="../styles\quadrodehorarios.css" />
+    <link rel="stylesheet" href="../styles/header-footer.css">
+<script defer src="../scripts/header-footer.js"></script>
   </head>
   <body>
-    <!--Cabeçalho-->
-    <div id="header">
-      <!--Seção do logotipo-->
-      <div id="topo-header">
-        <div id="cpspng">
-          <img
-            src="images/cps.png"
-            alt="Logo do Centro Paula Souza"
-            class="logo-header"
-          />
-          <!--Logotipo CPS-->
-        </div>
-        <div id="fatecpng">
-          <img
-            src="images/fatec-jac.png"
-            alt="Logo da Fatec de Jacareí"
-            class="logo-header"
-          />
-          <!--Logotipo Fatec-->
-        </div>
-        <div id="govsppng">
-          <img
-            src="images/sp.png"
-            alt="Logo do Governo de São Paulo"
-            class="logo-header"
-          />
-          <!--Logotipo Gov SP-->
-        </div>
-      </div>
-      <div class="linha"></div>
-      <!--Navegação principal da página-->
-      <nav class="navbar">
-        <ul class="nav-left">
-          <li><a href="#">Turma</a></li>
-          <li><a href="pages/professores.html">Professores</a></li>
-          <li><a href="#">Salas</a></li>
-        </ul>
-        <ul class="nav-center">
-          <li><a href="index.html">HOME</a></li>
-        </ul>
-        <ul class="nav-right">
-          <li><a href="pages/login.html">Área da Secretaria</a></li>
-        </ul>
-      </nav>
-      <div class="materia">
-        <a
-          >1º Semestre <br />
-          Desenvolvimento de Software Multiplataforma</a
-        >
-      </div>
-      <div class="horario">
-        <h1>Horários de Aula</h1>
-        <table>
-          <thead>
-            <tr>
-              <th>Horários</th>
-              <th>Segunda</th>
-              <th>Terça</th>
-              <th>Quarta</th>
-              <th>Quinta</th>
-              <th>Sexta</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>18h45 - 19h35</td>
-              <td class="egydio">
-                Engenharia de Software I<br />
-                <a href="/professores/Egydio">Antonio Egydio</a>
-                <a href="/salas/207">Sala 207</a>
-              </td>
-              <td class="sudo">
-                Modelagem de BD<br />
-                <a href="/professores/Sudo">Marcelo Sudo</a>
-                <a href="/salas/207">Sala 207</a>
-              </td>
-              <td class="arley">
-                Algoritmo<br />
-                <a href="/professores/Arley">Arley Ferreira</a>
-                <a href="/salas/207">Sala 207</a>
-              </td>
-              <td class="egydio">
-                SO e Redes de Comp.<br />
-                <a href="/professores/Egydio">Antonio Egydio</a>
-                <a href="/salas/207">Sala 207</a>
-              </td>
-              <td class="henrique">
-                Desenvolvimento Web I<br />
-                <a href="/professores/Egydio">Henrique</a>
-                <a href="/salas/207">Sala 207</a>
-              </td>
-            </tr>
-            <tr>
-              <td>19h35 - 20h25</td>
-              <td class="egydio">
-                Engenharia de Software I<br />
-                <a href="/professores/Egydio">Antonio Egydio</a>
-                <a href="/salas/207">Sala 207</a>
-              </td>
-              <td class="sudo">
-                Modelagem de BD<br />
-                <a href="/professores/Sudo">Marcelo Sudo</a>
-                <a href="/salas/207">Sala 207</a>
-              </td>
-              <td class="arley">
-                Algoritmo<br />
-                <a href="/professores/Arley">Arley Ferreira</a>
-                <a href="/salas/207">Sala 207</a>
-              </td>
-              <td class="egydio">
-                SO e Redes de Comp.<br />
-                <a href="/professores/Egydio">Antonio Egydio</a>
-                <a href="/salas/207">Sala 207</a>
-              </td>
-              <td class="henrique">
-                Desenvolvimento Web I<br />
-                <a href="/professores/Henrique">Henrique</a>
-                <a href="/salas/207">Sala 207</a>
-              </td>
-            </tr>
-            <tr>
-              <td>20h25 - 21h15</td>
-              <td class="egydio">
-                Engenharia de Software I<br />
-                <a href="/professores/Egydio">Antonio Egydio</a>
-                <a href="/salas/207">Sala 207</a>
-              </td>
-              <td class="sudo">
-                Modelagem de BD<br />
-                <a href="/professores/Sudo">Marcelo Sudo</a>
-                <a href="/salas/207">Sala 207</a>
-              </td>
-              <td class="arley">
-                Algoritmo<br />
-                <a href="/professores/Arley">Arley Ferreira</a>
-                <a href="/salas/207">Sala 207</a>
-              </td>
-              <td class="egydio">
-                SO e Redes de Comp.<br />
-                <a href="/professores/Egydio">Antonio Egydio</a>
-                <a href="/salas/207">Sala 207</a>
-              </td>
-              <td class="henrique">
-                Desenvolvimento Web I<br />
-                <a href="/professores/Henrique">Henrique</a>
-                <a href="/salas/207">Sala 207</a>
-              </td>
-            </tr>
-            <tr>
-              <td>21h25 - 22h15</td>
-              <td class="egydio">
-                Engenharia de Software I<br />
-                <a href="/professores/Egydio">Antonio Egydio</a>
-                <a href="/salas/207">Sala 207</a>
-              </td>
-              <td class="sudo">
-                Design Digital<br />
-                <a href="/professores/Sudo">Marcelo Sudo</a>
-                <a href="/salas/207">Sala 207</a>
-              </td>
-              <td class="arley">
-                Algoritmo<br />
-                <a href="/professores/Arley">Arley Ferreira</a>
-                <a href="/salas/207">Sala 207</a>
-              </td>
-              <td class="sudo">
-                Design Digital<br />
-                <a href="/professores/Sudo">Marcelo Sudo</a>
-                <a href="/salas/207">Sala 207</a>
-              </td>
-              <td class="henrique">
-                Desenvolvimento Web I<br />
-                <a href="/professores/Henrique">Henrique</a>
-                <a href="/salas/207">Sala 207</a>
-              </td>
-            </tr>
-            <tr class="trfinal">
-              <td>22h15 - 23h05</td>
-              <td class="egydio">
-                SO e Redes de Comp.<br />
-                <a href="/professores/Egydio">Antonio Egydio</a>
-                <a href="/salas/207">Sala 207</a>
-              </td>
-              <td class="sudo">
-                Design Digital<br />
-                <a href="/professores/Sudo">Marcelo Sudo</a>
-                <a href="/salas/207">Sala 207</a>
-              </td>
-              <td></td>
-              <td class="sudo">
-                Design Digital<br />
-                <a href="/professores/Sudo">Marcelo Sudo</a>
-                <a href="/salas/207">Sala 207</a>
-              </td>
-              <td class="sudo">
-                Modelagem de BD<br />
-                <a href="/professores/Sudo">Marcelo Sudo</a>
-                <a href="/salas/207">Sala 207</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <div class="materia">
+      <a>
+        Horários de Aula
+      </a>
     </div>
-    <!--Fim do cabeçalho da página-->
-    <footer>
-      <div id="informacao1">
-        <a id="FatecJacarei">Fatec Jacareí</a>
-        <p id="Endereco">
-          Av. Faria Lima, 155 - <br />
-          Jardim Santa Maria - Jacareí/SP - <br />
-          CEP: 12328-070
-        </p>
-      </div>
-      <div id="informacao2">
-        <a id="Telefone">Telefone</a>
-        <p id="Numero">(12) 3953-7926</p>
-      </div>
-    </footer>
+    <div class="horario">
+      <table>
+        <thead>
+          <tr>
+            <th>Horário</th>
+            <th>Matéria</th>
+            <th>Professor</th>
+          </tr>
+        </thead>
+        <tbody id="listarHorarios">
+        </tbody>
+      </table>
+    </div>
+    <script src="../scripts/quadrodehorarios.js"></script>
   </body>
 </html>
