@@ -12,24 +12,22 @@ async function listarProfessores(req, res) {
 }
 
 // Busca um professor por ID, com suas matérias
-async function buscarProfessorPorId(req, res) {
-  const { id } = req.params;
-
-  try {
-    const professor = await model.buscarProfessorPorId(id);
-
-    if (!professor) {
-      return res.status(404).json({ erro: 'Professor não encontrado' });
+const buscarProfessorPorId = async (req, res) => {
+  const id = req.params.id;
+  try{
+    const resultado = await model.buscarProfessorPorId(id);
+    if(resultado){
+      res.json(resultado);
+    } else {
+      res.status(404).json({erro: 'Professor não encontrado.'});
     }
-
-    res.json(professor);
-  } catch (error) {
+  } catch (error){
     console.error('Erro ao buscar professor por ID:', error);
-    res.status(500).json({ erro: 'Erro interno ao buscar professor' });
+    res.status(505).json({erro: 'Erro interno ao buscar professor'});
   }
-}
+};
 
 module.exports = {
   listarProfessores,
-  buscarProfessorPorId
+  buscarProfessorPorId,
 };
