@@ -86,7 +86,6 @@ function exibirProfessores() {
       <td>${p.id}</td>
       <td>${p.nome}</td>
       <td>${p.email}</td>
-      <td><img src="images/professores/${p.foto}" width="50" /></td>
       <td>
         <button onclick="editarProfessor(${p.id})">Editar</button>
         <button onclick="excluirProfessor(${p.id})">Excluir</button>
