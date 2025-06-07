@@ -47,22 +47,26 @@ body {
 table {
   border-collapse: collapse;
   width: 100%;
-  text-align: center;
+  text-align: left;
   margin-top: 20px;
-  table-layout: fixed;
+  table-layout: auto;
 }
 
 th,
 td {
   border: 1px solid #aaa;
   padding: 12px;
-  vertical-align: top;
+  vertical-align: middle;
 }
 
 th {
   background-color: #f0f0f0;
   font-weight: bold;
   color: #333;
+}
+
+td {
+  background-color: #fff;
 }
 
 td a {
@@ -76,40 +80,43 @@ td a:hover {
   text-decoration: underline;
 }
 
-footer {
-  background-color: #40403e;
-  height: 190px;
-  width: 100%;
-  margin-top: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 50px;
-  box-sizing: border-box;
-  gap: 100px;
-  border-top: 30px solid #ffffff;
-}
-
-#informacao1,
-#informacao2 {
+/* Estilo para o título do dia da semana */
+.dia-semana {
+  background-color: #7a0b0b;
   color: white;
+  font-weight: bold;
   text-align: center;
-  padding-bottom: 20px;
+  font-size: 18px;
+  padding: 10px 0;
 }
 
-#informacao1 a,
-#informacao2 a {
-  font-size: 32px;
-  color: #ffc85e;
-  text-decoration: none;
+/* Estilo para as linhas de horários */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
 }
 
-#informacao1 p,
-#informacao2 p {
-  font-size: 20px;
+tr:hover {
+  background-color: #f1f1f1;
 }
 
-.trfinal {
-  border-bottom: 3px solid #f0f0f0;
+/* Ajustes de espaçamento entre os dados da tabela */
+td:nth-child(2), td:nth-child(3), td:nth-child(4) {
+  text-align: center;
+}
+
+/* Ajuste para melhorar a apresentação das colunas */
+td:nth-child(1) {
+  width: 120px;
+}
+
+td:nth-child(2) {
+  width: 150px;
+}
+
+td:nth-child(3) {
+  width: 250px;
+}
+
+td:nth-child(4) {
+  width: 250px;
 }
