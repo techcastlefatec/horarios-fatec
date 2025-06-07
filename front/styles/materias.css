@@ -226,3 +226,35 @@ footer {
     bottom: 0;
     left: 0;
 }
+
+#paginacao {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#paginacao button {
+    width: 40px;
+    height: 50px;
+    margin: 0;
+    border-radius: 7px;
+    justify-content: center;
+    align-items: center;
+    background-color: #797979;
+    color: white;
+    border: none;
+    font-size: 18px;
+}
+
+#paginacao button:hover {
+    background-color: #b9b9b9;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+#paginacao button.ativo {
+    background-color: #007bff;
+    color: white;
+    border: 2px solid #0056b3;
+}
