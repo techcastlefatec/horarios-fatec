@@ -1,4 +1,4 @@
-const apiBase = "http://localhost:3000/api/materias";
+const apiBase = "/api/materias";
 const form = document.getElementById("formMateria");
 const lista = document.getElementById("listaMaterias");
 const paginacao = document.getElementById("paginacao");

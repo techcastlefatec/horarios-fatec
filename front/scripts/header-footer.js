@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  fetch('http://localhost:3000/pages/header-footer.html')
+  fetch('/pages/header-footer.html')
     .then(res => res.text())
     .then(data => {
       const temp = document.createElement('div');

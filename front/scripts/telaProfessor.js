@@ -18,7 +18,7 @@ const imagemElemento = document.querySelector('.profile-img');
 // função para buscar e exibir os dados do professor
 async function buscarDadosProfessor() {
     try {
-        const resposta = await fetch(`http://localhost:3000/api/public/professores-public/${idProfessor}`);
+        const resposta = await fetch(`/api/public/professores-public/${idProfessor}`);
         if (!resposta.ok) {
             throw new Error('Professor não encontrado');
         }

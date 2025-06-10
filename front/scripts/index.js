@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Busca turmas da API e preenche os menus
     try {
-        const response = await fetch("http://localhost:3000/api/turmas");
+        const response = await fetch("/api/turmas");
         const turmas = await response.json();
 
         // Agrupa turmas por curso_id

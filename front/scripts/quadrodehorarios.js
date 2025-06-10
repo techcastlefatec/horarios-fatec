@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const diasDaSemana = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta"];
 
-  fetch(`http://localhost:3000/api/public/quadro-public/${idCurso}`)
+  fetch(`/api/public/quadro-public/${idCurso}`)
     .then((res) => res.json())
     .then((dados) => {
       if (!dados || dados.length === 0) return;

@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
      */
     async function fetchData(endpoint) {
         try {
-            const response = await fetch(`http://localhost:3000/api${endpoint}`);
+            const response = await fetch(`/api${endpoint}`);
             if (!response.ok) {
                 throw new Error(`Erro ao buscar dados de ${endpoint}: ${response.statusText}`);
             }
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
      */
     async function fetchAulasByTurmaId(turmaId) {
         try {
-            const response = await fetch(`http://localhost:3000/api/public/quadro-public/${turmaId}`);
+            const response = await fetch(`/api/public/quadro-public/${turmaId}`);
             if (!response.ok) {
                 const errorData = await response.json();
                 throw new Error(errorData.mensagem || `Erro ao buscar aulas: ${response.statusText}`);
@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return false;
         }
         try {
-            const response = await fetch(`http://localhost:3000/api/aulas/${aulaId}`, {
+            const response = await fetch(`/api/aulas/${aulaId}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json'
@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
      */
     async function criarAula(aulaData) {
         try {
-            const response = await fetch('http://localhost:3000/api/aulas', {
+            const response = await fetch('/api/aulas', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
      */
     async function atualizarAula(aulaId, aulaData) {
         try {
-            const response = await fetch(`http://localhost:3000/api/aulas/${aulaId}`, {
+            const response = await fetch(`/api/aulas/${aulaId}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
@@ -584,19 +584,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // Adiciona event listeners para redirecionamento
     if (botaoTurma) { // Verifica se o elemento existe antes de adicionar o listener
         botaoTurma.addEventListener('click', () => {
-            window.location.href = 'http://localhost:3000/pages/CadastroDeTurmas.html'; // Corrigido para .html se for um arquivo
+            window.location.href = '/pages/CadastroDeTurmas.html'; // Corrigido para .html se for um arquivo
         });
     }
 
     if (botaoProf) {
         botaoProf.addEventListener('click', () => {
-            window.location.href = 'http://localhost:3000/pages/CadastroDeProfessores.html';
+            window.location.href = '/pages/CadastroDeProfessores.html';
         });
     }
 
     if (botaoMate) {
         botaoMate.addEventListener('click', () => {
-            window.location.href = 'http://localhost:3000/pages/materias.html';
+            window.location.href = '/pages/materias.html';
         });
     }
 });

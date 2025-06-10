@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/api/users/login';
+const API_URL = '/api/users/login';
 
 document.querySelector(".loginadm-form").addEventListener("submit", async function(e) {
     e.preventDefault(); // Impede o envio do formulário
@@ -21,7 +21,7 @@ async function login() {
         if (response.ok) {
             console.log('✅ Login bem-sucedido:', data);
             //alert(data.mensagem); // ou redirecione o usuário
-            window.location.href = "http://localhost:3000/pages/AreaDaSecretaria.html";
+            window.location.href = "/pages/AreaDaSecretaria.html";
 
         } else {
             console.warn('⚠️ Erro no login:', data.error);
