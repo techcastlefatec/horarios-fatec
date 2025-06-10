@@ -596,7 +596,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (botaoMate) {
         botaoMate.addEventListener('click', () => {
-            window.location.href = '/pages/materias.html';
+            window.location.href = '/pages/Materias.html';
         });
     }
 });
