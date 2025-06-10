@@ -8,7 +8,7 @@ let professores = [];
 // buscar todos os professores
 async function buscarProfessores() {
     try {
-        const resposta = await fetch('http://localhost:3000/api/public/professores-public'); 
+        const resposta = await fetch('/api/public/professores-public'); 
         professores = await resposta.json();
         renderizarProfessores();
         criarPaginacao();

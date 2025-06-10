@@ -29,7 +29,7 @@ form.addEventListener('submit', async (e) => {
   try {
     let res;
     if (modoEdicao && idEdicao !== null) {
-      res = await fetch(`http://localhost:3000/api/professores/${idEdicao}`, {
+      res = await fetch(`/api/professores/${idEdicao}`, {
         method: 'PUT',
         body: formData
       });
@@ -40,7 +40,7 @@ form.addEventListener('submit', async (e) => {
         alert('Erro ao atualizar professor.');
       }
     } else {
-      res = await fetch('http://localhost:3000/api/professores', {
+      res = await fetch('/api/professores', {
         method: 'POST',
         body: formData
       });
@@ -66,7 +66,7 @@ form.addEventListener('submit', async (e) => {
 
 async function carregarProfessores() {
   try {
-    const res = await fetch('http://localhost:3000/api/professores');
+    const res = await fetch('/api/professores');
     professores = await res.json();
     exibirProfessores();
   } catch (err) {
@@ -132,7 +132,7 @@ async function excluirProfessor(id) {
   if (!confirm('Tem certeza que deseja excluir este professor?')) return;
 
   try {
-    const res = await fetch(`http://localhost:3000/api/professores/${id}`, {
+    const res = await fetch(`/api/professores/${id}`, {
       method: 'DELETE'
     });
 

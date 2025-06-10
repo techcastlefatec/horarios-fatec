@@ -112,7 +112,7 @@ async function handleClick(event) {
 
 // Função para buscar aulas na API e exibir
 async function buscarAulasPorSala(salaId) {
-    const url = `http://localhost:3000/api/public/salas-public/${salaId}/aulas-hoje`;
+    const url = `/api/public/salas-public/${salaId}/aulas-hoje`;
     aulasContentDiv.innerHTML = '<p class="no-aulas-message">Carregando aulas...</p>'; // Mensagem de carregamento
     currentSalaNameSpan.textContent = 'Carregando...'; // Mensagem de carregamento para o nome da sala
 

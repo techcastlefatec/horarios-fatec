@@ -1,5 +1,5 @@
 // URL base da API para as turmas
-const API_URL = 'http://localhost:3000/api/turmas';
+const API_URL = '/api/turmas';
 
 // Espera o carregamento completo do DOM antes de executar os scripts
 document.addEventListener('DOMContentLoaded', () => {
