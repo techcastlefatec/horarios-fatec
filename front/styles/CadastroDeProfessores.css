@@ -1,8 +1,7 @@
 body {
-margin: 0;
-font-family: sans-serif;
-background-color: #7c8594;
-/* fundo azul acinzentado */
+font-family: 'Segoe UI', sans-serif; /* Define a fonte padrão para o texto */
+background-color: #f8f8f8;
+color: #333;
 display: flex;
 flex-direction: column;
 min-height: 100vh;
@@ -22,7 +21,7 @@ padding: 40px;
 }
 
 .form-container {
-background-color: #e1e1e1;
+background-color: white;
 padding: 30px;
 border: 1px solid #999;
 width: 100%;
@@ -147,10 +146,42 @@ th, td {
 
 
 th {
-  background-color: #b0b0b0;
-  color: #333;
+  background-color: #cc0000;
+  color: white;
 }
 
 tr:last-child td {
   border-bottom: none;
+}
+
+
+.paginacao{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.paginacao button{
+    width: 40px;
+    height: 50px;
+    margin: 0;
+    border-radius: 7px;
+    justify-content: center;
+    align-items: center;
+    background-color: #797979;
+    color: white;
+    
+}
+
+.paginacao button:hover {
+    background-color: #b9b9b9;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.paginacao button.ativo {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
 }

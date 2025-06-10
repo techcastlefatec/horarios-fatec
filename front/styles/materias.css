@@ -1,76 +1,13 @@
-/* HEADER */
-
-/* Estiliza o cabeçalho da página */
-header {
-    
-    font-family: Arial, sans-serif; /* Fonte usada no cabeçalho */
-}
-
-/* Container das logos */
-#topo-header {
-    background-color: #80ADB6; /* Cor de fundo da parte superior do header */
-    display: flex; /* Layout em linha */
-    justify-content: space-between; /* Espaçamento igual entre os itens */
-    flex-wrap: wrap; /* Permite quebra de linha em telas pequenas */
-}
-
-/* Estiliza cada logotipo do cabeçalho */
-.logo-header {
-    height: 100px; /* Altura da imagem */
-    width: 200px; /* Largura da imagem */
-    margin: 10px; /* Espaço externo ao redor da imagem */
-    object-fit: contain; /* Garante que a imagem não distorça */
-}
-
-/* Linha branca que separa o header da navegação */
-.linha {
-    height: 10px; /* Altura da linha */
-    background-color: white; /* Cor da linha */
-}
-
-/* NAV */
-
-/* Container da barra de navegação */
-nav {
-    background-color: red; /* Cor de fundo da barra de navegação */
-    padding: 15px; /* Espaçamento interno */
-}
-
-/* Lista de navegação sem estilos padrões */
-nav ul {
-    list-style: none; /* Remove marcadores da lista */
-    display: flex; /* Itens em linha */
-    justify-content: flex-start; /* Alinha os itens à esquerda */
-    padding: 0; /* Remove padding interno */
-    margin: 0; /* Remove margem externa */
-}
-
-/* Cada item da lista de navegação */
-nav ul li {
-    margin-right: 20px; /* Espaçamento entre os itens */
-}
-
-/* Links da navegação */
-nav ul li a {
-    color: white; /* Cor do texto */
-    text-decoration: none; /* Remove sublinhado */
-    font-size: 18px; /* Tamanho da fonte */
-}
-
-/* Empurra o item da secretaria para a extrema direita */
-.secretaria-nav {
-    margin-left: auto;
-}
-
-/* Define cor de fundo da página */
-body {
-    background-color: #80ADB6;
-}
-
 /* CADASTRO DE MATÉRIAS */
 
+body {
+font-family: 'Segoe UI', sans-serif; /* Define a fonte padrão para o texto */
+background-color: #f8f8f8;
+color: #333;
+}
+
 /* Container do título e seletor de curso */
-#cadastro-matérias {
+#cadastro-materias {
     display: flex; /* Coloca elementos em linha */
     justify-content: space-between; /* Espaça entre título e seletor */
     align-items: center; /* Alinha verticalmente */
@@ -83,27 +20,11 @@ body {
 h2 {
     font-size: 24px; /* Ajuste o tamanho do texto */
     margin: 0;
-    color: black; /* Cor do texto */
     transition: color 0.3s ease; /* Transição suave de cor */
 }
 
 h2:hover {
     color: #333; /* Cor do título ao passar o mouse */
-}
-
-/* Seletor de curso */
-#selecao-curso {
-    height: 30px;
-    align-self: flex-start; /* Alinha ao topo */
-    font-size: 16px;
-    background-color: #D9D9D9;
-    border: 1px solid #333;
-    border-radius: 4px;
-    cursor: pointer; /* Mostra ponteiro ao passar o mouse */
-}
-
-#selecao-curso:hover {
-    background-color: #e4e0e0;
 }
 
 /* FORMULÁRIO DE DISCIPLINA */
@@ -198,43 +119,16 @@ input {
       width: 100%;
     }
 
-    #topo-header {
-        justify-content: center; /* Centraliza os logos em telas pequenas */
-    }
-
-    .logo-header {
-        max-height: 80px; /* Adicionado para limitar a altura das imagens */
-        width: 150px; /* Largura ajustada para 150px */
-        margin: 10px; /* Mantido o espaçamento entre as logos */
-        object-fit: contain; /* Garante que as imagens não sejam distorcidas */
-        transition: transform 0.3s ease; /* Adicionado para uma animação suave ao passar o mouse */
-    }
-    
-}  
-
-/* FOOTER */
-
-/* Rodapé da página */
-footer {
-    background-color: #474a51; /* Fundo escuro */
-    color: white; /* Cor do texto */
-    text-align: center; /* Centraliza conteúdo */
-    padding: 20px; /* Espaço interno */
-    margin-top: 80px; /* Espaço acima do rodapé */
-    height: 120px; /* Altura fixa */
-    font-family: Arial, sans-serif;
-    bottom: 0;
-    left: 0;
 }
 
-#paginacao {
+.paginacao{
     display: flex;
     justify-content: center;
     gap: 10px;
     margin-top: 20px;
 }
 
-#paginacao button {
+.paginacao button{
     width: 40px;
     height: 50px;
     margin: 0;
@@ -243,18 +137,17 @@ footer {
     align-items: center;
     background-color: #797979;
     color: white;
-    border: none;
-    font-size: 18px;
+    
 }
 
-#paginacao button:hover {
+.paginacao button:hover {
     background-color: #b9b9b9;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     cursor: pointer;
 }
 
-#paginacao button.ativo {
+.paginacao button.ativo {
     background-color: #007bff;
     color: white;
-    border: 2px solid #0056b3;
+    border-color: #007bff;
 }

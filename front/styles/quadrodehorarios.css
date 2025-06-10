@@ -1,122 +1,119 @@
-html,
+/* Estilos para o Quadro de Horários da FATEC */
 body {
-  height: 100%;
   margin: 0;
   padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+#aulas-container {
+  max-width: 80%;
+  margin: 60px auto;
+  padding: 0 24px;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+/* Cabeçalho com imagem + título */
+.header-flex {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 24px;
 }
 
-body {
-  min-height: 100vh;
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
+.imgcal {
+  width: 36px;
+  height: 36px;
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.1));
 }
 
-.materia {
-  font-size: 20px;
-  padding: 20px;
-  text-align: center;
-  background-color: #e6e6e6;
-  border-radius: 5px;
-  margin: 20px auto;
-  width: 90%;
+/* Container da Tabela */
+.tabela-container {
+  overflow-x: auto;
+  max-width: 100%;
+  padding: 1rem;
 }
 
-.materia a {
-  text-decoration: none;
-  color: #2e4c99;
-  font-weight: bold;
-}
-
-.horario {
-  padding: 20px;
-  background-color: white;
-  border-radius: 10px;
-  margin: 20px auto;
-  width: 90%;
-}
-
-.horario h1 {
-  font-size: 24px;
-  color: #333;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-table {
+/* Estilos da Tabela de Aulas */
+table.tabela-aulas {
+  width: 900px; /* Tamanho fixo adequado para conteúdo */
   border-collapse: collapse;
-  width: 100%;
-  text-align: left;
-  margin-top: 20px;
-  table-layout: auto;
+  margin: 0 auto;
+  table-layout: fixed;
+  font-size: 16px;
 }
 
-th,
-td {
-  border: 1px solid #aaa;
-  padding: 12px;
-  vertical-align: middle;
-}
-
-th {
-  background-color: #f0f0f0;
-  font-weight: bold;
-  color: #333;
-}
-
-td {
-  background-color: #fff;
-}
-
-td a {
-  display: block;
-  margin: 4px 0;
-  color: #ffc85e;
-  text-decoration: none;
-}
-
-td a:hover {
-  text-decoration: underline;
-}
-
-/* Estilo para o título do dia da semana */
-.dia-semana {
-  background-color: #7a0b0b;
-  color: white;
-  font-weight: bold;
+table.tabela-aulas th,
+table.tabela-aulas td {
+  border: 1px solid #ccc;
+  padding: 8px;
   text-align: center;
-  font-size: 18px;
-  padding: 10px 0;
+  word-wrap: break-word;
 }
 
-/* Estilo para as linhas de horários */
-tr:nth-child(even) {
-  background-color: #f9f9f9;
+/* Ajustes Responsivos */
+---
+## Media Queries
+
+### Oculta o container de professores em telas maiores
+@media (min-width: 769px) {
+  #professores-mobile {
+    display: none;
+  }
 }
 
-tr:hover {
-  background-color: #f1f1f1;
+---
+### Ajustes para telas menores (até 900px)
+@media (max-width: 900px) {
+  .tabela-container {
+    transform: scale(0.85);
+    transform-origin: top center;
+  }
 }
 
-/* Ajustes de espaçamento entre os dados da tabela */
-td:nth-child(2), td:nth-child(3), td:nth-child(4) {
-  text-align: center;
+---
+### Ajustes para telas ainda menores (até 700px)
+@media (max-width: 700px) {
+  .tabela-container {
+    transform: scale(0.75);
+  }
 }
 
-/* Ajuste para melhorar a apresentação das colunas */
-td:nth-child(1) {
-  width: 120px;
+---
+### Ajustes para telas menores (até 500px)
+@media (max-width: 500px) {
+  .tabela-container {
+    transform: scale(0.65);
+  }
 }
 
-td:nth-child(2) {
-  width: 150px;
-}
+---
+### Ajustes para Mobile (até 768px)
+@media (max-width: 768px) {
+  /* Oculta a coluna de horários e a primeira coluna (que pode ser o dia da semana em algumas implementações) */
+  .col-horario,
+  .tabela-aulas td:first-child,
+  .tabela-aulas th:first-child {
+    display: none;
+  }
 
-td:nth-child(3) {
-  width: 250px;
-}
+  /* Oculta professor e sala dentro da célula da tabela */
+  .tabela-aulas td span.professor,
+  .tabela-aulas td em {
+    display: none;
+  }
 
-td:nth-child(4) {
-  width: 250px;
+  /* Exibe e estiliza o container de professores para mobile */
+  #professores-mobile {
+    display: block;
+    margin: 1em auto; /* Centraliza e adiciona margem */
+    max-width: 800px; /* Garante que não ocupe 100% da largura em tablets */
+    padding: 1em;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    font-size: 14px;
+  }
 }

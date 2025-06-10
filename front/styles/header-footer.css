@@ -39,7 +39,7 @@ header {
 
 /* Navegação */
 nav {
-  background-color: red;
+  background-color: #cc0000;
   padding: 15px;
   width: 100vw; /* força ocupar toda a largura da viewport */
 }
@@ -126,6 +126,13 @@ nav ul li a {
   #menu-mobile-nav.show {
     display: flex; /* exibe o menu mobile quando ativado */
   }
+
+  footer {
+    display: flex;
+    flex-direction: column; /* Alinha os itens do footer verticalmente */
+    padding: 20px; /* Reduz o padding para telas menores */
+    justify-content: space-around; /* Centraliza os itens */
+  }
 }
 
 /* FOOTER */
@@ -135,7 +142,41 @@ footer {
   text-align: center;
   padding: 40px;
   margin-top: 80px;
-  height: 120px;
   width: 100vw; /* força ocupar toda a largura da viewport */
   font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: raw;
+  justify-content: space-around;
+}
+
+#redes-icons-box {
+    display: flex;
+    flex-direction: row; /* Alinha os ícones horizontalmente */
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Espaçamento entre os ícones */
+    margin-top: 20px; /* Espaçamento superior */
+}
+
+.rede-social {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #c3c3c3;
+    align-items: center; 
+}
+
+.rede-social:hover {
+    background-color: #787878; /* Cor mais escura ao passar o mouse */
+}
+
+.fatec-icon-social {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    align-items: center;
+}
+
+.fatec-icon-social:hover {
+    background-color: #c3c3c3; /* Cor mais escura ao passar o mouse */
 }
