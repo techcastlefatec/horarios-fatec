@@ -1,5 +1,7 @@
 body {
-    font-family: Arial, sans-serif; /* Define a fonte padrão para o texto */
+    font-family: 'Segoe UI', sans-serif; /* Define a fonte padrão para o texto */
+    background-color: #f8f8f8;
+    color: #333;
 }
 
 /* Estiliza o título da página */
@@ -7,6 +9,19 @@ body {
     text-align: center; /* Centraliza o texto */
     margin-top: 50px; /* Adiciona espaçamento superior */
     margin-bottom: 60px; /* Adiciona espaçamento inferior */
+    color: #2c3e50;
+    font-weight: bold; /* Deixa o texto em negrito */
+}
+
+#relogio {
+  width: 40px;
+  height: 40px;
+}
+
+#titulo-dsm, #titulo-geo, #titulo-marh {
+    color: #2c3e50; /* Define a cor do texto */
+    height: 60px; /* Define a altura do título */
+    margin-bottom: 20px; /* Adiciona espaçamento inferior */
 }
 
 /* Configuração para telas maiores (desktop) */
@@ -14,7 +29,7 @@ body {
     .cursos {
         display: flex; /* Usa flexbox para exibição lado a lado */
         flex-direction: row; /* Mantém os cursos na mesma linha */
-        align-items: center; /* Centraliza os itens verticalmente */
+        //align-items: center; /* Centraliza os itens verticalmente */
         justify-content: space-between; /* Distribui os itens igualmente */
         text-align: center; /* Centraliza o texto dentro dos elementos */
     }
@@ -82,6 +97,7 @@ body {
 
 .toggle-button {
     background-color: #ccc; /* Cinza */
+    width: 100%;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
@@ -130,3 +146,4 @@ body {
     color: #333;
     display: block;
 }
+

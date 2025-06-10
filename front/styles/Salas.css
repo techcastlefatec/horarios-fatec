@@ -1,38 +1,146 @@
 body {
-  font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif; /* Define a fonte padrão para o texto */
+    background-color: #f8f8f8;
+    color: #333;
 }
 
-h1 {
-  text-align: center;
-  margin-top: 50px;
+#titulo-mapas {
+    color: #2c3e50;
+    font-weight: bold; /* Deixa o texto em negrito */
+}
+
+.titulo-container {
+    text-align: center;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+#mapa-icon {
+    width: 36px;
+    height: 36px;
+    filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.1));
 }
 
 #svg-container {
-  background-color: #c3c3c3;
-  display: flex;
-  justify-content: center;
+    background-color: #c3c3c3;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    min-height: 400px;
 }
 
-.retangulo-interativo {
-  fill: transparent ;
-  stroke: black; 
-  stroke-width: 1 ;
-  cursor: pointer;
+/* --- Estilos para Elementos SVG Interativos --- */
+
+/* Estilo base para elementos que podem ser clicados */
+.elemento-interativo {
+    fill: transparent; /* Por padrão, transparente */
+    stroke: black;
+    stroke-width: 1;
+    cursor: pointer;
+    transition: fill 0.2s ease-in-out, stroke 0.2s ease-in-out, stroke-width 0.2s ease-in-out;
 }
 
-.retangulo-interativo:hover:not(.ignorar-interacao) {
-  fill: #d3d3d3 !important;
-  stroke: #555 !important;
+/* Estilo ao passar o mouse sobre um elemento interativo */
+.elemento-interativo:hover:not(.ignorar-interacao):not(.elemento-selecionado) {
+    fill: #d3d3d3 !important; /* Cinza claro */
+    stroke: #555 !important; /* Cinza escuro */
 }
 
-.retangulo-selecionado {
-  fill: #ffcccc !important;
-  stroke: #ff0000 !important;
-  stroke-width: 2.5 !important;
+/* Estilo para o elemento interativo que está selecionado */
+.elemento-selecionado {
+    fill: #ffcccc !important; /* Vermelho claro */
+    stroke: #ff0000 !important; /* Vermelho */
+    stroke-width: 2.5 !important;
 }
 
-
-/* Ignorados (sem interações visuais) */
+/* Estilos para elementos que devem ser ignorados pela interação */
 .ignorar-interacao {
-  pointer-events: none;
+    pointer-events: none; /* Desabilita eventos de mouse no elemento */
+    cursor: default; /* Não mostra o cursor de ponteiro */
+    /* Você pode adicionar uma opacidade ou cor diferente aqui se quiser indicar que não é clicável */
+    /* opacity: 0.7; */
+}
+
+---
+
+### **Estilos para Informações e Aulas**
+
+```css
+/* Escondido, pois agora temos #sala-info */
+#info {
+    display: none; /* Não precisamos mais da div "info" */
+}
+
+#sala-info {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px dashed #333;
+    background-color: #f0f0f0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    max-width: 800px; /* Alinhar com o container de aulas, se desejar */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#sala-info p {
+    margin: 0;
+    font-size: 1.1em;
+    color: #444;
+}
+
+#sala-info span#current-sala-name {
+    font-weight: bold;
+    color: #cc0000; /* Cor destacada para o nome da sala */
+}
+
+#aulas-container {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#aulas-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#aulas-content {
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+.aula-item {
+    background-color: #fff;
+    border: 1px solid #eee;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.aula-item p {
+    margin: 5px 0;
+}
+
+.aula-item strong {
+    color: #e63939;
+}
+
+.no-aulas-message {
+    text-align: center;
+    color: #666;
+    font-style: italic;
 }

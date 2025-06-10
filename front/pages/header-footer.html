@@ -1,90 +1,135 @@
 <!-- Declaração do tipo de documento HTML -->
 <!DOCTYPE html>
 <html lang="pt-BR"> <!-- Define a linguagem padrão do documento como português do Brasil -->
+
 <head>
     <meta charset="UTF-8"> <!-- Define a codificação de caracteres para UTF-8, permitindo caracteres especiais -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta a escala para dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ajusta a escala para dispositivos móveis -->
     <title>Horários de Aulas</title> <!-- Define o título da página que aparece na aba do navegador -->
-    <link rel="stylesheet" href="../styles/header-footer.css"> <!-- Importa o arquivo CSS externo para estilização da página -->
-    
+    <link rel="stylesheet" href="../styles/header-footer.css">
+    <!-- Importa o arquivo CSS externo para estilização da página -->
+
 </head>
+
 <body>
-   
+
     <!-- Cabeçalho da página -->
-   <header>
-    <div id="topo-header"> 
-        <div>
-            <img src="../images/cps.png" alt="Logo do Centro Paula Souza" class="logo-header" id="logo-cps"> <!-- Imagem do logotipo da CPS -->
+    <header>
+        <div id="topo-header">
+            <div>
+                <img src="../images/cps.png" alt="Logo do Centro Paula Souza" class="logo-header" id="logo-cps">
+                <!-- Imagem do logotipo da CPS -->
+            </div>
+            <div>
+                <img src="../images/fatec-jac.png" alt="Logo da Fatec de Jacareí" class="logo-header" id="logo-fatec">
+                <!-- Imagem do logotipo da Fatec -->
+            </div>
+            <div>
+                <img src="../images/sp.png" alt="Logo do Governo de São Paulo" class="logo-header" id="logo-sp">
+                <!-- Imagem do logotipo do GOV SP-->
+            </div>
         </div>
-    <div>
-        <img src="../images/fatec-jac.png" alt="Logo da Fatec de Jacareí" class="logo-header" id="logo-fatec"> <!-- Imagem do logotipo da Fatec -->
-    </div>
-    <div>
-        <img src="../images/sp.png" alt="Logo do Governo de São Paulo" class="logo-header" id="logo-sp"> <!-- Imagem do logotipo do GOV SP-->
-    </div>
-    </div>
-    <div class="linha"> </div>
-    <!-- Navegação principal da página -->
-    <nav>
-    <div class="nav-container">
-        <ul class="nav-list">
-        <li><a href="http://localhost:3000">Home</a></li>
-        <li class="nav-desktop"><a href="http://localhost:3000/pages/consultaprofessor.html">Professores</a></li>
-        <li class="nav-desktop"><a href="http://localhost:3000/pages/Salas.html">Salas</a></li>
-        </ul>
-        <ul id="sec">
-        <li class="nav-desktop secretaria-nav" ><a href="http://localhost:3000/pages/loginsecretaria.html">Área da Secretaria</a></li>
-        </ul>
-        <button class="menu-toggle-nav" onclick="toggleMenu()">☰</button>
-    </div>
+        <div class="linha"> </div>
+        <!-- Navegação principal da página -->
+        <nav>
+            <div class="nav-container">
+                <ul class="nav-list">
+                    <li><a href="http://localhost:3000">Home</a></li>
+                    <li class="nav-desktop"><a href="http://localhost:3000/pages/consultaprofessor.html">Professores</a>
+                    </li>
+                    <li class="nav-desktop"><a href="http://localhost:3000/pages/Salas.html">Salas</a></li>
+                </ul>
+                <ul id="sec">
+                    <li class="nav-desktop secretaria-nav"><a
+                            href="http://localhost:3000/pages/loginsecretaria.html">Área da Secretaria</a></li>
+                </ul>
+                <button class="menu-toggle-nav" id="menu-toggle-nav" onclick="toggleMenu()">☰</button>
+            </div>
 
-    <div id="menu-mobile-nav" class="menu-mobile-nav">
-        <a href="http://localhost:3000/pages/consultaprofessor.html">Professores</a>
-        <a href="http://localhost:3000/pages/Salas.html">Salas</a>
-        <a href="http://localhost:3000/pages/loginsecretaria.html">Área da Secretaria</a>
-    </div>
-    </nav>
+            <div id="menu-mobile-nav" class="menu-mobile-nav">
+                <a href="http://localhost:3000/pages/consultaprofessor.html">Professores</a>
+                <a href="http://localhost:3000/pages/Salas.html">Salas</a>
+                <a href="http://localhost:3000/pages/loginsecretaria.html">Área da Secretaria</a>
+            </div>
+        </nav>
 
-    <div class="linha"> </div>
+        <div class="linha"> </div>
     </header>
-    
 
 
 
 
-    
+
+
     <!-- Rodapé da página -->
     <footer>
-       
-         <a class="govsp-social" href="https://www.flickr.com/governosp/" target="_blank">
-                            <img class="govsp-icon-social" src="https://fatecjacarei.cps.sp.gov.br/wp-content/themes/tema-cps/images/sao-paulo/i-flickr.png" alt="Flickr Governo de São Paulo" />
-                        </a>
-                        <a class="govsp-social" href="https://www.linkedin.com/company/governosp/" target="_blank">
-                            <img class="govsp-icon-social" src="https://fatecjacarei.cps.sp.gov.br/wp-content/themes/tema-cps/images/sao-paulo/i-linkedin.png" alt="Linkedin Governo de São Paulo" />
-                        </a>
-                        <a class="govsp-social" href="https://www.tiktok.com/@governosp" target="_blank">
-                            <img class="govsp-icon-social" src="https://fatecjacarei.cps.sp.gov.br/wp-content/themes/tema-cps/images/sao-paulo/i-tiktok.png" alt="TikTok Governo de São Paulo" />
-                        </a>
-                        <a class="govsp-social" href="https://www.youtube.com/governosp/" target="_blank">
-                            <img class="govsp-icon-social" src="https://fatecjacarei.cps.sp.gov.br/wp-content/themes/tema-cps/images/sao-paulo/i-youtube.png" alt="Youtube Governo de São Paulo" />
-                        </a>
-                        <a class="govsp-social" href="https://www.twitter.com/governosp/" target="_blank">
-                            <img class="govsp-icon-social" src="https://fatecjacarei.cps.sp.gov.br/wp-content/themes/tema-cps/images/sao-paulo/i-twitter.png" alt="Facebook Governo de São Paulo" />
-                        </a>
-                        <a class="govsp-social" href="https://www.instagram.com/governosp/" target="_blank">
-                            <img class="govsp-icon-social" src="https://fatecjacarei.cps.sp.gov.br/wp-content/themes/tema-cps/images/sao-paulo/i-insta.png" alt="Instagram Governo de São Paulo" />
-                        </a>
-                        <a class="govsp-social" href="https://www.facebook.com/governosp/" target="_blank">
-                            <img class="govsp-icon-social" src="https://fatecjacarei.cps.sp.gov.br/wp-content/themes/tema-cps/images/sao-paulo/i-facebook.png" alt="Facebook Governo de São Paulo" />
-                        </a>
-      
-    </footer>    
+
+        <div id="endereço">
+            <span>
+                <h3>Fatec Jacareí</h3>
+                <h5>Av. Faria Lima, 155 - Jardim Santa Maria - Jacareí/SP - CEP: 12328-070</h5>
+            </span>
+        </div>
+        <div id="telefone">
+            <span>
+                <h4>Telefone:</h4>
+                <h5>(12) 3953-7926</h5>
+            </span>
+        </div>
+        <div id="funcionamento">
+            <span>
+                <h4>Horário de funcionamento:</h4>
+                <h5>Seg. a Sex. das 07h às 22h</h5>
+            </span>
+        </div>
+        <div id="redes">
+            <span>
+                <h4>Redes Sociais:</h4>
+            </span>
+            <div id="redes-icons-box">
+            <div class="rede-social">    
+            <a href="https://www.linkedin.com/company/fatec-faculdade-de-tecnologia-de-jacare%C3%AD/" target="_blank">
+                <img class="fatec-icon-social"
+                    src="https://fatecjacarei.cps.sp.gov.br/wp-content/themes/tema-cps/images/sao-paulo/i-linkedin.png"
+                    alt="Linkedin Fatec Jacarei" />
+            </a>
+            </div>
+            <div class="rede-social">
+            <a href="https://www.youtube.com/channel/UCUr_kAji04ek02JSK-YiFdg" target="_blank">
+                <img class="fatec-icon-social"
+                    src="https://fatecjacarei.cps.sp.gov.br/wp-content/themes/tema-cps/images/sao-paulo/i-youtube.png"
+                    alt="Youtube Fatec Jacarei" />
+            </a>
+            </div>
+            <div class="rede-social">
+            <a href="https://www.instagram.com/fatec_jacarei" target="_blank">
+                <img class="fatec-icon-social"
+                    src="https://fatecjacarei.cps.sp.gov.br/wp-content/themes/tema-cps/images/sao-paulo/i-insta.png"
+                    alt="Instagram Fatec Jacarei" />
+            </a>
+            </div>
+            <div class="rede-social"> 
+            <a  href="https://www.facebook.com/jacareifatec" target="_blank">
+                <img class="fatec-icon-social"
+                    src="https://fatecjacarei.cps.sp.gov.br/wp-content/themes/tema-cps/images/sao-paulo/i-facebook.png"
+                    alt="Facebook Fatec Jacarei" />
+            </a>
+            </div>
+            </div>
+
+        </div>
+
+
+    </footer>
+
     <script>
         function toggleMenu() {
             const menu = document.getElementById("menu-mobile-nav");
             menu.classList.toggle("show");
         }
     </script>
-   
+
 </body>
+
 </html>
