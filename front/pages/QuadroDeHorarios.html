@@ -19,12 +19,19 @@
     </div>
   </div>
 
+  <div id="turma-container">
+    <div><span id="curso-nome"></span></div>
+    <div><span>Turma: </span><span id="turma-nome"></span></div>
+    <div><span>Período: </span><span id="periodo-nome"></span></div>
+  </div>
+
   <!-- Tabela de horários -->
-  <div class="tabela-container" id="zoom-wrapper">
+  <div class="tabela-container">
     <table class="tabela-aulas">
       <thead>
         <tr>
-          <th class="col-horario">Horário</th>
+          <th class="head-horario" id="inicio">Início</th>
+          <th class="head-horario" id="fim">Fim</th>
           <th>Segunda-feira</th>
           <th>Terça-feira</th>
           <th>Quarta-feira</th>
@@ -32,18 +39,12 @@
           <th>Sexta-feira</th>
         </tr>
       </thead>
-      <tbody id="tabela-corpo">
+      <tbody id="tabela-corpo" class="tabela-corpo">
         <!-- Preenchido via JS -->
       </tbody>
     </table>
   </div>
 
-   <!-- Zoom e container -->
-  <div style="display: flex; justify-content: center; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-    <span style="color: red; font-size: 1.5rem;">🔍</span>
-    <button id="zoom-out" style="font-size: 1.2rem;">➖</button>
-    <button id="zoom-in" style="font-size: 1.2rem;">➕</button>
-  </div>
 
   <!-- Professores e matérias mobile -->
   <div id="professores-mobile"></div>
