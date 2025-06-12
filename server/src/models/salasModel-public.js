@@ -26,6 +26,18 @@ async function obterAulasPorSalaEDia(sala_id, dia_semana) {
     return result.rows;
 }
 
+async function listarSalas() {
+  const result = await pool.query('SELECT * FROM salas ORDER BY id');
+  return result.rows;
+}
+
+async function obterSala(id) {
+  const result = await pool.query('SELECT * FROM salas WHERE id = $1', [id]);
+  return result.rows[0];
+}
+
 module.exports = {
-    obterAulasPorSalaEDia
+    obterAulasPorSalaEDia,
+    listarSalas,
+    obterSala
 };

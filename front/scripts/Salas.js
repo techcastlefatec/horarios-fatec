@@ -1,5 +1,9 @@
-// Lista de IDs a ignorar nas interações visuais e de clique
-const idsIgnorados = ['null', 'null-1', 'null-2', 'null-3', 'null-4', 'null-5', 'null-6', 'null-7', 'null-8', 'null-9', 'null-10'];
+// --- Constantes e Referências DOM ---
+// Lista de IDs a ignorar nas interações visuais (elementos que não são clicáveis/selecionáveis no SVG)
+const idsIgnoradosSvg = ['null', 'null-1', 'null-2', 'null-3', 'null-4', 'null-5', 'null-6', 'null-7', 'null-8', 'null-9', 'null-10'];
+
+// Lista de IDs que representam ambientes, mas não são salas de aula válidas para exibir aulas
+const idsNaoSalaDeAula = ['3','40', '39']; // Exemplo: Banheiros, Copa, etc.
 
 // Mapeamento dos valores do select para os caminhos dos arquivos SVG
 const caminhosSvg = {
@@ -11,16 +15,22 @@ const caminhosSvg = {
 // Referências aos elementos do DOM
 const andarSelect = document.getElementById("andar");
 const svgContainer = document.getElementById("svg-container");
-const salaInfoDiv = document.getElementById("sala-info"); // Novo: referência para o contêiner de nome da sala
-const currentSalaNameSpan = document.getElementById("current-sala-name"); // Novo: referência para o span do nome da sala
+const currentSalaNameSpan = document.getElementById("current-sala-name");
 const aulasContentDiv = document.getElementById("aulas-content");
 
-// Função assíncrona para carregar e exibir o SVG
+// --- Funções Principais ---
+
+/**
+ * Carrega e exibe o SVG do andar selecionado no container.
+ * Limpa o estado da exibição de aulas ao carregar um novo mapa.
+ * @param {string} andarValor - O valor do andar (ex: 'terreo', 'primeiro').
+ */
 async function carregarESelecionarSVG(andarValor) {
     const caminhoDoSvg = caminhosSvg[andarValor];
 
     if (!caminhoDoSvg) {
         console.error(`Caminho SVG não encontrado para o andar: ${andarValor}`);
+        svgContainer.innerHTML = '<p style="color: red;">Mapa não disponível para este andar.</p>';
         return;
     }
 
@@ -34,12 +44,11 @@ async function carregarESelecionarSVG(andarValor) {
         // Limpa o contêiner e insere o novo SVG
         svgContainer.innerHTML = svgContent;
 
-        // Limpa o conteúdo das aulas e o nome da sala ao carregar um novo mapa
-        aulasContentDiv.innerHTML = '<p class="no-aulas-message">Selecione uma sala para ver as aulas.</p>';
-        currentSalaNameSpan.textContent = 'Nenhuma'; // Reseta o nome da sala
+        // Reseta o conteúdo das aulas e o nome da sala ao carregar um novo mapa
+        resetarExibicaoAulas();
 
-        // Após a inserção, aplique as interações
-        aplicarInteracoes();
+        // Aplica as interações aos elementos do SVG recém-carregado
+        aplicarInteracoesSVG();
 
     } catch (error) {
         console.error('Erro ao carregar e exibir SVG:', error);
@@ -47,10 +56,11 @@ async function carregarESelecionarSVG(andarValor) {
     }
 }
 
-// Função para aplicar interações após carregar SVG
-function aplicarInteracoes() {
+/**
+ * Aplica classes e event listeners aos elementos interativos dentro do SVG.
+ */
+function aplicarInteracoesSVG() {
     const svg = svgContainer.querySelector("svg");
-
     if (!svg) {
         console.warn("SVG não encontrado no container para aplicar interações.");
         return;
@@ -60,119 +70,165 @@ function aplicarInteracoes() {
 
     elementosInterativos.forEach(el => {
         const id = el.id;
-
         if (!id) return;
 
-        if (el.tagName.toLowerCase() !== 'text' && !idsIgnorados.includes(id)) {
-            el.classList.add("elemento-interativo");
-        } else if (idsIgnorados.includes(id)) {
+        // Adiciona classes para estilo e identifica elementos a ignorar interatividade do clique
+        if (idsIgnoradosSvg.includes(id)) {
             el.classList.add("ignorar-interacao");
+        } else if (el.tagName.toLowerCase() !== 'text') { // Evita que texto puro seja interativo se não for sala
+            el.classList.add("elemento-interativo");
         }
 
-        el.removeEventListener("click", handleClick);
-        el.addEventListener("click", handleClick);
+        // Remove listener anterior para evitar duplicação e adiciona o novo
+        el.removeEventListener("click", handleElementClick);
+        el.addEventListener("click", handleElementClick);
     });
 }
 
-// Função de callback para o evento de clique
-async function handleClick(event) {
+/**
+ * Lida com o clique em um elemento interativo do SVG.
+ * @param {Event} event - O evento de clique.
+ */
+async function handleElementClick(event) {
     let targetElement = event.currentTarget;
     let elementId = targetElement.id;
 
+    // Se o clique foi em um elemento <text>, tenta encontrar a forma correspondente com o mesmo ID
     if (targetElement.tagName.toLowerCase() === 'text') {
         const correspondingShape = document.getElementById(elementId);
         if (correspondingShape && (correspondingShape.tagName.toLowerCase() === 'rect' || correspondingShape.tagName.toLowerCase() === 'path')) {
             targetElement = correspondingShape;
         } else {
+            // Se o texto não corresponde a uma forma clicável, ignora o clique
             return;
         }
     }
 
-    if (idsIgnorados.includes(elementId)) {
+    // Ignora elementos com IDs na lista de ignorados
+    if (idsIgnoradosSvg.includes(elementId)) {
         return;
     }
 
     const svg = svgContainer.querySelector("svg");
     if (!svg) return;
 
+    // Remove a seleção de elementos anteriores
     svg.querySelectorAll(".elemento-selecionado").forEach(e => {
         e.classList.remove("elemento-selecionado");
     });
 
+    // Adiciona a classe de seleção ao elemento clicado (se não for texto puro)
     if (targetElement.tagName.toLowerCase() !== 'text') {
         targetElement.classList.add("elemento-selecionado");
     }
 
-    // Apenas para depuração, pode ser removido
-    console.log("Elemento clicado com ID:", elementId);
-
-    // Agora, faça a requisição para a API e exiba as aulas e o nome da sala
-    await buscarAulasPorSala(elementId);
+    // Inicia o processo de busca de nome e aulas
+    await processarSelecaoSala(elementId);
 }
 
-// Função para buscar aulas na API e exibir
+/**
+ * Processa a seleção de uma sala, buscando seu nome e, se for uma sala de aula válida, suas aulas.
+ * @param {string} salaId - O ID da sala selecionada.
+ */
+async function processarSelecaoSala(salaId) {
+    currentSalaNameSpan.textContent = 'Carregando...';
+    aulasContentDiv.innerHTML = '<p class="no-aulas-message">Carregando informações...</p>';
+
+    try {
+        // 1. Tenta carregar o nome da sala primeiro
+        const salaData = await obterDetalhesSala(salaId);
+        currentSalaNameSpan.textContent = salaData.nome || salaId; // Exibe o nome ou o ID como fallback
+
+        // 2. Verifica se o ID está na lista de "não salas de aula"
+        if (idsNaoSalaDeAula.includes(salaId)) {
+            aulasContentDiv.innerHTML = '<p class="no-aulas-message" style="color: orange;">Escolha um ambiente válido (não é uma sala de aula).</p>';
+            return; // Interrompe o processo, não busca aulas
+        }
+
+        // 3. Se for uma sala de aula válida, busca as aulas
+        await buscarAulasPorSala(salaId);
+
+    } catch (error) {
+        console.error('Erro ao processar seleção da sala:', error);
+        currentSalaNameSpan.textContent = 'Erro ao carregar nome';
+        aulasContentDiv.innerHTML = `<p class="no-aulas-message" style="color: red;">Erro: ${error.message || 'Não foi possível carregar as informações do ambiente.'}</p>`;
+    }
+}
+
+/**
+ * Obtém os detalhes de uma sala (incluindo o nome) da API.
+ * @param {string} salaId - O ID da sala.
+ * @returns {Promise<Object>} - Um objeto contendo os detalhes da sala.
+ */
+async function obterDetalhesSala(salaId) {
+    const url = `/api/public/salas-public/${salaId}`;
+    const response = await fetch(url);
+    const data = await response.json();
+
+    if (!response.ok) {
+        throw new Error(data.mensagem || `Erro ao buscar detalhes da sala ${salaId}.`);
+    }
+    return data;
+}
+
+/**
+ * Busca e exibe as aulas para uma sala específica na API.
+ * @param {string} salaId - O ID da sala para buscar as aulas.
+ */
 async function buscarAulasPorSala(salaId) {
     const url = `/api/public/salas-public/${salaId}/aulas-hoje`;
-    aulasContentDiv.innerHTML = '<p class="no-aulas-message">Carregando aulas...</p>'; // Mensagem de carregamento
-    currentSalaNameSpan.textContent = 'Carregando...'; // Mensagem de carregamento para o nome da sala
+    aulasContentDiv.innerHTML = '<p class="no-aulas-message">Buscando aulas...</p>'; // Mensagem de carregamento específico para aulas
 
     try {
         const response = await fetch(url);
         const data = await response.json();
 
         if (!response.ok) {
+            // Se a API retornar um erro mas com mensagem de "Nenhuma aula...", trate-a como sucesso.
+            if (response.status === 404 && data.mensagem === "Nenhuma aula nesta sala hoje") {
+                 aulasContentDiv.innerHTML = '<p class="no-aulas-message">Nenhuma aula nesta sala hoje.</p>';
+                 return;
+            }
             throw new Error(data.mensagem || 'Erro desconhecido ao buscar aulas.');
         }
 
-        if (data.mensagem && data.mensagem === "Nenhuma aula nesta sala hoje") {
-            aulasContentDiv.innerHTML = '<p class="no-aulas-message">Nenhuma aula nesta sala hoje.</p>';
-            // Se não há aulas, mas a sala é reconhecida, exibe o nome se disponível.
-            // Assumimos que 'data' ainda pode ter 'sala_nome' se a API retornar.
-            // Se a API SEMPRE retornar 'sala_nome' mesmo sem aulas, use data.sala_nome aqui.
-            // Para este caso, vamos supor que o nome da sala virá apenas quando há aulas.
-            // Caso contrário, você pode precisar de um endpoint separado para obter o nome da sala pelo ID.
-            // Por enquanto, vamos manter o nome da sala como 'N/A' ou o ID.
-            // Melhor: Se a API retorna `sala_nome` na resposta de "Nenhuma aula", use-o.
-            // Senão, uma requisição separada para o nome da sala seria ideal.
-            // Para simplificar, vou tentar extrair da primeira aula se houver, ou exibir o ID.
-             if (data.sala_nome) {
-                currentSalaNameSpan.textContent = data.sala_nome;
-            } else {
-                // Se a API não retorna o nome da sala quando não há aulas,
-                // poderíamos fazer outra requisição para obter o nome da sala pelo ID,
-                // ou exibir o ID como fallback.
-                currentSalaNameSpan.textContent = salaId; // Fallback para o ID
-            }
-
-        } else if (Array.isArray(data) && data.length > 0) {
+        if (Array.isArray(data) && data.length > 0) {
             let htmlAulas = '';
-            // Pega o nome da sala da primeira aula (assumindo que todas as aulas são da mesma sala)
-            const salaNome = data[0].sala_nome || salaId; // Fallback para o ID se sala_nome não vier
-            currentSalaNameSpan.textContent = salaNome;
-
             data.forEach(aula => {
+                // Certifica-se que hora_inicio e hora_fim existem antes de usar substring
+                const horaInicioFormatada = aula.hora_inicio ? aula.hora_inicio.substring(0, 5) : 'N/A';
+                const horaFimFormatada = aula.hora_fim ? aula.hora_fim.substring(0, 5) : 'N/A';
+
                 htmlAulas += `
                     <div class="aula-item">
-                        <p><strong>Matéria:</strong> ${aula.materia}</p>
-                        <p><strong>Professor:</strong> ${aula.professor}</p>
-                        <p><strong>Horário:</strong> ${aula.hora_inicio.substring(0, 5)} - ${aula.hora_fim.substring(0, 5)}</p>
-                        <p><strong>Turma:</strong> ${aula.turma} (${aula.curso})</p>
+                        <p><strong>Matéria:</strong> ${aula.materia || 'N/A'}</p>
+                        <p><strong>Professor:</strong> ${aula.professor || 'A Definir'}</p>
+                        <p><strong>Horário:</strong> ${horaInicioFormatada} - ${horaFimFormatada}</p>
+                        <p><strong>Turma:</strong> ${aula.turma || 'N/A'} (${aula.curso || 'N/A'})</p>
                     </div>
                 `;
             });
             aulasContentDiv.innerHTML = htmlAulas;
         } else {
-            aulasContentDiv.innerHTML = '<p class="no-aulas-message" style="color: orange;">Formato de resposta inesperado da API ou sem aulas.</p>';
-            currentSalaNameSpan.textContent = 'Erro'; // Indica erro
-            console.error('Formato de resposta inesperado ou array vazio:', data);
+            // Caso a resposta seja 200 OK, mas o array de aulas esteja vazio ou não seja um array
+            aulasContentDiv.innerHTML = '<p class="no-aulas-message">Nenhuma aula nesta sala hoje.</p>';
         }
 
     } catch (error) {
         console.error('Erro ao buscar aulas:', error);
         aulasContentDiv.innerHTML = `<p class="no-aulas-message" style="color: red;">Erro ao carregar aulas: ${error.message}</p>`;
-        currentSalaNameSpan.textContent = 'Erro'; // Indica erro
     }
 }
+
+/**
+ * Reseta o conteúdo das aulas e o nome da sala para o estado inicial.
+ */
+function resetarExibicaoAulas() {
+    aulasContentDiv.innerHTML = '<p class="no-aulas-message">Selecione uma sala para ver as aulas.</p>';
+    currentSalaNameSpan.textContent = 'Nenhum';
+}
+
+// --- Event Listeners ---
 
 // Evento de mudança no select do andar
 andarSelect.addEventListener("change", function () {

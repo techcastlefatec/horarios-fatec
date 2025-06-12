@@ -95,7 +95,7 @@ nav ul li a {
 #menu-mobile-nav {
   display: none;
   flex-direction: column;
-  background-color: red;
+  background-color: #cc0000;
   padding: 10px;
 }
 

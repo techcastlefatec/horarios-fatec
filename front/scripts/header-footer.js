@@ -8,5 +8,18 @@ document.addEventListener("DOMContentLoaded", () => {
       const footer = temp.querySelector('footer');
       document.body.prepend(header);
       document.body.appendChild(footer);
+
+      // Espera o DOM atualizar para garantir que o botão exista
+      setTimeout(() => {
+        const btnToggle = document.getElementById("menu-toggle-nav");
+        if (btnToggle) {
+          btnToggle.addEventListener("click", () => {
+            const menu = document.getElementById("menu-mobile-nav");
+            if (menu) {
+              menu.classList.toggle("show");
+            }
+          });
+        }
+      }, 0);
     });
 });

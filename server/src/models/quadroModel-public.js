@@ -10,13 +10,16 @@ async function obterQuadroHorariosPorTurma(turma_id) {
       m.nome AS materia,
       p.nome AS professor,
       s.nome AS sala,
-      t.periodo
+      t.nome AS turma,
+      t.periodo,
+      c.nome AS curso
     FROM aulas a
     JOIN horarios h ON a.horario_id = h.id
     JOIN materias m ON a.materia_id = m.id
     LEFT JOIN professores p ON a.professor_id = p.id
     LEFT JOIN salas s ON a.sala_id = s.id
     JOIN turmas t ON a.turma_id = t.id
+    JOIN cursos c ON t.curso_id = c.id
     WHERE a.turma_id = $1
     ORDER BY
       CASE a.dia_semana
