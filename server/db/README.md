@@ -21,3 +21,17 @@ Esse repositório contém o esquema do banco de dados utilizado para gerenciar i
 | **aulas**       | Registra cada aula com suas relações: curso, turma, professor, etc.          |
 
 ---
+
+Usamos o render para hospedar nosso banco de dados, aqui está um pequeno tutotial de como criar um BD no render:
+
+Primeiramente, cria uma conta e clique na opçao "Create a Postgres database".
+
+![PrimeiroPasso](Documentos/Render/PrimeiroPasso.jpeg)
+
+Preencha os dados para criar o banco.
+
+![SegundoPasso](Documentos/Render/SegundoPasso.jpeg)
+
+![TerceiroPasso](Documentos/Render/TerceiroPasso.jpeg)
+
+Usamos umk URL externa para o sistema funcionar corretamente.
