@@ -1,44 +1,32 @@
 // src/app.js
 const express = require('express');
-// const cors = require('cors'); // <--- REMOVIDO: Não necessário se o front-end é servido pelo mesmo back-end
 const session = require("express-session");
 const path = require('path');
 const app = express();
 
-// Importa o pool do banco de dados
 const pool = require('./config/db'); 
-
-// ** Importa o session store para PostgreSQL **
 const pgSession = require('connect-pg-simple')(session);
 
-// Carrega variáveis de ambiente do arquivo .env
 require('dotenv').config({path: './.env'});
-
-// ** REMOVIDO AQUI: Configuração do CORS (causava conflito com cookies e 'credentials: true') **
-// app.use(cors({
-//     credentials: true
-// }));
 
 // Middleware para analisar corpos de requisição JSON
 app.use(express.json());
 
-// ** Configuração da sessão - USANDO PostgreSQL para persistência **
+// ** Configuração da sessão usando PostgreSQL para persistência **
 app.use(session({
-    // Configura o armazenamento da sessão para usar o PostgreSQL
     store: new pgSession({
-        pool: pool, // Seu pool de conexão do PostgreSQL (do arquivo './config/db')
-        tableName: 'session' // Nome da tabela que você criou no seu banco de dados
+        pool: pool,
+        tableName: 'session'
     }),
-    secret: process.env.SESSION_SECRET || 'a9Xb72cLqW4mN0pZrT6vYdUs', // Use uma chave secreta forte e gerada aleatoriamente
-    resave: false, // Evita salvar a sessão se ela não foi modificada
-    saveUninitialized: false, // Evita criar sessões para usuários não autenticados
+    secret: process.env.SESSION_SECRET || 'a9Xb72cLqW4mN0pZrT6vYdUs',
+    resave: false,
+    saveUninitialized: false,
     cookie: { 
-        secure: process.env.NODE_ENV === 'production', // true em produção (HTTPS), false em dev (HTTP)
-        httpOnly: true, // Impede acesso ao cookie via JavaScript do lado do cliente
-        maxAge: 1000 * 60 * 60 * 24, // 1 dia de duração do cookie (em milissegundos)
-        // sameSite: 'None' exige que 'secure' seja true para funcionar.
-        // Usamos uma condicional para 'Lax' em desenvolvimento, para que funcione via HTTP localmente.
-        sameSite: process.env.NODE_ENV === 'production' ? 'None' : 'Lax'
+        secure: process.env.NODE_ENV === 'production',
+        httpOnly: true,
+        maxAge: 1000 * 60 * 60 * 24,
+        sameSite: process.env.NODE_ENV === 'production' ? 'None' : 'Lax',
+        path: '/' // <--- ADICIONE ESTA LINHA para garantir o path correto do cookie
     } 
 }));
 
@@ -84,7 +72,6 @@ app.get('/db', async (req, res) => {
 
 
 // Configuração do diretório estático para servir arquivos front-end
-// Certifique-se de que o caminho para o frontend está correto
 app.use(express.static(path.join(__dirname, '../../front')));
 
 // Inicia o servidor
