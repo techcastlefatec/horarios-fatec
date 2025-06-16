@@ -4,13 +4,19 @@ const cors = require('cors');
 const session = require("express-session");
 const path = require('path');
 const app = express();
-// Importa o pool do banco de dados 
+
+// Importa o pool do banco de dados
 const pool = require('./config/db'); 
+
+// ** Importa o session store para PostgreSQL **
+const pgSession = require('connect-pg-simple')(session);
 
 // Carrega variáveis de ambiente do arquivo .env
 require('dotenv').config({path: './.env'});
 
 // Configuração do CORS
+// Se o seu front-end está sendo servido pelo mesmo back-end,
+// você pode não precisar do CORS aqui, mas o mantemos por segurança caso haja outras interações.
 app.use(cors({
     credentials: true // Importante para permitir o envio de cookies de sessão
 }));
@@ -18,19 +24,24 @@ app.use(cors({
 // Middleware para analisar corpos de requisição JSON
 app.use(express.json());
 
-// Configuração da sessão - DEVE VIR ANTES DAS ROTAS QUE USAM SESSÃO
+// ** Configuração da sessão - AGORA USANDO PostgreSQL para persistência **
 app.use(session({
-  secret: process.env.SESSION_SECRET || 'a9Xb72cLqW4mN0pZrT6vYdUs', // Use uma chave secreta forte
-  resave: false,
-  saveUninitialized: false,
-  cookie: {
-    secure: process.env.NODE_ENV === 'production', // true em produção (HTTPS) - OBRIGATÓRIO com sameSite: 'None'
-    httpOnly: true, // Impede acesso via JavaScript
-    maxAge: 1000 * 60 * 60 * 24, // 1 dia de duração do cookie
-    // sameSite: 'None' exige que 'secure' seja true para funcionar.
-    // Usamos uma condicional para 'Lax' em desenvolvimento, para que funcione via HTTP localmente.
-    sameSite: process.env.NODE_ENV === 'production' ? 'None' : 'Lax'
-  }
+    // Configura o armazenamento da sessão para usar o PostgreSQL
+    store: new pgSession({
+        pool: pool, // Seu pool de conexão do PostgreSQL (do arquivo './config/db')
+        tableName: 'session' // Nome da tabela que você criou no seu banco de dados
+    }),
+    secret: process.env.SESSION_SECRET || 'a9Xb72cLqW4mN0pZrT6vYdUs', // Use uma chave secreta forte e gerada aleatoriamente
+    resave: false, // Evita salvar a sessão se ela não foi modificada
+    saveUninitialized: false, // Evita criar sessões para usuários não autenticados
+    cookie: { 
+        secure: process.env.NODE_ENV === 'production', // true em produção (HTTPS), false em dev (HTTP)
+        httpOnly: true, // Impede acesso ao cookie via JavaScript do lado do cliente
+        maxAge: 1000 * 60 * 60 * 24, // 1 dia de duração do cookie (em milissegundos)
+        // sameSite: 'None' exige que 'secure' seja true para funcionar.
+        // Usamos uma condicional para 'Lax' em desenvolvimento, para que funcione via HTTP localmente.
+        sameSite: process.env.NODE_ENV === 'production' ? 'None' : 'Lax'
+    } 
 }));
 
 // Importação das rotas
