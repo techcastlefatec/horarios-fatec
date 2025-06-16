@@ -1,4 +1,4 @@
-// Script para gerenciar o login da secretaria
+// front/scripts/LoginSecretaria.js
 const API_URL = '/api/users/login'; // Caminho relativo para o endpoint de login
 
 document.querySelector(".loginadm-form").addEventListener("submit", async function(e) {
@@ -16,7 +16,8 @@ async function login() {
             headers: {
                 'Content-Type': 'application/json' // Indica que o corpo da requisição é JSON
             },
-            body: JSON.stringify({ email, senha }) // Converte os dados para JSON e os envia no corpo
+            body: JSON.stringify({ email, senha }), // Converte os dados para JSON e os envia no corpo
+            credentials: 'include' // <--- ADICIONE ESTA LINHA para enviar cookies de sessão
         });
 
         const data = await response.json(); // Analisa a resposta JSON do servidor
@@ -29,14 +30,11 @@ async function login() {
         } else {
             // Se a resposta não foi ok, exibe o erro retornado pelo servidor
             console.warn('⚠️ Erro no login:', data.error);
-            // Usa um modal customizado ou div para a mensagem de erro ao invés de alert()
-            // (Conforme as instruções, evitar alert() em iframes)
             displayMessage(data.error, 'error'); 
         }
     } catch (error) {
         // Captura erros de rede ou outros erros na requisição
         console.error('❌ Erro na requisição:', error);
-        // Usa um modal customizado ou div para a mensagem de erro
         displayMessage('Erro na requisição ao servidor. Verifique sua conexão.', 'error');
     }
 }
@@ -46,18 +44,16 @@ function displayMessage(message, type) {
     const messageContainer = document.getElementById('messageContainer'); // Crie uma div com esse ID no seu HTML
     if (!messageContainer) {
         console.error('Elemento #messageContainer não encontrado para exibir a mensagem.');
-        // Fallback para alert() se não houver um container, mas preferível evitar
         alert(message); 
         return;
     }
 
     messageContainer.textContent = message;
-    messageContainer.className = `message ${type}`; // Adiciona classes para estilização (ex: .message.error)
-    messageContainer.style.display = 'block'; // Mostra a mensagem
+    messageContainer.className = `message ${type}`; 
+    messageContainer.style.display = 'block'; 
 
-    // Opcional: Esconder a mensagem após alguns segundos
     setTimeout(() => {
         messageContainer.style.display = 'none';
         messageContainer.textContent = '';
-    }, 5000); // Esconde após 5 segundos
+    }, 5000); 
 }
