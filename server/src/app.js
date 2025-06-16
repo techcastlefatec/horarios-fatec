@@ -24,10 +24,12 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
   cookie: {
-    secure: process.env.NODE_ENV === 'production', // true em produção (HTTPS), false em dev (HTTP)
+    secure: process.env.NODE_ENV === 'production', // true em produção (HTTPS) - OBRIGATÓRIO com sameSite: 'None'
     httpOnly: true, // Impede acesso via JavaScript
     maxAge: 1000 * 60 * 60 * 24, // 1 dia de duração do cookie
-    sameSite: 'Lax' // O navegador envia o cookie em requisições same-site e algumas cross-site de navegação
+    // sameSite: 'None' exige que 'secure' seja true para funcionar.
+    // Usamos uma condicional para 'Lax' em desenvolvimento, para que funcione via HTTP localmente.
+    sameSite: process.env.NODE_ENV === 'production' ? 'None' : 'Lax'
   }
 }));
 
