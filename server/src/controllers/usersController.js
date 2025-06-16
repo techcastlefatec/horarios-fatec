@@ -1,6 +1,6 @@
 // server/src/controllers/usersController.js
 const model = require('../models/usersModel');
-// const bcrypt = require('bcryptjs'); // Mantendo comentado por enquanto, foco é o cookie
+// const bcrypt = require('bcryptjs'); // Lembre-se de implementar bcryptjs depois que a sessão funcionar.
 
 async function login(req, res) {
     const { email, senha } = req.body;
@@ -12,7 +12,7 @@ async function login(req, res) {
         const user = await model.getUserByEmail(email);
 
         // ATENÇÃO: Ainda usando comparação de senha em texto puro.
-        // Lembrar de implementar bcryptjs depois que a sessão funcionar.
+        // É CRÍTICO implementar bcryptjs assim que a sessão estiver funcionando.
         if (!user || user.senha !== senha) {
             console.log('Login falhou: Email ou senha incorretos.');
             return res.status(401).json({ error: 'Email ou senha incorretos' });
@@ -27,22 +27,27 @@ async function login(req, res) {
             email: user.email
         };
 
-        // *************** LOGS DE DEPURACAO AQUI ***************
         console.log('Dados da sessão definidos:', req.session.usuario);
         console.log('Session ID após definir usuario:', req.sessionID);
-        // O express-session só define o cookie na resposta após a sessão ser modificada.
-        // A linha abaixo forçaria o save, mas geralmente não é necessário pois ele auto-salva ao final da requisição.
-        // req.session.save((err) => {
-        //     if (err) console.error('Erro ao salvar sessão explicitamente:', err);
-        // });
-        // *************** FIM DOS LOGS DE DEPURACAO ***************
 
-        return res.status(200).json({
-            mensagem: 'Login realizado com sucesso',
-            usuario: req.session.usuario
+        // ** AQUI ESTÁ A MUDANÇA CRÍTICA: Forçar o salvamento da sessão **
+        req.session.save((err) => {
+            if (err) {
+                console.error('Erro ao salvar sessão explicitamente:', err);
+                return res.status(500).json({ error: 'Erro interno ao salvar sessão' });
+            }
+
+            // Somente envia a resposta JSON após a sessão ser salva com sucesso
+            // e o Set-Cookie ter sido preparado.
+            console.log('Sessão salva com sucesso e Set-Cookie preparado.');
+            return res.status(200).json({
+                mensagem: 'Login realizado com sucesso',
+                usuario: req.session.usuario
+            });
         });
+
     } catch (error) {
-        console.error('Erro interno no login:', error);
+        console.error('Erro interno no login (catch):', error);
         return res.status(500).json({ error: 'Erro interno no servidor' });
     }
 }
