@@ -1,153 +1,181 @@
-/* CADASTRO DE MATÉRIAS */
-
+/* Estilos Gerais */
 body {
-font-family: 'Segoe UI', sans-serif; /* Define a fonte padrão para o texto */
-background-color: #f8f8f8;
-color: #333;
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
 }
 
-/* Container do título e seletor de curso */
-#cadastro-materias {
-    display: flex; /* Coloca elementos em linha */
-    justify-content: space-between; /* Espaça entre título e seletor */
-    align-items: center; /* Alinha verticalmente */
-    margin: 50px 200px 0 200px; /* Margem externa */
-    font-family: Arial, sans-serif;
-    flex-wrap: wrap; /* quebra linha em telas menores */
+h1, h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 30px;
+  font-weight: bold;
 }
 
-/* Título "Cadastro de Matérias" */
-h2 {
-    font-size: 24px; /* Ajuste o tamanho do texto */
-    margin: 0;
-    transition: color 0.3s ease; /* Transição suave de cor */
+/* Fieldset e Formulários */
+fieldset {
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+  margin: 30px auto;
+  max-width: 500px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
 }
 
-h2:hover {
-    color: #333; /* Cor do título ao passar o mouse */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-/* FORMULÁRIO DE DISCIPLINA */
-
-/* Container do formulário de cadastro */
-#Disciplina {
-    margin: 50px auto 0 auto; /* Centraliza horizontalmente */
-    margin-top: 30px; /* Espaçamento superior */
-    max-width: 90%;
-    width: 1000px;  /* mantém largura ideal em telas grandes */
-    background-color: #d9d9d9;
-    padding: 20px;
-    border-radius: 15px 15px 0 0; /* Cantos arredondados em cima */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+input, button {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1em;
+  box-sizing: border-box;
 }
 
-/* Cada linha do formulário (label + input) */
-#Disciplina div {
-    margin-bottom: 15px; /* Espaço entre os campos */
-    display: flex; /* Coloca label e input em linha */
-    align-items: center; /* Alinha verticalmente */
+/* Estilo de Botões */
+button {
+  cursor: pointer;
+  background-color: #34495e;
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Estilo dos rótulos dos inputs */
-label {
-    font-size: 20px;
-    width: 90px; /* Largura fixa */
+button:hover {
+  background-color: #2c3e50;
+  transform: translateY(-2px);
 }
 
-/* Estilo dos campos de entrada */
-input {
-    width: 400px; /* Largura dos inputs */
-    font-size: 20px; /* Tamanho da fonte igual ao label */
-    padding: 6px 10px; /* Espaço interno */
-    border: 1px solid black;
-    border-radius: 3px;
-    line-height: 1.2; /* Altura da linha do texto */
-    box-sizing: border-box; /* Inclui padding na largura */
+/* Estilo da Tabela */
+table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Rodapé do formulário */
-.form-footer {
-    background-color: #666; /* Fundo escuro */
-    padding: 15px; /* Espaço interno */
-    border-radius: 0 0 15px 15px; /* Cantos arredondados embaixo */
-    text-align: right; /* Alinha botão à direita */
+th, td {
+  padding: 15px 20px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
 }
 
-/* Estilo do botão de envio */
-.form-footer button {
-    padding: 10px 20px;
-    background-color: #D9D9D9;
-    color: black;
-    font-size: 16px;
-    border-radius: 4px;
-    border: 1px solid #333;
-    font-family: Arial, sans-serif;
-    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
-    cursor: pointer;
+th {
+  background-color: #cc0000;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
-/* Efeito ao passar o mouse sobre o botão */
-.form-footer button:hover {
-    background-color: #e4e0e0;
+tr:last-child td {
+  border-bottom: none;
 }
 
-/* Estilos para dispositivos móveis */
+/* Estilos Específicos para Botões de Ação na Tabela */
+.delete-btn {
+  background-color: #e74c3c;
+  margin-left: 8px;
+}
 
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.edit-btn {
+  background-color: #3498db;
+}
+
+.edit-btn:hover {
+  background-color: #2980b9;
+}
+
+.save-btn {
+  background-color: #27ae60;
+}
+
+.save-btn:hover {
+  background-color: #229a56;
+}
+
+.cancel-btn {
+  background-color: #f39c12;
+  margin-left: 8px;
+}
+
+.cancel-btn:hover {
+  background-color: #e67e22;
+}
+
+/* Estilos para Edição Inline na Tabela */
+tr.editing {
+  background-color: #f0f8ff;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para os inputs dentro da célula da tabela durante a edição */
+.editable-input {
+  width: calc(100% - 10px);
+  padding: 8px;
+  border: 1px solid #3498db;
+  border-radius: 4px;
+  font-size: 0.95em;
+  text-align: center;
+}
+
+/* Estilos para mensagens de feedback */
+.mensagem {
+  padding: 10px 20px;
+  margin: 15px auto;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  max-width: 600px;
+}
+
+.mensagem.sucesso {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.mensagem.erro {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.mensagem.info {
+  background-color: #d1ecf1;
+  color: #0c5460;
+  border: 1px solid #bee5eb;
+}
+
+/* Responsividade básica */
 @media (max-width: 768px) {
-
-    #cadastro-matérias {
-        flex-direction: column; /* Coloca título e seletor em coluna */
-        margin: 50px 20px 0 20px; /* Reduz a margem */
-    }
-
-    h2 {
-        font-size: 18px; /* Diminui o tamanho do título em telas pequenas */
-        text-align: center; /* Centraliza o título em telas menores */
-    }
-
-    #selecao-curso {
-        width: 100%; /* Seletor ocupa toda a largura */
-    }
-
-   
-    #Disciplina div {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    label, input {
-      width: 100%;
-    }
-
-}
-
-.paginacao{
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.paginacao button{
-    width: 40px;
-    height: 50px;
-    margin: 0;
-    border-radius: 7px;
-    justify-content: center;
-    align-items: center;
-    background-color: #797979;
-    color: white;
-    
-}
-
-.paginacao button:hover {
-    background-color: #b9b9b9;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    cursor: pointer;
-}
-
-.paginacao button.ativo {
-    background-color: #007bff;
-    color: white;
-    border-color: #007bff;
+  table {
+    width: 95%;
+  }
+  th, td {
+    padding: 10px 12px;
+    font-size: 0.9em;
+  }
+  fieldset {
+    margin: 20px 10px;
+    padding: 20px;
+  }
+  input, button {
+    padding: 10px;
+    font-size: 0.9em;
+  }
 }

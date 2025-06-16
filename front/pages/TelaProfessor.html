@@ -16,30 +16,27 @@
 
 <body>
     <div class="container">
-        <main>
-            <div>
-                <img src="../images/nofoto2.png" alt="foto-perfil" class="profile-img" id="foto-professor" onerror="this.src='../images/nofoto2.png'">
-
+        <div id="dados-pessoais">
+            <div id="foto-container">
+                <img src="../images/nofoto2.png" alt="foto-perfil" id="foto-professor">
             </div>
-            <div>
-                <div id="break">
+            <div id="info-container">
+                <div id="nome-professor">
                     <p id="nome"><strong>Nome:</strong></p>
                 </div>
-                <div id="break">
+                <div id="email-professor">
                     <p id="email"><strong>Email Institucional:</strong></p>
                 </div>
+            </div>  
+        </div>
+
+        <div id ="dados-academicos">
+            <div id="detalhes"><strong>Detalhes:</strong></div>
+            <div id ="info-academicos">
+                <div id="cursos"></div>
+                <div id="disciplinas"></div>
+                <div id="turmas"></div>
             </div>
-        </main>
-
-        <div id="divider-line"></div>
-
-        <div>
-            <div id="aula"><strong>Detalhes:</strong></div>
-            <aside>
-                <p id="cursos"></p>
-                <p id="disciplinas"></p>
-                <p id="turmas"></p>
-            </aside>
         </div>
     </div>
 

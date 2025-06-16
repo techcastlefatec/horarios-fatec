@@ -1,50 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cadastro de Professor</title>
-    <link rel="stylesheet" href="../styles/CadastroDeProfessores.css" />
-    <link rel="stylesheet" href="../styles/header-footer-secretaria.css" />
-    <script defer src="../scripts/header-footer-secretaria.js"></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Professores</title>
+  <link rel="stylesheet" href="../styles/header-footer.css" />
+  <link rel="stylesheet" href="../styles/CadastroDeProfessores.css" />
+  <script src="../scripts/header-footer.js"></script>
+</head>
+<body>
 
-  <body>
-    <main>
-      <h2>Cadastro de Professores</h2>
-      <form id="formProfessor" enctype="multipart/form-data" class="form-container">
-        <div class="form-group">
-          <label for="nome">Nome:</label>
-          <input type="text" id="nome" name="nome" required />
-        </div>
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-        </div>
-        <div class="form-right">
-          <input type="file" id="uploadFoto" name="foto" accept="image/*" hidden />
-          <label for="uploadFoto" class="upload-placeholder">📷 +</label>
-        </div>
-        <div class="form-bottom">
-          <button type="submit">Salvar</button>
-        </div>
-      </form>
-    </main>
+  <h1>Cadastro de Professores</h1>
 
-    <h2>Lista de Professores</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Nome</th>
-          <th>Email</th>
-          <th>Ações</th>
-        </tr>
-      </thead>
-      <tbody id="listaProfessores"></tbody>
-    </table>
-    <div class="paginacao" id="paginacao"></div>
+  <!-- Formulário de Cadastro -->
+  <fieldset>
+    <form id="formCadastro" enctype="multipart/form-data"> <!-- Importante: enctype para upload de arquivo -->
+      <legend><strong>Novo Professor</strong></legend>
+      <input type="text" id="nome" placeholder="Nome do Professor" required />
+      <input type="email" id="email" placeholder="Email do Professor" />
+      <label for="foto">Foto do Professor:</label>
+      <input type="file" id="foto" accept="image/*" /> <!-- Input de arquivo para a foto -->
+      <button type="submit">Cadastrar</button>
+    </form>
+  </fieldset>
 
-    <script src="../scripts/CadastroDeProfessores.js"></script>
-  </body>
+  <!-- Lista de Professores -->
+  <h2>Lista de Professores</h2>
+  <p id="mensagem-feedback" class="mensagem"></p> <!-- Para feedback de sucesso/erro -->
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Foto</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody id="listaProfessores"></tbody>
+  </table>
+
+  <script src="../scripts/CadastroDeProfessores.js"></script>
+</body>
 </html>

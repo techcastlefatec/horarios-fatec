@@ -1,130 +1,85 @@
 /* ======= PADRÃO PARA TODA A TELA ======= */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  font-size: 22px;
+  font-family: 'Segoe UI', sans-serif; /* Define a fonte padrão para o texto */
+  background-color: #f8f8f8;
+  color: #2c3e50
 }
 
 /* ======= CONTAINER PRINCIPAL ======= */
 .container {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
   position: relative; /* Necessário para posicionar a linha */
   padding: 20px;
-}
-
-/* ======= LINHA VERTICAL (DINÂMICA) ======= */
-#divider-line {
-  position: absolute;
-  top: 100px; /* altura do header (ajuste conforme o seu header) */
-  bottom: 100px; /* altura do footer (ajuste conforme seu footer) */
-  left: 600px;
-  width: 2px;
-  background-color: #000;
-  z-index: 1;
-  transition: all 0.5s ease; /* animação suave para esconder/mostrar */
+  min-height: 700px
 }
 
 /* ======= IMAGEM DE PERFIL ======= */
-.profile-img {
+#foto-professor {
   display: flex;
   margin-top: 40px;
   margin-left: 90px;
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   border-radius: 100px;
   object-fit: cover;
 }
 
-/* ======= ÁREAS PRINCIPAIS ======= */
-main, aside {
-  padding-bottom: 20px;
-}
-
-/* ======= SEÇÃO MAIN ======= */
-main {
-  flex: 1;
-  margin-top: 50px;
-  margin-left: 90px;
-  margin-right: 120px;
-  margin-bottom: 85px;
-  width: 200px;
-  height: 350px;
-}
-
-/* ======= SEÇÃO ASIDE ======= */
-aside {
-  flex: 2;
+#dados-pessoais {
   display: flex;
   flex-direction: column;
-  margin-right: 120px;
-  margin-bottom: 85px;
-  border: 1px solid black;
-  border-radius: 25px;
-  padding: 10px;
+  margin-left: 20px;
+  width: 30%
 }
 
-/* ======= TÍTULO AULAS ======= */
-#aula {
-  margin-top: 100px;
-  margin-left: 15px;
+#dados-academicos {
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+  width: 70%
 }
 
-/* ======= PARÁGRAFOS DENTRO DO ASIDE ======= */
-aside p {
-  margin-left: 10px;
-}
 
-/* ======= ESPAÇO ENTRE ELEMENTOS ======= */
-#break {
-  margin-top: 50px;
-}
-
-/* ======= RESPONSIVIDADE ======= */
-
-/* === DESKTOP GRANDE (até 1200px) === */
-@media (max-width: 1200px) {
+@media (min-width: 769px) {
   .container {
     padding: 0 40px;
     gap: 20px;
+    font-size: 24px;
   }
 
-  main {
-    width: 45%;
-    margin-right: 0;
+  #foto-container {
+    margin-top: 50px;
   }
 
-  aside {
-    width: 50%;
+  #info-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    gap: 40px;
   }
 
-  #divider-line {
-    opacity: 0;
-    pointer-events: none;
-    transform: scaleY(0);
+  #dados-academicos {
+    margin-top: 100px;
+    border: 3px solid #2c3e50;
+    border-radius: 20px;
+    min-height: 400px;
   }
+
+  #info-academicos {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding: 30px;
+  }
+
+  #detalhes {
+    margin-top: 40px;
+    margin-left: 20px;
+  }
+
 }
 
-/* === DESKTOP MÉDIO (até 992px) === */
-@media (max-width: 992px) {
-  .container {
-    padding: 0 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  main, aside {
-    width: 90%;
-    margin: 10px 0;
-  }
-
-  #divider-line {
-    opacity: 0;
-    pointer-events: none;
-    transform: scaleY(0);
-  }
-}
 
 /* === TABLET / MOBILE (até 768px) === */
 @media (max-width: 768px) {
@@ -133,25 +88,44 @@ aside p {
     align-items: center;
   }
 
-  main {
-    margin: 20px;
-    width: auto;
-    height: auto;
+  #foto-professor {
+    margin-top: 30px;
   }
 
-  aside {
-    margin: 20px auto;
-    width: 90%;
-    height: auto;
+  #info-container {
+    margin-top: 50px;
   }
 
-  .profile-img {
+  #email-professor {
+    margin-top: 20px;
+  }
+
+  #dados-pessoais, #dados-academicos {
+    margin-top: 50px;
     margin-left: 0;
+    width: 95%;
   }
 
-  #divider-line {
-    opacity: 0;
-    pointer-events: none;
-    transform: scaleY(0);
+  #dados-pessoais {
+   margin-bottom: 20px;
   }
+
+  #detalhes {
+    margin-bottom: 20px;
+  }
+
+  #dados-academicos {
+    min-height: 300px;
+    margin-top: 20px;
+    border: 3px solid #2c3e50;
+    border-radius: 20px;
+    padding: 20px;
+  }
+
+  #info-academicos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
 }
