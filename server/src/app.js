@@ -1,6 +1,6 @@
 // src/app.js
 const express = require('express');
-const cors = require('cors');
+// const cors = require('cors'); // <--- REMOVIDO: Não necessário se o front-end é servido pelo mesmo back-end
 const session = require("express-session");
 const path = require('path');
 const app = express();
@@ -14,17 +14,15 @@ const pgSession = require('connect-pg-simple')(session);
 // Carrega variáveis de ambiente do arquivo .env
 require('dotenv').config({path: './.env'});
 
-// Configuração do CORS
-// Se o seu front-end está sendo servido pelo mesmo back-end,
-// você pode não precisar do CORS aqui, mas o mantemos por segurança caso haja outras interações.
-app.use(cors({
-    credentials: true // Importante para permitir o envio de cookies de sessão
-}));
+// ** REMOVIDO AQUI: Configuração do CORS (causava conflito com cookies e 'credentials: true') **
+// app.use(cors({
+//     credentials: true
+// }));
 
 // Middleware para analisar corpos de requisição JSON
 app.use(express.json());
 
-// ** Configuração da sessão - AGORA USANDO PostgreSQL para persistência **
+// ** Configuração da sessão - USANDO PostgreSQL para persistência **
 app.use(session({
     // Configura o armazenamento da sessão para usar o PostgreSQL
     store: new pgSession({
