@@ -36,13 +36,18 @@
             <div class="nav-container">
                 <ul class="nav-list">
                     <li><a href="/">Home</a></li>
-                    <li class="nav-desktop"><a href="/pages/ConsultaProfessor.html">Professores</a>
-                    </li>
+                    <li class="nav-desktop"><a href="/pages/ConsultaProfessor.html">Professores</a></li>
                     <li class="nav-desktop"><a href="/pages/Salas.html">Salas</a></li>
+                    <li class="nav-desktop"><a href="/pages/AreaDaSecretaria.html" class="menu-logado">Controle de Horários</a></li>
+                    <li class="nav-desktop"><a href="/pages/Relatorios.html" class="menu-logado">Relatorios</a></li>
                 </ul>
                 <ul id="sec">
                     <li class="nav-desktop secretaria-nav"><a
-                            href="/pages/LoginSecretaria.html">Área da Secretaria</a></li>
+                            href="/pages/LoginSecretaria.html" class="menu-deslogado">Área da Secretaria</a></li>
+                </ul>
+                    <ul id="sec">
+                    <li class="nav-desktop secretaria-nav"><a
+                            href="/" class="menu-logado btn-logout">Sair</a></li>
                 </ul>
                 <button class="menu-toggle-nav" id="menu-toggle-nav" onclick="toggleMenu()">☰</button>
             </div>
@@ -50,7 +55,10 @@
             <div id="menu-mobile-nav" class="menu-mobile-nav">
                 <a href="/pages/ConsultaProfessor.html">Professores</a>
                 <a href="/pages/Salas.html">Salas</a>
-                <a href="/pages/LoginSecretaria.html">Área da Secretaria</a>
+                <a href="/pages/LoginSecretaria.html" class="menu-deslogado">Área da Secretaria</a>
+                <a href="/pages/AreaDaSecretaria.html" class="menu-logado">Controle de Horários</a>
+                <a href="/pages/Relatorios.html" class="menu-logado">Relatorios</a>
+                <a href="/" class="menu-logado btn-logout">Sair</a>
             </div>
         </nav>
 
@@ -65,25 +73,25 @@
     <!-- Rodapé da página -->
     <footer>
 
-        <div id="endereço">
+        <div id="endereço" class="menu-deslogado">
             <span>
                 <h3>Fatec Jacareí</h3>
                 <h5>Av. Faria Lima, 155 - Jardim Santa Maria - Jacareí/SP - CEP: 12328-070</h5>
             </span>
         </div>
-        <div id="telefone">
+        <div id="telefone" class="menu-deslogado">
             <span>
                 <h4>Telefone:</h4>
                 <h5>(12) 3953-7926</h5>
             </span>
         </div>
-        <div id="funcionamento">
+        <div id="funcionamento" class="menu-deslogado">
             <span>
                 <h4>Horário de funcionamento:</h4>
                 <h5>Seg. a Sex. das 07h às 22h</h5>
             </span>
         </div>
-        <div id="redes">
+        <div id="redes" class="menu-deslogado">
             <span>
                 <h4>Redes Sociais:</h4>
             </span>
@@ -120,6 +128,15 @@
 
         </div>
 
+        <div id="info-footer-secretaria" class="menu-logado">
+            <span>
+                <h4>Desenvolvido por:</h4>
+                <h5>Grupo Tech Casle - 1º Semestre de DSM - Fatec Jacareí</h5>
+                <h5><a href="https://github.com/techcastlefatec/"></a></h5>
+            </span>
+
+        </div>
+
 
     </footer>
 
@@ -131,5 +148,4 @@
     </script>
 
 </body>
-
 </html>

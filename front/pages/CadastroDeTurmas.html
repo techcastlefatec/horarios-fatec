@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cadastro de Turmas</title>
-  <link rel="stylesheet" href="../styles/header-footer-secretaria.css" />
+  <link rel="stylesheet" href="../styles/header-footer.css" />
   <link rel="stylesheet" href="../styles/CadastroDeTurmas.css" />
-  <script defer src="../scripts/header-footer-secretaria.js"></script>
+  <script src="../scripts/header-footer.js"></script>
 </head>
 <body>
 
@@ -14,8 +14,8 @@
 
   <!-- Formulário de Cadastro -->
   <fieldset>
-    <legend><strong>Nova Turma</strong></legend>
     <form id="formCadastro">
+      <legend><strong>Nova Turma</strong></legend>
       <input type="text" id="nome" placeholder="Nome da Turma" required />
       <input type="text" id="periodo" placeholder="Período" />
       <input type="number" id="curso_id" placeholder="ID do Curso" required />
@@ -23,21 +23,9 @@
     </form>
   </fieldset>
 
-  <!-- Formulário de Atualização (oculto até necessário) -->
-  <fieldset style="display:none;" id="updateSection">
-    <legend><strong>Editar Turma</strong></legend>
-    <form id="formAtualizar">
-      <input type="hidden" id="edit_id" />
-      <input type="text" id="edit_nome" placeholder="Nome da Turma" required />
-      <input type="text" id="edit_periodo" placeholder="Período" />
-      <input type="number" id="edit_curso_id" placeholder="ID do Curso" required />
-      <button type="submit">Salvar Alterações</button>
-      <button type="button" onclick="cancelarEdicao()">Cancelar</button>
-    </form>
-  </fieldset>
-
   <!-- Lista de Turmas -->
   <h2>Lista de Turmas</h2>
+  <p id="mensagem-feedback" class="mensagem"></p> <!-- Para feedback de sucesso/erro -->
   <table>
     <thead>
       <tr>
@@ -45,6 +33,7 @@
         <th>Nome</th>
         <th>Período</th>
         <th>Curso ID</th>
+        <th>Sigla Curso</th>
         <th>Ações</th>
       </tr>
     </thead>

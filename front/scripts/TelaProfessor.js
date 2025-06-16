@@ -1,52 +1,53 @@
-// função utilitária para pegar parâmetros da URL
-function obterParametroURL(nome) {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(nome);
-}
+document.addEventListener("DOMContentLoaded", () => {
+  const nomeEl = document.getElementById("nome");
+  const emailEl = document.getElementById("email");
+  const fotoEl = document.getElementById("foto-professor");
+  const cursosEl = document.getElementById("cursos");
+  const disciplinasEl = document.getElementById("disciplinas");
+  const turmasEl = document.getElementById("turmas");
 
-// obtém o ID do professor da URL
-const idProfessor = obterParametroURL('id');
+  // Pega o ID da URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const id = urlParams.get("id");
 
-// referências aos elementos HTML
-const nomeElemento = document.querySelector('#nome');
-const emailElemento = document.querySelector('#email');
-const cursosElemento = document.querySelector('#cursos');
-const materiasElemento = document.querySelector('#disciplinas');
-const turmasElemento = document.querySelector('#turmas');
-const imagemElemento = document.querySelector('.profile-img');
+  if (!id) {
+    nomeEl.innerHTML += " Não encontrado (ID ausente)";
+    return;
+  }
 
-// função para buscar e exibir os dados do professor
-async function buscarDadosProfessor() {
+  async function carregarProfessor() {
     try {
-        const resposta = await fetch(`/api/public/professores-public/${idProfessor}`);
-        if (!resposta.ok) {
-            throw new Error('Professor não encontrado');
-        }
+      const resposta = await fetch(`/api/public/professores-public/${id}`);
+      if (!resposta.ok) throw new Error("Erro ao buscar professor");
 
-        const professor = await resposta.json();
+      const professor = await resposta.json();
 
-        // preenche os dados na página
-        nomeElemento.innerHTML = `<strong>Nome:</strong><br>Prof. ${professor.nome}`;
-        emailElemento.innerHTML = `<strong>Email Institucional:</strong><br>${professor.email || 'Não informado'}`;
-        cursosElemento.innerHTML = `<strong>Curso(s):</strong><br>${professor.curso || 'Não informado'}`;
-        materiasElemento.innerHTML = `<strong>Disciplina(s):</strong><br>${(professor.materias || []).join(', ')}`;
-        turmasElemento.innerHTML = `<strong>Turma(s):</strong><br>${(professor.turmas || []).join(', ')}`;
+      // Preenche os dados no HTML
+      nomeEl.innerHTML = `<strong>Nome:</strong> ${professor.nome}`;
+      emailEl.innerHTML = `<strong>Email Institucional:</strong> ${professor.email || "Não informado"}`;
+      fotoEl.src = `../images/professores/${professor.foto}`;
 
-        if (
-    professor.foto &&
-    typeof professor.foto === 'string' &&
-    professor.foto.trim() !== '' &&
-    !professor.foto.toLowerCase().includes('foto-perfil') &&  // previne casos como no print
-    professor.foto.trim().length > 10
-) {
-    imagemElemento.src = professor.foto;
-}
+      // Cursos
+      if (professor.cursos?.length) {
+        cursosEl.innerHTML = `<p><strong>Curso(s):</strong> ${professor.cursos.join(", ")}</p>`;
+      }
+
+      // Disciplinas (materias)
+      if (professor.materias?.length) {
+        disciplinasEl.innerHTML = `<p><strong>Disciplinas:</strong> ${professor.materias.join(", ")}</p>`;
+      }
+
+      // Turmas
+      if (professor.turmas?.length) {
+        turmasEl.innerHTML = `<p><strong>Turmas:</strong> ${professor.turmas.join(", ")}</p>`;
+      }
 
     } catch (erro) {
-        console.error('Erro ao buscar dados do professor:', erro);
-        document.querySelector('.container').innerHTML = '<p>Erro ao carregar dados do professor.</p>';
+      console.error("Erro ao carregar professor:", erro);
+      nomeEl.innerHTML += " (erro ao carregar)";
     }
-}
+  }
 
-// comando de execução
-buscarDadosProfessor();
+  carregarProfessor();
+});
+

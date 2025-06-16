@@ -73,6 +73,10 @@ nav ul li a {
   font-size: 18px;
 }
 
+.secretaria-nav {
+  white-space: nowrap;
+}
+
 #sec {
   width: 200px;
   list-style: none;

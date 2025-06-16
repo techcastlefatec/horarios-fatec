@@ -4,11 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../styles/header-footer-secretaria.css">
-    <script defer src="../scripts/header-footer-secretaria.js"></script>
+    <link rel="stylesheet" href="../styles/header-footer.css">
+    <script defer src="../scripts/header-footer.js"></script>
+    <link rel="stylesheet" href="../styles/Relatorios.css">
 </head>
-<body style="background-color: #80ADB6;">
-    Voltar para a página inicial: 
-    <a href="/"> Home</a>
+<body>
+  <div class="container">
+    <h2>Relatório de Aulas por Sala</h2>
+
+    <form id="formulario">
+      <label for="dia">Selecione o dia da semana:</label>
+      <select id="dia" name="dia">
+        <option value="">-- Escolha o dia --</option>
+        <option value="Segunda">Segunda</option>
+        <option value="Terça">Terça</option>
+        <option value="Quarta">Quarta</option>
+        <option value="Quinta">Quinta</option>
+        <option value="Sexta">Sexta</option>
+      </select>
+
+      <div class="botoes">
+        <button type="button" onclick="baixarRelatorio('csv')">Baixar CSV</button>
+        <button type="button" onclick="baixarRelatorio('xlsx')">Baixar Excel</button>
+        <button type="button" onclick="baixarRelatorio('pdf')">Baixar PDF</button>
+      </div>
+    </form>
+
+    <div id="mensagem"></div>
+  </div>
+
+  <div class="container">
+
+      <div class="upload-section">
+      <h2>Importar Aulas via Planilha</h2>
+      <p>
+        Você pode baixar o <a href="../modelo/modelo.xlsx" download>modelo.xlsx</a>, preencher com os dados e fazer o upload abaixo:
+      </p>
+
+      <form id="upload-form">
+        <input type="file" id="arquivo" accept=".csv, .xlsx">
+        <button type="submit">Enviar Arquivo</button>
+      </form>
+
+      <div id="mensagem-upload"></div>
+    </div>
+  </div>
+  
+
+  <script src="../scripts/Relatorios.js"></script>
 </body>
+
 </html>

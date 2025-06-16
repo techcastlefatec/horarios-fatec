@@ -33,10 +33,40 @@ async function deletarAula(id) {
   await pool.query('DELETE FROM aulas WHERE id = $1', [id]);
 }
 
+async function listarAulasPorSala(dia_semana) {
+  const result = await pool.query(`
+    SELECT 
+      s.id AS sala_id,
+      s.nome AS sala_nome,
+      s.andar,
+      a.id AS aula_id,
+      a.dia_semana,
+      h.hora_inicio,
+      h.hora_fim,
+      m.nome AS materia,
+      p.nome AS professor,
+      t.nome AS turma,
+      c.nome AS curso
+    FROM aulas a
+    JOIN salas s ON a.sala_id = s.id
+    JOIN horarios h ON a.horario_id = h.id
+    LEFT JOIN materias m ON a.materia_id = m.id
+    LEFT JOIN professores p ON a.professor_id = p.id
+    JOIN turmas t ON a.turma_id = t.id
+    JOIN cursos c ON a.curso_id = c.id
+    WHERE a.dia_semana = $1
+    ORDER BY s.nome, h.hora_inicio
+  `, [dia_semana]);
+
+  return result.rows;
+}
+
+
 module.exports = {
   listarAulas,
   obterAula,
   criarAula,
   atualizarAula,
-  deletarAula
+  deletarAula,
+  listarAulasPorSala
 };
