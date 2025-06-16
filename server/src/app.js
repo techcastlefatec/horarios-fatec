@@ -20,14 +20,15 @@ app.use(express.json());
 
 // Configuração da sessão - DEVE VIR ANTES DAS ROTAS QUE USAM SESSÃO
 app.use(session({
-    secret: process.env.SESSION_SECRET || 'a9Xb72cLqW4mN0pZrT6vYdUs', // Use uma chave secreta forte e gerada aleatoriamente
-    resave: false, // Evita salvar a sessão se ela não foi modificada
-    saveUninitialized: false, // Evita criar sessões para usuários não autenticados
-    cookie: { 
-        secure: process.env.NODE_ENV === 'production', // Use true em produção (HTTPS)
-        httpOnly: true, // Impede acesso ao cookie via JavaScript do lado do cliente
-        maxAge: 1000 * 60 * 60 * 24 // 1 dia de duração do cookie
-    } 
+  secret: process.env.SESSION_SECRET || 'a9Xb72cLqW4mN0pZrT6vYdUs', // Use uma chave secreta forte
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    secure: process.env.NODE_ENV === 'production', // true em produção (HTTPS), false em dev (HTTP)
+    httpOnly: true, // Impede acesso via JavaScript
+    maxAge: 1000 * 60 * 60 * 24, // 1 dia de duração do cookie
+    sameSite: 'Lax' // O navegador envia o cookie em requisições same-site e algumas cross-site de navegação
+  }
 }));
 
 // Importação das rotas
