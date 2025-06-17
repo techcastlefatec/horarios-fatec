@@ -26,12 +26,12 @@ Usamos o render para hospedar nosso banco de dados, aqui está um pequeno tutoti
 
 Primeiramente, cria uma conta e clique na opçao "Create a Postgres database".
 
-![PrimeiroPasso](../../../Documentos/Render/PrimeiroPasso.jpeg)
+![PrimeiroPasso](../../Documentos/Render/PrimeiroPasso.jpeg)
 
 Preencha os dados para criar o banco.
 
-![SegundoPasso](../../../Documentos/Render/SegundoPasso.jpeg)
+![SegundoPasso](../../Documentos/Render/SegundoPasso.jpeg)
 
-![TerceiroPasso](../../../Documentos/Render/TerceiroPasso.jpeg)
+![TerceiroPasso](../../Documentos/Render/TerceiroPasso.jpeg)
 
 Usamos umk URL externa para o sistema funcionar corretamente.
