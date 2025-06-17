@@ -34,4 +34,4 @@ Preencha os dados para criar o banco.
 
 ![TerceiroPasso](../../Documentos/Render/TerceiroPasso.jpeg)
 
-Usamos umk URL externa para o sistema funcionar corretamente.
+Usamos a URL externa como variável de ambiente dentro de um arquivo .env na raiz para fazer a conexão com o banco e o sistema funcionar corretamente.
