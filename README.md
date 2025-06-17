@@ -304,6 +304,7 @@ Melhorar as revisões de código e testes para garantir que não haja imprevisto
 ### • Sprint Retrospective 
 <br>
 <br>
+
 **1. O que funcionou bem durante a Sprint?**
 <br>
 
@@ -313,6 +314,7 @@ O grupo conseguiu atingir os objetivos do trabalho e entregar a maior parte dos 
 <br>
 
 <br>
+
 **2. O que não funcionou tão bem durante a Sprint?**
 <br>
 
@@ -322,6 +324,7 @@ Reconhecemos que pecamos ao não realizar a validação da entrada de dados, e e
 
 
 <br>
+
 **3. Quais ações podemos tomar para melhorar para o próximo Projeto?**
 <br>
 
