@@ -303,28 +303,28 @@ Melhorar as revisões de código e testes para garantir que não haja imprevisto
 
 ### • Sprint Retrospective 
 <br>
-
+<br>
 **1. O que funcionou bem durante a Sprint?**
 <br>
-<br>
+
 
 <br>
 O grupo conseguiu atingir os objetivos do trabalho e entregar a maior parte dos requisitos de forma satisfatória inclusive os opcionais, entregando uma solução simples, porém bastante funcional.
 <br>
 
-
+<br>
 **2. O que não funcionou tão bem durante a Sprint?**
 <br>
-<br>
+
 <br>
 Reconhecemos que pecamos ao não realizar a validação da entrada de dados, e em outros aspectos de desenvolvimento que poderiam ser realizados de forma mais condizente com o que se esperaria em um cenário profissional.
 <br>
 
 
-
+<br>
 **3. Quais ações podemos tomar para melhorar para o próximo Projeto?**
 <br>
-<br>
+
 <br>
 Estudar mais técnicas de desenvolvimento, padrões de arquitetura, documentação, entre outras boas práticas, para sermos capazes entregar softwares escaláveis e de fácil manutenção.
 <br>
