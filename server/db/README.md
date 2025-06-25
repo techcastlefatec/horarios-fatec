@@ -1,5 +1,3 @@
-Claro! Aqui está o README sem os exemplos, mas ainda com as tabelas e explicações bem organizadas:
-
 ---
 
 # 📚 Descrição do Banco de Dados
